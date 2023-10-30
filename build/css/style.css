@@ -1297,6 +1297,9 @@ button,
           box-sizing: border-box;
   display: -ms-grid;
   display: grid;
+  -webkit-column-gap: 15px;
+     -moz-column-gap: 15px;
+          column-gap: 15px;
   justify-items: end;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1385,7 +1388,7 @@ button,
   color: white;
   text-transform: uppercase;
   letter-spacing: -1px;
-  padding: 27px 56px;
+  padding: 25px 56px;
   font-size: 12px;
   line-height: 12px;
   font-weight: 700;

@@ -52,6 +52,7 @@
 .hero__content {
   box-sizing: border-box;
   display: grid;
+  column-gap: 15px;
   justify-items: end;
   align-items: center;
   //grid-template-columns: 113px 270px;
@@ -120,7 +121,7 @@
     color: white;
     text-transform: uppercase;
     letter-spacing: -1px;
-    padding: 27px 56px;
+    padding: 25px 56px;
     font-size: 12px;
     line-height: 12px;
     font-weight: 700;
