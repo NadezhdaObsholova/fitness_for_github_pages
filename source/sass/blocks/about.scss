@@ -1,3 +1,219 @@
+.about__container {
+  position: relative;
+  display: grid;
+  grid-template-columns: size(355px) size(660px);
+  gap: size(145px);
+  padding-top: size(120px);
+  padding-bottom: size(230px);
+
+  @include vp-1365 {
+    display: flex;
+    flex-direction: column;
+    padding-top: size(105px);
+    padding-bottom: size(185px);
+    gap: 0;
+  }
+
+  @include vp-767 {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: size(75px);
+    padding-bottom: size(210px);
+  }
+
+  img {
+    width: 100%;
+    object-fit: cover;
+
+    @include vp-767 {
+      height: size(313px);
+    }
+  }
+}
+
 .about__content {
-  padding-top: 120px;
+
+  @include vp-767 {
+    padding: 0 size(15px);
+  }
+
+  h2 {
+    font-family: "AlumniSans";
+    font-size: size(54px);
+    line-height: size(54px);
+    font-weight: 600;
+    letter-spacing: size(1.62px);
+    margin-top: size(-5px);
+    margin-bottom: 0;
+
+    @include vp-1365 {
+      font-size: size(42px);
+      line-height: size(42px);
+      text-align: center;
+    }
+
+    @include vp-767 {
+      font-size: size(32px);
+      line-height: size(32px);
+      text-align: left;
+      letter-spacing: size(1.1px);
+    }
+  }
+
+  h3 {
+    font-size: size(22px);
+    line-height: size(22px);
+    font-weight: 400;
+    letter-spacing: 0;
+    margin-top: size(27px);
+    margin-bottom: size(95px);
+
+    @include vp-1365 {
+      font-size: size(20px);
+      line-height: size(20px);
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      letter-spacing: 0.3px;
+    }
+
+    @include vp-767 {
+      font-size: size(18px);
+      line-height: size(20px);
+      text-align: left;
+      margin-top: 12px;
+      letter-spacing: 0;
+    }
+  }
+
+  p {
+    margin: size(10px) 0;
+
+    @include vp-1365 {
+      width: size(502px);
+      letter-spacing: 0.3px;
+      text-align: center;
+    }
+
+    @include vp-767 {
+      width: size(280px);
+      font-size: size(14px);
+      line-height: size(22px);
+      text-align: left;
+      margin-top: size(38px);
+      margin-bottom: size(52px);
+      letter-spacing: 0;
+    }
+  }
+
+  p:not(:first-of-type) {
+    @include vp-1365 {
+      display: none;
+    }
+  }
+}
+
+.about__video {
+  position: absolute;
+  z-index: 1;
+  width: size(364px);
+  height: size(228px);
+  overflow: hidden;
+  right: size(462px);
+  top: size(408px);
+
+  @include vp-1365 {
+    width: size(265px);
+    height: size(167px);
+    right: calc(50% - size(133px));
+    top: calc(100% - size(268px));
+  }
+
+  @include vp-767 {
+    width: size(320px);
+    height: size(167px);
+    right: calc(50% - size(160px));
+    top: calc(100% - size(167px));
+  }
+
+  img {
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
+
+    @include vp-767 {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  iframe {
+    object-fit: cover;
+    width: size(364px);
+    height: size(228px);
+
+    @include vp-1365 {
+      width: size(265px);
+      height: size(167px);
+    }
+
+    @include vp-767 {
+      width: size(320px);
+    }
+  }
+
+  svg {
+    width: size(100px);
+    height: size(100px);
+
+    @include vp-1365 {
+      width: size(72px);
+      height: size(72px);
+    }
+  }
+
+  button {
+    position: absolute;
+    z-index: 2;
+    top: calc(50% - size(50px));
+    left: calc(50% - size(50px));
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+
+    @include vp-1365 {
+      top: calc(50% - size(36px));
+      left: calc(50% - size(36px));
+    }
+  }
+}
+
+.about__preview-cover {
+  position: absolute;
+  z-index: 1;
+  width: size(364px);
+  height: size(228px);
+  background-color: rgba(20, 54, 122, 0.50);
+
+  @include vp-1365 {
+    width: size(265px);
+    height: size(167px);
+  }
+
+  @include vp-767 {
+    width: size(320px);
+  }
+}
+
+.about__video-iframe {
+  object-fit: cover;
+  width: size(364px);
+  height: size(228px);
+}
+
+.about__video-iframe--hidden {
+  display: none;
 }
