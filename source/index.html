@@ -44,21 +44,22 @@
               width="500" type="image/webp">
             <source media="(min-width: 768px)" srcset="img/hero_img_tablet.webp, img/hero_img_tablet@2x.webp 2x"
               width="324" type="image/webp">
-            <img width="324" height="390" srcset="img/hero_img_tablet.webp, img/hero_img_tablet@2.webp 2x"
-              src="img/hero_img_tablet.jpg" alt="фотография супер-мена">
+            <img width="0" height="0" srcset="" src="" alt="фотография супер-мена">
           </picture>
         </span>
       </div>
     </header>
 
     <main>
-      <section data-test="about">
+      <section class="about" data-test="about">
         <div class="about__container container">
           <div class="about__content">
             <h2>Тренажерный зал</h2>
             <h3>Просторный зал площадью 900 кв/м</h3>
-            <p>Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела<br class="mobile-only">и здоровья.
-              Тренажерный зал оснащен всем необходимым современным оборудованием<br class="mobile-only">для всех спортсменов.</p>
+            <p>Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела<br
+                class="mobile-only">и здоровья.
+              Тренажерный зал оснащен всем необходимым современным оборудованием<br class="mobile-only">для всех
+              спортсменов.</p>
             <p>В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажерами. Также в фитнес центре есть
               несколько оборудованных залов для различных видов групповых занятий. </p>
           </div>
@@ -72,7 +73,6 @@
                 src="img/gym_mobile.jpg" alt="фотография тренажерного зала">
             </picture>
           </span>
-
           <span class="about__video video">
             <span class="about__video-preview">
               <button class="about__preview-button">
@@ -111,7 +111,7 @@
           </span>
         </div>
       </section>
-      <section data-test="price">
+      <section class="price" data-test="price">
         <div class="price__container container">
           <h2>Абонементы</h2>
           <div class="price__options">
@@ -124,40 +124,52 @@
           <div class="price__options-list">
             <ul>
               <li>
-                <div class="price__current-background"></div>
+                <div class="price__background"></div>
                 <div class="price__option-content">
                   <h3>С тренером</h3>
                   <h4>12 занятий</h4>
                   <p>
                     <span class="price__shadow">5000</span>
                     <span>5000</span>
-                    <span>&#8381;</span>
+                    <span>
+                      <svg aria-hidden="true" focusable="false" width="30" height="42">
+                        <use href="img/sprite.svg#ruble"></use>
+                      </svg>
+                    </span>
                   </p>
                   <a href="blank.html">Купить абонемент</a>
                 </div>
               </li>
-              <li class="price__option-current">
-                <div class="price__current-background"></div>
+              <li class="price__item-current">
+                <div class="price__background"></div>
                 <div class="price__option-content">
                   <h3>Дневной</h3>
                   <h4>с 8:00 до 17:00</h4>
                   <p>
                     <span class="price__shadow">1700</span>
                     <span>1700</span>
-                    <span>&#8381;</span>
+                    <span>
+                      <svg aria-hidden="true" focusable="false" width="30" height="42">
+                        <use href="img/sprite.svg#ruble"></use>
+                      </svg>
+                    </span>
                   </p>
                   <a href="blank.html">Купить абонемент</a>
                 </div>
               </li>
               <li>
-                <div class="price__current-background"></div>
+                <div class="price__background"></div>
                 <div class="price__option-content">
                   <h3>Полный день</h3>
                   <h4>с 8:00 до 22:00</h4>
                   <p>
                     <span class="price__shadow">2700</span>
                     <span>2700</span>
-                    <span>&#8381;</span>
+                    <span>
+                      <svg aria-hidden="true" focusable="false" width="30" height="42">
+                        <use href="img/sprite.svg#ruble"></use>
+                      </svg>
+                    </span>
                   </p>
                   <a href="blank.html">Купить абонемент</a>
                 </div>
@@ -169,15 +181,51 @@
               <source media="(min-width: 1366px)"
                 srcset="img/weight_plate_desktop.webp, img/weight_plate_desktop@2x.webp 2x" width="287"
                 type="image/webp">
-              <img width="327" height="423"
-                srcset="img/weight_plate_tablet.webp, img/weight_plate_tablet@2x.webp 2x"
-                src="img/weight_plate_tablet.jpg" alt="">
+              <source media="(min-width: 768px)"
+                srcset="img/weight_plate_tablet.webp, img/weight_plate_tablet@2x.webp 2x" width="327" type="image/webp">
+              <img width="0" height="0" srcset="" src="" alt="">
             </picture>
           </div>
         </div>
       </section>
-      <section data-test="games">
-
+      <section class="games" data-test="games">
+        <div class="games__container container">
+          <div class="games__banner">
+            <div class="games__content">
+              <h3>Super Games</h3>
+              <div class="games__data">
+                <h4>Дата</h4>
+                <div>
+                  <p>7</p>
+                  <p>Марта</p>
+                  <p>2019</p>
+                </div>
+              </div>
+              <div class="games__time">
+                <h4>Время</h4>
+                <div>
+                  <p>12:00</p>
+                </div>
+              </div>
+              <h4>Ежегодные соревнования по CrossFit</h4>
+              <a href="blank.html">Заполнить заявку</a>
+            </div>
+            <div class="games__img">
+              <picture>
+                <source media="(min-width: 1366px)"
+                  srcset="img/games_img_desktop.webp, img/games_img_desktop@2x.webp 2x" width="660" type="image/webp">
+                <source media="(min-width: 768px)" srcset="img/games_img_tablet.webp, img/games_img_tablet@2x.webp 2x"
+                  width="386" type="image/webp">
+                <img width="290" height="292" srcset="img/games_img_mobile.webp, img/games_img_mobile@2x.webp 2x"
+                  src="img/games_img_mobile.jpg" alt="">
+              </picture>
+            </div>
+          </div>
+          <div class="games__jury">
+            <h2>Жюри</h2>
+            <div class="games__jury-slider"></div>
+          </div>
+        </div>
       </section>
       <section data-test="features">
 

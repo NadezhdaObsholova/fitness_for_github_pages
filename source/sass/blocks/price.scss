@@ -2,7 +2,7 @@
   position: relative;
   background-color: $color-basic-grey;
   padding-top: size(82px);
-  padding-bottom: size(108px);
+  padding-bottom: size(120px);
 
   @include vp-1365 {
     padding-top: size(62px);
@@ -101,7 +101,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 0;
+    margin: 0;
     padding: 0;
     padding-top: size(37px);
 
@@ -113,8 +113,8 @@
 
     @include vp-767 {
       padding-top: size(35px);
+      gap: size(40px);
     }
-
   }
 
   li {
@@ -126,22 +126,41 @@
 
     @include vp-1365 {
       width: size(440px);
-      }
-  }
-
-  .price__current-background {
-    grid-row: 1/2;
-    grid-column: 1/2;
-    width: 100%;
-    height: 100%;
-    background-color: $color-default-white;
+    }
   }
 
   li:hover {
-    .price__current-background {
+    .price__background {
       background: linear-gradient(135deg, #ED0233, #003EB7);
     }
+
+    a {
+      color: $color-default-white;
+      background: var(--1, linear-gradient(97deg, #ED0233 17.6%, #003EB7 95.31%));
+      outline: none;
+    }
   }
+
+  li.price__item-current {
+    .price__background {
+      background: linear-gradient(135deg, #ED0233, #003EB7);
+    }
+
+    a {
+      color: $color-default-white;
+      background: var(--1, linear-gradient(97deg, #ED0233 17.6%, #003EB7 95.31%));
+      outline: none;
+    }
+  }
+
+}
+
+.price__background {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  width: 100%;
+  height: 100%;
+  background-color: $color-default-white;
 }
 
 .price__option-content {
@@ -153,11 +172,12 @@
   box-sizing: border-box;
   width: calc(100% - size(14px));
   background-color: $color-default-white;
-  padding: size(58px) 0;
+  padding: size(59px) 0;
   margin: size(7px);
 
   @include vp-767 {
     padding-top: size(42px);
+    padding-bottom: size(42px);
   }
 
   h3 {
@@ -171,6 +191,11 @@
       font-size: size(24px);
       line-height: size(24px);
     }
+
+    @include vp-767 {
+      font-size: size(22px);
+      line-height: size(22px);
+    }
   }
 
   h4 {
@@ -182,6 +207,11 @@
     @include vp-1365 {
       margin-top: size(15px);
     }
+
+    @include vp-767 {
+      font-size: size(14px);
+      line-height: size(22px);
+    }
   }
 
   a {
@@ -190,25 +220,16 @@
     line-height: size(12px);
     letter-spacing: size(0.6px);
     text-transform: uppercase;
-    padding-top: size(25px);
-    padding-bottom: size(25px);
-    padding-left: size(45px);
-    padding-right: size(45px);
-    border: size(2px) solid $color-default-black;
+    padding: size(25px) size(45px);
+    outline: size(2px) solid $color-default-black;
 
     @include vp-1365 {
       font-weight: 400;
-      padding-top: size(20px);
-      padding-bottom: size(20px);
+      padding: size(22px) size(45px);
     }
 
     @include vp-767 {
-      padding-top: size(20px);
-      padding-bottom: size(20px);
-      padding-left: size(86px);
-      padding-right: size(86px);
-      grid-column: 1/3;
-      letter-spacing: size(0.5px);
+      padding: size(21px) size(44px);
     }
   }
 
@@ -217,11 +238,16 @@
     display: flex;
     gap: size(15px);
     margin-top: size(46px);
-    margin-bottom: size(38px);
+    margin-bottom: size(39px);
 
     @include vp-1365 {
       margin-top: size(52px);
-      margin-bottom: size(27px);
+      margin-bottom: size(25px);
+    }
+
+    @include vp-767 {
+      margin-top: size(45px);
+      margin-bottom: size(23px);
     }
   }
 
@@ -231,6 +257,22 @@
     font-size: size(60px);
     line-height: size(90px);
     z-index: 1;
+    color: #103aae;
+
+    @include vp-767 {
+      font-size: size(48px);
+      line-height: size(72px);
+    }
+  }
+
+  svg {
+    width: size(30px);
+    height: size(42px);
+
+    @include vp-767 {
+      width: size(24px);
+      height: size(33px);
+    }
   }
 
   .price__shadow {
@@ -241,6 +283,11 @@
     color: #e8e8e8;
     top: size(-55px);
     left: size(-17px);
+
+    @include vp-767 {
+      font-size: size(80px);
+      line-height: size(120px);
+    }
   }
 }
 
@@ -251,9 +298,9 @@
 
   @include vp-1365 {
     bottom: size(-123px);
-    }
+  }
 
-    @include vp-767 {
-     display: none;
-      }
+  @include vp-767 {
+    display: none;
+  }
 }
