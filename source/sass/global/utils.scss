@@ -69,3 +69,12 @@
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
 }
+
+.mobile-only {
+  display: none;
+
+  @include vp-767 {
+    display: block;
+  }
+
+}

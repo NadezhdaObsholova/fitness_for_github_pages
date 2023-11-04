@@ -96,18 +96,18 @@
     @include vp-1365 {
       width: size(502px);
       margin: size(10px) auto;
-      letter-spacing: 0.2px;
       text-align: center;
       margin-bottom: size(40px);
     }
 
     @include vp-767 {
-      width: size(280px);
+      width: size(290px);
       font-size: size(14px);
       line-height: size(22px);
       text-align: left;
       margin-top: size(38px);
       margin-bottom: size(52px);
+
     }
   }
 

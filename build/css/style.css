@@ -572,6 +572,15 @@ button,
   outline: none;
 }
 
+.mobile-only {
+  display: none;
+}
+@media (max-width: 767px) {
+  .mobile-only {
+    display: block;
+  }
+}
+
 .container {
   width: 100%;
   max-width: 85.375rem;
@@ -1619,14 +1628,13 @@ button,
   .about__content p {
     width: 31.375rem;
     margin: 0.625rem auto;
-    letter-spacing: 0.2px;
     text-align: center;
     margin-bottom: 2.5rem;
   }
 }
 @media (max-width: 767px) {
   .about__content p {
-    width: 17.5rem;
+    width: 18.125rem;
     font-size: 0.875rem;
     line-height: 1.375rem;
     text-align: left;
