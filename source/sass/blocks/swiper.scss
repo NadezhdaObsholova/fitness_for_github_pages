@@ -1,0 +1,189 @@
+.swiper {
+
+  h2 {
+    font-family: "AlumniSans";
+    font-size: size(54px);
+    line-height: size(54px);
+    font-weight: 600;
+    letter-spacing: size(1.62px);
+    margin-top: size(-5px);
+    margin-bottom: 0;
+
+    @include vp-1365 {
+      font-size: size(42px);
+      line-height: size(42px);
+      letter-spacing: size(1.26px);
+      text-align: center;
+    }
+
+    @include vp-767 {
+      font-size: size(32px);
+      line-height: size(32px);
+      text-align: left;
+      letter-spacing: size(0.96px);
+    }
+  }
+}
+
+.swiper__holder {
+  position: relative;
+  margin-top: size(45px);
+
+  @include vp-1365 {
+    margin: size(37px) auto 0 auto;
+    width: size(568px);
+  }
+
+  @include vp-767 {
+    margin-top: size(42px);
+  }
+}
+
+.swiper__button-prev,
+.swiper__button-next {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  svg {
+    width: size(18px);
+    height: size(34px);
+  }
+
+  path {
+    stroke: #102654;
+  }
+
+  top: calc(50% - size(20px));
+}
+
+.swiper__button-prev {
+  left: size(-62px);
+}
+
+.swiper__button-next {
+  right: size(-62px);
+}
+
+.swiper__slides-holder {
+  position: relative;
+  height: size(294px);
+  overflow: hidden;
+}
+
+.swiper__slides {
+  position: absolute;
+  display: flex;
+  gap: size(40px);
+
+  @include vp-1365 {
+    gap: size(32px);
+    }
+}
+
+
+.swiper__slide {
+  display: grid;
+  justify-items: center;
+  align-items: end;
+
+  h3 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    font-size: size(22px);
+    line-height: size(22px);
+    font-weight: 400;
+    color: $color-default-white;
+  }
+}
+
+.swiper__slide-img {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  width: size(260px);
+  height: size(294px);
+
+  @include vp-1365 {
+  width: size(268px);
+  height: size(294px);
+  }
+
+  @include vp-767 {
+    width: size(226px);
+    height: size(274px);
+    }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.swiper__info-container {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  display: grid;
+  height: 100%;
+  overflow: scroll;
+}
+
+.swiper__info-background {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  background-color: thistle;
+  background-color: rgba(16, 38, 84, 0.89);
+  box-shadow: (0px 0px 35px rgba(42, 59, 99, 0.17));
+}
+
+.slider__info {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: size(45px) size(40px);
+  color: $color-default-white;
+
+  @include vp-767 {
+    padding: size(35px) size(30px);
+    }
+
+  h4 {
+    font-size: size(22px);
+    line-height: size(22px);
+    font-weight: 400;
+    margin: 0;
+
+    @include vp-767 {
+      font-size: size(18px);
+      line-height: size(18px);
+      }
+  }
+
+  p {
+    font-size: size(16px);
+    line-height: size(24px);
+    font-weight: 300;
+    margin-top: size(8px);
+    margin-bottom: size(27px);
+
+    @include vp-767 {
+      font-size: size(14px);
+      line-height: size(18px);
+      }
+  }
+
+  ul {
+    font-size: size(14px);
+    line-height: size(22px);
+    padding-left: size(20px);
+    margin: 0;
+  }
+
+  li {
+    padding: size(6px) 0;
+  }
+}

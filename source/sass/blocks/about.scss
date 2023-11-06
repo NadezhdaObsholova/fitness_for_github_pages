@@ -11,7 +11,7 @@
     display: flex;
     flex-direction: column;
     padding-top: size(105px);
-    padding-bottom: size(185px);
+    padding-bottom: size(180px);
     gap: 0;
   }
 
@@ -91,7 +91,7 @@
   p {
     margin: size(10px) 0;
     font-weight: 300;
-    letter-spacing: size(0.2px);
+    letter-spacing: 0;
 
     @include vp-1365 {
       width: size(502px);
@@ -131,7 +131,7 @@
     width: size(265px);
     height: size(167px);
     right: calc(50% - size(133px));
-    top: calc(100% - size(271px));
+    top: calc(100% - size(265px));
   }
 
   @include vp-767 {

@@ -171,15 +171,15 @@
     text-decoration: none;
     color: white;
     text-transform: uppercase;
-    letter-spacing: 0.8px;
     padding-top: size(25px);
     padding-bottom: size(25px);
-    padding-left: size(56px);
-    padding-right: size(56px);
+    padding-left: size(58px);
+    padding-right: size(58px);
     font-size: size(12px);
     line-height: size(12px);
     font-weight: 700;
     border: size(2px) solid $color-default-white;
+    user-select: none;
 
     @include vp-1365 {
       font-weight: 400;

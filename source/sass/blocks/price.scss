@@ -5,11 +5,13 @@
   padding-bottom: size(120px);
 
   @include vp-1365 {
-    padding-top: size(62px);
+    padding-top: size(67px);
+    padding-bottom: size(95px);
   }
 
   @include vp-767 {
     padding-top: size(47px);
+    padding-bottom: size(75px);
   }
 
   h2 {
@@ -222,6 +224,7 @@
     text-transform: uppercase;
     padding: size(25px) size(45px);
     outline: size(2px) solid $color-default-black;
+    user-select: none;
 
     @include vp-1365 {
       font-weight: 400;
@@ -292,15 +295,25 @@
 }
 
 .price__weight-plate {
+  display: flex;
   position: absolute;
   right: 0;
-  bottom: size(-147px);
+  bottom: size(-155px);
 
   @include vp-1365 {
-    bottom: size(-123px);
+    bottom: size(-150px);
   }
 
   @include vp-767 {
     display: none;
+  }
+
+  img {
+    width: size(284px);
+    height: size(497px);
+    @include vp-1365 {
+      width: size(327px);
+      height: size(423px);
+    }
   }
 }
