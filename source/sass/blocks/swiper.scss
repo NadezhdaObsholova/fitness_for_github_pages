@@ -36,6 +36,7 @@
 
   @include vp-767 {
     margin-top: size(42px);
+    width: size(226px);
   }
 }
 
@@ -47,8 +48,13 @@
   cursor: pointer;
 
   svg {
-    width: size(18px);
-    height: size(34px);
+    width: size(16px);
+    height: size(32px);
+
+    @include vp-767 {
+      width: size(10px);
+      height: size(19px);
+    }
   }
 
   path {
@@ -60,10 +66,16 @@
 
 .swiper__button-prev {
   left: size(-62px);
+  @include vp-767 {
+    left: size(-32px);
+  }
 }
 
 .swiper__button-next {
   right: size(-62px);
+  @include vp-767 {
+    right: size(-32px);
+  }
 }
 
 .swiper__slides-holder {

@@ -2427,6 +2427,7 @@ button,
 @media (max-width: 767px) {
   .swiper__holder {
     margin-top: 2.625rem;
+    width: 14.125rem;
   }
 }
 
@@ -2440,8 +2441,15 @@ button,
 }
 .swiper__button-prev svg,
 .swiper__button-next svg {
-  width: 1.125rem;
-  height: 2.125rem;
+  width: 1rem;
+  height: 2rem;
+}
+@media (max-width: 767px) {
+  .swiper__button-prev svg,
+.swiper__button-next svg {
+    width: 0.625rem;
+    height: 1.1875rem;
+  }
 }
 .swiper__button-prev path,
 .swiper__button-next path {
@@ -2451,9 +2459,19 @@ button,
 .swiper__button-prev {
   left: -3.875rem;
 }
+@media (max-width: 767px) {
+  .swiper__button-prev {
+    left: -2rem;
+  }
+}
 
 .swiper__button-next {
   right: -3.875rem;
+}
+@media (max-width: 767px) {
+  .swiper__button-next {
+    right: -2rem;
+  }
 }
 
 .swiper__slides-holder {
