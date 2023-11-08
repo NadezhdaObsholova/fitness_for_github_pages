@@ -76,5 +76,16 @@
   @include vp-767 {
     display: block;
   }
+}
 
+.tablet-only {
+  display: none;
+
+  @include vp-1365 {
+    display: block;
+  }
+  
+  @include vp-767 {
+    display: none;
+  }
 }

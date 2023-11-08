@@ -1,0 +1,257 @@
+.offers {
+  padding-top: size(120px);
+  padding-bottom: size(120px);
+
+  @include vp-1365 {
+  padding-top: size(100px);
+  }
+
+  @include vp-767 {
+    padding-top: size(68px);
+    padding-bottom: size(70px);
+    }
+
+  h2 {
+    font-family: "AlumniSans";
+    font-size: size(54px);
+    line-height: size(54px);
+    font-weight: 600;
+    letter-spacing: size(1.62px);
+    text-align: center;
+    margin-bottom: size(34px);
+    margin: 0;
+
+    @include vp-1365 {
+      font-size: size(42px);
+      line-height: size(42px);
+      letter-spacing: size(1.26px);
+    }
+
+    @include vp-767 {
+      font-size: size(32px);
+      line-height: size(32px);
+      letter-spacing: size(0.96px);
+      margin-bottom: size(22px);
+    }
+  }
+}
+
+.offers__wrapper {
+  display: grid;
+  grid-template-columns: size(560px) size(560px);
+  gap: size(40px);
+  padding-top: size(70px);
+
+  @include vp-1365 {
+    display: flex;
+    flex-direction: column;
+    gap: size(30px);
+    padding-top: size(40px);
+  }
+
+  @include vp-767 {
+    padding-top: size(20px);
+    gap: size(40px);
+  }
+}
+
+.offers__banner {
+  display: flex;
+
+  @include vp-767 {
+flex-direction: column;
+  }
+}
+
+.offers__info {
+  display: flex;
+  flex-direction: column;
+  width: size(280px);
+  min-height: size(462px);
+  color: $color-default-white;
+  background-color: #ed0233;
+  padding: size(40px) size(45px) size(50px);
+
+
+  @include vp-1365 {
+    width: size(279px);
+    padding: size(43px) size(45px) size(45px);
+  }
+
+  @include vp-767 {
+    width: 100%;
+    min-height: size(300px);
+    padding: size(43px) size(45px) size(45px);
+    align-items: center;
+  }
+
+  .offers__description {
+    font-size: size(18px);
+    line-height: size(24px);
+    font-weight: 300;
+    margin: 0;
+
+    @include vp-767 {
+      font-size: size(16px);
+      line-height: size(20px);
+    }
+  }
+
+  a {
+    color: $color-default-white;
+    border-bottom: size(2px) solid $color-default-white;
+  }
+}
+
+.offers__link {
+  flex-grow: 1;
+  display: flex;
+  margin: 0;
+  align-items: end;
+
+  a {
+    font-size: size(14px);
+    line-height: size(14px);
+    font-weight: 700;
+    letter-spacing: size(0.7px);
+    text-transform: uppercase;
+    border-bottom: size(2px) solid $color-default-white;
+  }
+}
+
+.offers__period {
+  font-size: size(26px);
+  line-height: size(26px);
+  font-weight: 700;
+  margin: 0;
+
+  @include vp-1365 {
+    font-size: size(24px);
+    line-height: size(24px);
+  }
+
+  @include vp-767 {
+    font-size: size(22px);
+    line-height: size(22px);
+  }
+}
+
+.offers__price {
+  font-size: size(70px);
+  line-height: size(70px);
+  font-weight: 700;
+  margin-top: size(15px);
+  margin-bottom: size(25px);
+
+  @include vp-1365 {
+    margin-top: size(8px);
+    margin-bottom: size(20px);
+  }
+
+  @include vp-767 {
+    font-size: size(64px);
+    line-height: size(64px);
+  }
+}
+
+.offers__img {
+  display: flex;
+  width: size(280px);
+
+  @include vp-1365 {
+    width: size(399px);
+  }
+
+  img {
+    height: 100%;
+    width: size(290px);
+    object-fit: cover;
+  }
+}
+
+.offers__list {
+  display: flex;
+  flex-direction: column;
+  gap: size(40px);
+
+  @include vp-1365 {
+    display: grid;
+    grid-template-columns: size(324px) size(324px);
+    gap: size(30px);
+  }
+
+  @include vp-1365 {
+    display: grid;
+    grid-template-columns: size(290px);
+    gap: size(30px);
+  }
+}
+
+.offers__item {
+  display: grid;
+  flex-grow: 1;
+  min-height: size(211px);
+}
+
+.offers__item-background {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  background: linear-gradient(160deg, #ED0233, #003EB7);
+}
+
+.offers__item-content {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  display: flex;
+  flex-direction: column;
+  margin: size(7px);
+  background-color: $color-default-white;
+  padding: size(23px) size(28px);
+  padding-bottom: size(34px);
+
+  @include vp-1365 {
+    padding-bottom: size(28px);
+  }
+
+  @include vp-767 {
+    align-items: center;
+    padding: size(38px) size(28px);
+    padding-bottom: size(35px);
+  }
+
+  h3 {
+    margin: 0;
+    font-size: size(26px);
+    line-height: size(26px);
+    font-weight: 700;
+
+
+    @include vp-1365 {
+      font-size: size(24px);
+      line-height: size(24px);
+    }
+
+    @include vp-767 {
+      font-size: size(22px);
+      line-height: size(22px);
+    }
+  }
+
+  p {
+    font-size: size(16px);
+    font-weight: 300;
+    margin-top: size(10px);
+
+    @include vp-767 {
+      font-size: size(14px);
+      line-height: size(22px);
+      text-align: center;
+    }
+  }
+
+  a {
+    display: block;
+    padding-bottom: size(3px);
+    border-bottom: size(2px) solid ;
+  }
+}

@@ -71,6 +71,7 @@
       font-size: size(14px);
       line-height: size(14px);
       margin: 0;
+
       @include vp-1365 {
         font-size: size(10px);
         line-height: size(10px);
@@ -81,6 +82,7 @@
       font-weight: 700;
       font-size: size(40px);
       line-height: size(40px);
+
       @include vp-1365 {
         font-size: size(24px);
         line-height: size(24px);
@@ -104,13 +106,11 @@
         padding-top: size(3px);
         column-gap: size(5px);
       }
-
     }
 
     p:first-of-type {
       grid-column: 1/2;
       grid-row: 1/3;
-
     }
   }
 
