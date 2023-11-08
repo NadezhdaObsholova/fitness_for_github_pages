@@ -1,9 +1,9 @@
-import Swiper from './vendor/swiper.js';
+import Swiper from '../../vendor';
 
 const swiperWrapper = document.querySelector('.swiper');
 const buttonPrev = document.querySelector('.swiper__button-prev');
 const buttonNext = document.querySelector('.swiper__button-next');
-//const slidesArray = Array.from(document.querySelectorAll('.swiper__slide'));
+const slidesArray = Array.from(document.querySelectorAll('.swiper__slide'));
 
 const swiper = new Swiper(swiperWrapper, {
   direction: 'horizontal',
