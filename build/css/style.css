@@ -2603,7 +2603,7 @@ button,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 2.8125rem 1.875rem;
+  padding: 2.5rem 1.875rem;
   color: #ffffff;
 }
 @media (max-width: 767px) {

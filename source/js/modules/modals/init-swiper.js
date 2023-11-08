@@ -1,9 +1,16 @@
-import Swiper from '../../vendor';
+import Swiper from '../../vendor/swiper';
 
 const swiperWrapper = document.querySelector('.swiper');
+console.log(swiperWrapper);
+
 const buttonPrev = document.querySelector('.swiper__button-prev');
+console.log(buttonPrev);
+
 const buttonNext = document.querySelector('.swiper__button-next');
+console.log(buttonNext);
+
 const slidesArray = Array.from(document.querySelectorAll('.swiper__slide'));
+console.log(slidesArray);
 
 const swiper = new Swiper(swiperWrapper, {
   direction: 'horizontal',
@@ -29,6 +36,5 @@ const swiper = new Swiper(swiperWrapper, {
     },
   },
 });
-
 
 export {swiper};
