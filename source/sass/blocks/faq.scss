@@ -1,27 +1,116 @@
+.faq {
+  background-color: $color-basic-grey;
+}
+
 .faq__container {
   padding-top: size(110px);
 
   h2 {
-  font-family: "AlumniSans";
-  font-size: size(54px);
-  line-height: size(54px);
-  font-weight: 600;
-  letter-spacing: size(1.62px);
-  text-align: left;
-  margin-bottom: size(34px);
+    font-family: "AlumniSans";
+    font-size: size(54px);
+    line-height: size(54px);
+    font-weight: 600;
+    letter-spacing: size(1.62px);
+    text-align: left;
+    margin: 0;
+    margin-bottom: size(51px);
+
+    @include vp-1365 {
+      font-size: size(42px);
+      line-height: size(42px);
+      letter-spacing: size(1.26px);
+    }
+
+    @include vp-767 {
+      font-size: size(32px);
+      line-height: size(32px);
+      letter-spacing: size(0.96px);
+      margin-bottom: size(22px);
+    }
+  }
+}
+
+.faq__wrapper {
+  display: grid;
+  grid-template-columns: size(260px) size(860px);
+  column-gap: size(40px);
+}
+
+.faq__topics {
+  display: flex;
+  flex-direction: column;
+  gap: size(10px);
+
+  .faq__item {
+    font-size: size(18px);
+    font-weight: 400;
+    line-height: size(18px);
+    min-height: size(54px);
+    background-color: transparent;
+    border: none;
+    outline: 1px solid rgba(16, 38, 84, 0.20);
+
+    @include hover-focus {
+      color: $color-default-white;
+      background: var(--1, linear-gradient(97deg, #ED0233 17.6%, #003EB7 95.31%));
+      outline: none;
+    }
+  }
+}
+
+.faq__info {
+  display: grid;
+  border-top: 1px solid rgba(28, 51, 116, 0.20);
+}
+
+.faq__info-list {
+  grid-column: 1/2;
+  grid-row: 1/2;
   margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
-  @include vp-1365 {
-    font-size: size(42px);
-    line-height: size(42px);
-    letter-spacing: size(1.26px);
+.faq__info-item {
+  display: grid;
+  grid-template-columns: 1fr size(40px);
+  column-gap: size(160px);
+  padding-top: size(30px);
+  border-bottom: size(1px) solid rgba(28, 51, 116, 0.20);
+
+  h3 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    font-size: size(24px);
+    font-weight: 400;
+    line-height: size(24px);
+    margin-top: size(10px);
+    margin-bottom: 0;
   }
 
-  @include vp-767 {
-    font-size: size(32px);
-    line-height: size(32px);
-    letter-spacing: size(0.96px);
-    margin-bottom: size(22px);
+  p {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    font-size: size(18px);
+    font-weight: 300;
+    line-height: size(24px);
+    margin-top: size(9px);
   }
-}
-}
+
+  button {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    width: size(40px);
+    height: size(40px);
+    }
+  }
+
+
+
+
+
+
+

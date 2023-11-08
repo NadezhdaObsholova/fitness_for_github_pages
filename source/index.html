@@ -73,8 +73,8 @@
                 src="img/gym_mobile.jpg" alt="фотография тренажерного зала">
             </picture>
           </span>
-          <span class="about__video video">
-            <span class="about__video-preview">
+          <div class="about__video video">
+            <div class="about__video-preview">
               <button class="about__preview-button">
                 <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle opacity="0.2" cx="50" cy="50" r="49" stroke="#ED0233" stroke-width="2" />
@@ -101,14 +101,14 @@
                   srcset="img/video_preview_mobile.webp, img/video_preview_mobile@2x.webp 2x"
                   src="img/video_preview_mobile.jpg" alt="видео тренажерного зала">
               </picture>
-            </span>
+            </div>
             <span class="about__video-iframe about__video-iframe--hidden">
               <iframe width="364" height="228" src="https://www.youtube.com/embed/9TZXsZItgdw?si=ADi1Rl8ggbDzAEyn"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen></iframe>
             </span>
-          </span>
+          </div>
         </div>
       </section>
       <section class="price" data-test="price">
@@ -488,101 +488,242 @@
               </div>
             </div>
           </div>
-
+        </div>
       </section>
       <section data-test="offers" id="offers" class="offers">
         <div class="offers__container container">
           <h2>Акции</h2>
           <div class="offers__wrapper">
-          <div class="offers__banner">
-            <div class="offers__info">
-              <p class="offers__period">
-                <span>Год</span>
-              </p>
-              <p class="offers__price">
-                <span>4999</span>
-              </p>
-              <p class="offers__description">
-                <span>Безлимитный абонемент в тренажерный зал</span>
-              </p>
-              <p class="offers__link">
-                <a href="#">Подробнее</a>
-              </p>
-            </div>
-            <div class="offers__img">
-              <picture>
-                <source media="(min-width: 1366px)"
-                  srcset="img/offers_img_desktop.webp, img/offers_img_desktop@2x.webp 2x" width="280" type="image/webp">
-                <source media="(min-width: 768px)" srcset="img/offers_img_tablet.webp, img/offers_img_tablet@2x.webp 2x"
-                  width="399" type="image/webp">
-                <img width="290" height="330" srcset="img/offers_img_mobile.webp, img/offers_img_mobile@2x.webp 2x"
-                  src="img/offers_img_mobile.jpg" alt="">
-              </picture>
-            </div>
-          </div>
-          <div class="offers__list">
-            <div class="offers__item">
-              <div class="offers__item-background"></div>
-              <div class="offers__item-content">
-                <h3>Месяц бесплатно</h3>
-                <p>Приведи друга, получи <br class="mobile-only">абонемент <br class="tablet-only">в подарок</p>
+            <div class="offers__banner">
+              <div class="offers__info">
+                <p class="offers__period">
+                  <span>Год</span>
+                </p>
+                <p class="offers__price">
+                  <span>4999</span>
+                </p>
+                <p class="offers__description">
+                  <span>Безлимитный абонемент в тренажерный зал</span>
+                </p>
                 <p class="offers__link">
                   <a href="#">Подробнее</a>
                 </p>
               </div>
-            </div>
-            <div class="offers__item">
-              <div class="offers__item-background"></div>
-              <div class="offers__item-content">
-                <h3>Скидка 20%</h3>
-                <p>Корпоративный фитнес с <br class="mobile-only">командой</p>
-                <p class="offers__link">
-                  <a href="#">Подробнее</a>
-                </p>
+              <div class="offers__img">
+                <picture>
+                  <source media="(min-width: 1366px)"
+                    srcset="img/offers_img_desktop.webp, img/offers_img_desktop@2x.webp 2x" width="280"
+                    type="image/webp">
+                  <source media="(min-width: 768px)"
+                    srcset="img/offers_img_tablet.webp, img/offers_img_tablet@2x.webp 2x" width="399" type="image/webp">
+                  <img width="290" height="330" srcset="img/offers_img_mobile.webp, img/offers_img_mobile@2x.webp 2x"
+                    src="img/offers_img_mobile.jpg" alt="">
+                </picture>
               </div>
             </div>
-          </div>
+            <div class="offers__list">
+              <div class="offers__item">
+                <div class="offers__item-background"></div>
+                <div class="offers__item-content">
+                  <h3>Месяц бесплатно</h3>
+                  <p>Приведи друга, получи <br class="mobile-only">абонемент <br class="tablet-only">в подарок</p>
+                  <p class="offers__link">
+                    <a href="#">Подробнее</a>
+                  </p>
+                </div>
+              </div>
+              <div class="offers__item">
+                <div class="offers__item-background"></div>
+                <div class="offers__item-content">
+                  <h3>Скидка 20%</h3>
+                  <p>Корпоративный фитнес с <br class="mobile-only">командой</p>
+                  <p class="offers__link">
+                    <a href="#">Подробнее</a>
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+
       <section data-test="faq" class="faq">
         <div class="faq__container container">
           <h2>Вопросы и ответы</h2>
           <div class="faq__wrapper">
-          <ul class="faq__topics">
-            <li>Центр</li>
-            <li>Абонемент</li>
-            <li>Услуги</li>
-            <li>Правила</li>
-          </ul>
-          <ul class="faq__questions">
-            <li>
-              <h3>Как стать членом фитнес-центра?</h3>
-              <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придет вам на почту.</p>
-              <button></button>
-            </li>
-            <li>
-              <h3>Где можно посмотреть расписание?</h3>
-              <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придет вам на почту.</p>
-              <button></button>
-            </li>
-            <li>
-              <h3>Есть кулеры в центре? Предоставляются полотенца?</h3>
-              <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придет вам на почту.</p>
-              <button></button>
-            </li>
-            <li>
-              <h3>Сколько тренеров работает в клубе и какова их квалификация?</h3>
-              <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придет вам на почту.</p>
-              <button></button>
-            </li>
-            <li>Абонемент</li>
-            <li>Услуги</li>
-            <li>Правила</li>
-          </ul>
-        </div>
+            <div class="faq__topics">
+              <button class="faq__item">Центр</button>
+              <button class="faq__item">Абонемент</button>
+              <button class="faq__item">Услуги</button>
+              <button class="faq__item">Правила</button>
+            </div>
+            <div class="faq__info">
+              <ul class="faq__info-list">
+                <li class="faq__info-item">
+                  <h3>Как стать членом фитнес-центра?</h3>
+                  <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При
+                    покупке абонемента онлайн, анкета также заполняется онлайн и договор придет вам на почту.</p>
+                  <button>
+                    <svg class="faq__svg-button visually-hidden" width="40" height="40">
+                      <use href="img/sprite.svg#faq_info_open"></use>
+                    </svg>
+                    <svg class="faq__svg-button" width="40" height="40">
+                      <use href="img/sprite.svg#faq_info_close"></use>
+                    </svg>
+                  </button>
+                </li>
+                <li class="faq__info-item">
+                  <h3>Где можно посмотреть расписание?</h3>
+                  <p class="visually-hidden">При первом посещении и покупке абонемента, необходимо заполнить анкету и
+                    подписать договор. При
+                    покупке абонемента онлайн, анкета также заполняется онлайн и договор придет вам на почту.</p>
+                  <button>
+                    <svg class="faq__svg-button" width="40" height="40">
+                      <use href="img/sprite.svg#faq_info_open"></use>
+                    </svg>
+                    <svg class="faq__svg-button visually-hidden" width="40" height="40">
+                      <use href="img/sprite.svg#faq_info_close"></use>
+                    </svg>
+                  </button>
+                </li>
+                <li class="faq__info-item">
+                  <h3>Есть кулеры в центре? Предоставляются полотенца?</h3>
+                  <p class="visually-hidden">При первом посещении и покупке абонемента, необходимо заполнить анкету и
+                    подписать договор. При
+                    покупке абонемента онлайн, анкета также заполняется онлайн и договор придет вам на почту.</p>
+                  <button>
+                    <svg class="faq__svg-button" width="40" height="40">
+                      <use href="img/sprite.svg#faq_info_open"></use>
+                    </svg>
+                    <svg class="faq__svg-button visually-hidden" width="40" height="40">
+                      <use href="img/sprite.svg#faq_info_close"></use>
+                    </svg>
+                  </button>
+                </li>
+                <li class="faq__info-item">
+                  <h3>Сколько тренеров работает в клубе и какова их квалификация?</h3>
+                  <p class="visually-hidden">При первом посещении и покупке абонемента, необходимо заполнить анкету и
+                    подписать договор. При
+                    покупке абонемента онлайн, анкета также заполняется онлайн и договор придет вам на почту.</p>
+                  <button>
+                    <svg class="faq__svg-button" width="40" height="40">
+                      <use href="img/sprite.svg#faq_info_open"></use>
+                    </svg>
+                    <svg class="faq__svg-button visually-hidden" width="40" height="40">
+                      <use href="img/sprite.svg#faq_info_close"></use>
+                    </svg>
+                  </button>
+                </li>
+              </ul>
+              <ul class="faq__info-list visually-hidden">
+                <li class="faq__info-item">
+                  <h3>Занятия с тренером входят в абонемент?</h3>
+                  <p class="visually-hidden">При посещении тренажерного зала вам необходимо оплатить занятия с тренером
+                    отдельно. В зале всегда
+                    присутствует дежурный тренер, которому можно задать вопрос, получить небольшую консультацию по
+                    тренажеру или технике выполнения упражнения.</p>
+                  <button></button>
+                </li>
+                <li class="faq__info-item">
+                  <h3>Можно ли заморозить абонемент?</h3>
+                  <p class="visually-hidden">При посещении тренажерного зала вам необходимо оплатить занятия с тренером
+                    отдельно. В зале всегда
+                    присутствует дежурный тренер, которому можно задать вопрос, получить небольшую консультацию по
+                    тренажеру или технике выполнения упражнения.</p>
+                  <button></button>
+                </li>
+                <li class="faq__info-item">
+                  <h3>Есть ли лимит по посещениям тренажерного зала и групповых занятий?</h3>
+                  <p class="visually-hidden">При посещении тренажерного зала вам необходимо оплатить занятия с тренером
+                    отдельно. В зале всегда
+                    присутствует дежурный тренер, которому можно задать вопрос, получить небольшую консультацию по
+                    тренажеру или технике выполнения упражнения.</p>
+                  <button></button>
+                </li>
+                <li class="faq__info-item">
+                  <h3>Что такое семейный доступ и доступ для друзей?</h3>
+                  <p class="visually-hidden">При посещении тренажерного зала вам необходимо оплатить занятия с тренером
+                    отдельно. В зале всегда
+                    присутствует дежурный тренер, которому можно задать вопрос, получить небольшую консультацию по
+                    тренажеру или технике выполнения упражнения.</p>
+                  <button></button>
+                </li>
+              </ul>
+              <ul class="faq__info-list visually-hidden">
+                <li class="faq__info-item">
+                  <h3>Предлагает ли клуб услуги
+                    по консультированию
+                    по вопросам питания?</h3>
+                  <p class="visually-hidden">Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу.
+                    Специалист уточнит ваши
+                    данные, цели и предложит программу питания.</p>
+                  <button></button>
+                </li>
+                <li class="faq__info-item">
+                  <h3>Проводятся ли в клубе какие-либо мероприятия или соревнования?</h3>
+                  <p class="visually-hidden">Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу.
+                    Специалист уточнит ваши
+                    данные, цели и предложит программу питания.</p>
+                  <button></button>
+                </li>
+                <li class="faq__info-item">
+                  <h3>Можно ли приобрести в центре спортивное питание?</h3>
+                  <p class="visually-hidden">Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу.
+                    Специалист уточнит ваши
+                    данные, цели и предложит программу питания.</p>
+                  <button></button>
+                </li>
+                <li class="faq__info-item">
+                  <h3>Есть ли в центре детская комната?</h3>
+                  <p class="visually-hidden">Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу.
+                    Специалист уточнит ваши
+                    данные, цели и предложит программу питания.</p>
+                  <button></button>
+                </li>
+              </ul>
+              <ul class="faq__info-list visually-hidden">
+                <li class="faq__info-item">
+                  <h3>Есть в фитнес-центре дресс-код?</h3>
+                  <p class="visually-hidden">Для тренировок необходимо иметь предназначенную для этого закрытую
+                    спортивную обувь и одежду.
+                    Верхняя и нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки,
+                    шорты, кроссовки). В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних
+                    тапочках и т. п., исключения составляют специальные классы (например, йога, пилатес). </p>
+                  <button></button>
+                </li>
+                <li class="faq__info-item">
+                  <h3>Можно ли приводить с собой детей на тренировки?</h3>
+                  <p class="visually-hidden">Для тренировок необходимо иметь предназначенную для этого закрытую
+                    спортивную обувь и одежду.
+                    Верхняя и нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки,
+                    шорты, кроссовки). В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних
+                    тапочках и т. п., исключения составляют специальные классы (например, йога, пилатес). </p>
+                  <button></button>
+                </li>
+                <li class="faq__info-item">
+                  <h3>Какие дополнительные правила посещения центра?</h3>
+                  <p class="visually-hidden">Для тренировок необходимо иметь предназначенную для этого закрытую
+                    спортивную обувь и одежду.
+                    Верхняя и нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки,
+                    шорты, кроссовки). В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних
+                    тапочках и т. п., исключения составляют специальные классы (например, йога, пилатес). </p>
+                  <button></button>
+                </li>
+                <li class="faq__info-item">
+                  <h3>Нужна ли медицинская справка для посещения залов и бассейна?</h3>
+                  <p class="visually-hidden">Для тренировок необходимо иметь предназначенную для этого закрытую
+                    спортивную обувь и одежду.
+                    Верхняя и нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки,
+                    шорты, кроссовки). В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних
+                    тапочках и т. п., исключения составляют специальные классы (например, йога, пилатес). </p>
+                  <button></button>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
+
       <section data-test="reviews">
       </section>
     </main>
