@@ -3,7 +3,18 @@
 }
 
 .faq__container {
-  padding-top: size(110px);
+  padding-top: size(120px);
+  padding-bottom: size(125px);
+
+  @include vp-1365 {
+    padding-top: size(82px);
+    padding-bottom: size(110px);
+  }
+
+  @include vp-767 {
+    padding-top: size(70px);
+    padding-bottom: size(70px);
+  }
 
   h2 {
     font-family: "AlumniSans";
@@ -13,19 +24,20 @@
     letter-spacing: size(1.62px);
     text-align: left;
     margin: 0;
-    margin-bottom: size(51px);
+    margin-bottom: size(50px);
 
     @include vp-1365 {
       font-size: size(42px);
       line-height: size(42px);
       letter-spacing: size(1.26px);
+      text-align: center;
     }
 
     @include vp-767 {
       font-size: size(32px);
       line-height: size(32px);
       letter-spacing: size(0.96px);
-      margin-bottom: size(22px);
+      margin-bottom: size(38px);
     }
   }
 }
@@ -34,12 +46,32 @@
   display: grid;
   grid-template-columns: size(260px) size(860px);
   column-gap: size(40px);
+
+  @include vp-1365 {
+    grid-template-columns: 1fr;
+    row-gap: size(37px);
+  }
+
+  @include vp-767 {
+    row-gap: size(28px);
+  }
 }
 
 .faq__topics {
   display: flex;
   flex-direction: column;
   gap: size(10px);
+
+  @include vp-1365 {
+    flex-direction: row;
+    gap: size(10px);
+  }
+
+  @include vp-767 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: size(10px);
+  }
 
   .faq__item {
     font-size: size(18px);
@@ -48,7 +80,18 @@
     min-height: size(54px);
     background-color: transparent;
     border: none;
-    outline: 1px solid rgba(16, 38, 84, 0.20);
+    outline: size(1px) solid rgba(16, 38, 84, 0.20);
+
+    @include vp-1365 {
+      width: size(162px);
+    }
+
+    @include vp-767 {
+      font-size: size(16px);
+      line-height: size(16px);
+      min-height: size(44px);
+      width: size(141px);
+    }
 
     @include hover-focus {
       color: $color-default-white;
@@ -69,14 +112,34 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
 }
 
 .faq__info-item {
   display: grid;
   grid-template-columns: 1fr size(40px);
+  grid-template-rows: 1fr min-content;
+  align-items: center;
   column-gap: size(160px);
-  padding-top: size(30px);
   border-bottom: size(1px) solid rgba(28, 51, 116, 0.20);
+  min-height: size(80px);
+  padding-top: size(24px);
+  padding-bottom: size(23px);
+
+  @include vp-1365 {
+    column-gap: size(100px);
+    min-height: size(90px);
+  }
+
+  @include vp-767 {
+    display: grid;
+    grid-template-columns: size(260px) size(30px);
+    column-gap: 0;
+    min-height: size(84px);
+    align-items: center;
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
 
   h3 {
     grid-column: 1/2;
@@ -84,8 +147,20 @@
     font-size: size(24px);
     font-weight: 400;
     line-height: size(24px);
-    margin-top: size(10px);
-    margin-bottom: 0;
+    margin: 0;
+
+    @include vp-1365 {
+      flex-grow: 1;
+      font-size: size(22px);
+      line-height: size(22px);
+    }
+
+    @include vp-767 {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      font-size: size(20px);
+      line-height: size(20px);
+    }
   }
 
   p {
@@ -94,23 +169,32 @@
     font-size: size(18px);
     font-weight: 300;
     line-height: size(24px);
-    margin-top: size(9px);
+    margin: 0;
+
+    @include vp-767 {
+      grid-column: 1/3;
+      grid-row: 2/3;
+      font-size: size(16px);
+      line-height: size(20px);
+      padding-top: 16px;
+    }
   }
 
   button {
     grid-column: 2/3;
-    grid-row: 1/3;
+    grid-row: 1/2;
     border: none;
     background-color: transparent;
     padding: 0;
-    width: size(40px);
-    height: size(40px);
+
+    svg {
+      width: size(40px);
+      height: size(40px);
+
+      @include vp-767 {
+        width: size(30px);
+        height: size(30px);
+      }
     }
   }
-
-
-
-
-
-
-
+}
