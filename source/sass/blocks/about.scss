@@ -76,7 +76,6 @@
       text-align: center;
       margin-top: size(20px);
       margin-bottom: size(33px);
-      letter-spacing: size(0.3px);
     }
 
     @include vp-767 {
@@ -106,8 +105,7 @@
       line-height: size(22px);
       text-align: left;
       margin-top: size(38px);
-      margin-bottom: size(52px);
-
+      margin-bottom: size(53px);
     }
   }
 
@@ -138,7 +136,7 @@
     width: size(320px);
     height: size(167px);
     right: calc(50% - size(160px));
-    top: calc(100% - size(236px));
+    top: calc(100% - size(238px));
   }
 
   img {
@@ -193,23 +191,6 @@
       top: calc(50% - size(36px));
       left: calc(50% - size(36px));
     }
-  }
-}
-
-.about__preview-cover {
-  position: absolute;
-  z-index: 1;
-  width: size(364px);
-  height: size(228px);
-  background-color: rgba(20, 54, 122, 0.50);
-
-  @include vp-1365 {
-    width: size(265px);
-    height: size(167px);
-  }
-
-  @include vp-767 {
-    width: size(320px);
   }
 }
 

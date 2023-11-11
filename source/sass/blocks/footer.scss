@@ -2,15 +2,32 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 
+  @include vp-1365 {
+    display: flex;
+    flex-direction: column;
+  }
+
   h2 {
     font-family: "AlumniSans";
     font-size: size(54px);
-    font-style: normal;
     font-weight: 600;
     line-height: size(54px);
     letter-spacing: size(1.62px);
     margin-top: 0;
     margin-bottom: size(33px);
+
+    @include vp-1365 {
+      font-size: size(42px);
+      line-height: size(42px);
+      letter-spacing: size(1.26px);
+    }
+
+    @include vp-767 {
+      font-size: size(32px);
+      line-height: size(32px);
+      letter-spacing: size(0.96px);
+      margin-bottom: size(36px);
+    }
   }
 }
 
@@ -18,6 +35,14 @@
   padding: size(60px) size(170px) size(60px) size(103px);
   background-color: $color-basic-dark-blue;
   color: $color-default-white;
+
+  @include vp-1365 {
+    padding: size(100px) size(133px);
+  }
+
+  @include vp-767 {
+    padding: size(71px) size(15px);
+  }
 }
 
 .footer__form {
@@ -26,13 +51,22 @@
   column-gap: size(30px);
   row-gap: size(28px);
 
+  @include vp-1365 {
+    column-gap: size(55px);
+    row-gap: size(30px);
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    row-gap: size(30px);
+  }
 
   input {
     width: 100%;
     border: none;
     background-color: transparent;
-    border: size(1px) solid #74819C;
-   // border-bottom: size(1px) solid #74819C;
+    border-bottom: size(1px) solid #74819C;
     padding-top: size(5px);
     padding-bottom: size(5px);
     font-family: inherit;
@@ -40,6 +74,17 @@
     line-height: size(22px);
     font-weight: 400;
     color: $color-default-white;
+
+    @include vp-1365 {
+      font-weight: 300;
+      padding-top: size(3px);
+      padding-bottom: size(3px);
+    }
+
+    @include vp-767 {
+      padding-left: 0;
+      letter-spacing: size(-1px);
+    }
   }
 
   input::placeholder {
@@ -48,6 +93,16 @@
     line-height: size(22px);
     font-weight: 400;
     color: $color-default-white;
+
+    @include vp-1365 {
+      font-size: size(16px);
+      font-weight: 300;
+      line-height: size(24px);
+
+      @include vp-767 {
+        line-height: size(22px);
+      }
+    }
   }
 
   button {
@@ -63,11 +118,38 @@
     border: none;
     outline: size(1px) solid $color-default-white;
     color: $color-default-white;
+
+    @include vp-1365 {
+      min-height: size(54px);
+    }
+
+    @include vp-767 {
+      min-height: size(54px);
+      margin-top: size(11px);
+    }
   }
 }
 
 .footer__contacts-holder {
   padding: size(60px) size(123px) size(60px) size(120px);
+
+  @include vp-1365 {
+    padding: size(105px) size(133px);
+    padding-bottom: size(99px);
+
+    h2 {
+      letter-spacing: size(1.65px);
+    }
+  }
+
+  @include vp-767 {
+    padding: size(66px) size(15px);
+    padding-bottom: size(67px);
+
+    h2 {
+      letter-spacing: size(1px);
+    }
+  }
 }
 
 .footer__contacts {
@@ -77,12 +159,33 @@
   grid-template-columns: 1fr 1fr;
   margin-top: size(40px);
 
+  @include vp-1365 {
+    row-gap: size(30px);
+  }
+
+  @include vp-767 {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: size(37px);
+    row-gap: size(26px);
+  }
+
   h3 {
     font-size: size(24px);
     font-weight: 400;
     line-height: size(24px);
     margin: 0;
     margin-bottom: size(7px);
+
+    @include vp-1365 {
+      font-size: size(22px);
+      line-height: size(22px);
+      margin-bottom: size(10px);
+    }
+
+    @include vp-767 {
+      letter-spacing: size(-0.8px);
+    }
   }
 
   p {
@@ -91,8 +194,31 @@
     margin: 0;
   }
 
-  div:nth-child(even) {
+  .footer__address,
+  .footer__phone {
+    display: flex;
+    flex-direction: column;
+    row-gap: size(12px);
+
+    @include vp-1365 {
+      row-gap: size(30px);
+    }
+
+    @include vp-767 {
+      row-gap: size(27px);
+    }
+  }
+
+  .footer__phone {
     padding-left: size(70px);
+
+    @include vp-1365 {
+      padding-left: size(60px);
+    }
+
+    @include vp-767 {
+      padding-left: 0;
+    }
   }
 }
 
@@ -103,6 +229,11 @@
   width: size(1px);
   background-color: #74819C;
   right: 50%;
+
+  @include vp-767 {
+    height: 0;
+    width: 0;
+  }
 }
 
 .footer__nav {
@@ -112,13 +243,35 @@
   align-items: end;
   padding: size(40px) size(103px);
   background-color: #030a1a;
+
+  @include vp-1365 {
+    padding: size(45px);
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: size(30px) size(15px);
+    gap: size(25px);
+  }
 }
 
 .footer__nav-list {
   display: flex;
   flex-wrap: wrap;
   gap: size(40px);
-  padding-right: 15px;
+  padding-right: size(15px);
+
+  @include vp-1365 {
+    gap: size(30px);
+    padding-right: size(5px);
+  }
+
+  @include vp-767 {
+    column-gap: size(35px);
+    row-gap: size(15px);
+  }
 
   a {
     display: block;
@@ -126,13 +279,43 @@
     line-height: size(22px);
     text-decoration: none;
     color: $color-default-white;
+
+    @include vp-1365 {
+      display: block;
+      padding-bottom: size(5px);
+    }
   }
+}
+
+.footer__logo {
+  padding-bottom: size(3px);
+
+  img {
+    width: size(109px);
+    height: size(24px);
+
+    @include vp-1365 {
+      width: size(100px);
+      height: size(24px);
+    }
+
+    @include vp-767 {
+      width: size(89px);
+      height: size(15px);
+    }
+  }
+
 }
 
 .footer__sotial-list {
   display: flex;
   flex-wrap: wrap;
   gap: size(10px);
+
+  @include vp-767 {
+  align-self: center;
+  margin-top: size(24px);
+  }
 }
 
 .fotter__sotial-item {

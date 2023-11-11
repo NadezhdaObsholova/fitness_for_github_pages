@@ -7,7 +7,7 @@
   padding-bottom: size(67px);
 
   @include vp-1365 {
-    padding: size(80px) size(44px) size(45px) size(44px);
+    padding: size(101px) size(44px) size(47px) size(44px);
     margin: 0 auto;
   }
 
@@ -120,11 +120,12 @@
     width: auto;
     column-gap: size(50px);
     row-gap: size(340px);
+    margin: size(50px) auto;
   }
 
   @include vp-767 {
     grid-template-columns: 1fr;
-    gap: size(38px);
+    gap: size(39px);
     margin-top: size(55px);
   }
 
@@ -159,7 +160,6 @@
   min-height: size(172px);
   border-bottom: size(2px) solid rgba(209, 10, 66, 0.20);
 
-
   @include vp-1365 {
     padding-top: 0;
     min-height: auto;
@@ -171,7 +171,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 50px;
+    padding: 0 size(50px);
   }
 
 }

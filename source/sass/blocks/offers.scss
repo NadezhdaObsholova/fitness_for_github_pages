@@ -4,6 +4,7 @@
 
   @include vp-1365 {
   padding-top: size(100px);
+  padding-bottom: size(100px);
   }
 
   @include vp-767 {
@@ -50,8 +51,8 @@
   }
 
   @include vp-767 {
-    padding-top: size(20px);
-    gap: size(40px);
+    padding-top: size(19px);
+    gap: size(38px);
   }
 }
 
@@ -81,7 +82,7 @@ flex-direction: column;
   @include vp-767 {
     width: 100%;
     min-height: size(300px);
-    padding: size(43px) size(45px) size(45px);
+    padding: size(44px) size(45px) size(47px);
     align-items: center;
   }
 
@@ -94,6 +95,7 @@ flex-direction: column;
     @include vp-767 {
       font-size: size(16px);
       line-height: size(20px);
+      text-align: center;
     }
   }
 
@@ -191,7 +193,7 @@ flex-direction: column;
     display: grid;
     grid-template-columns: auto;
     max-width: size(290px);
-    gap: size(30px);
+    gap: size(31px);
   }
 }
 
@@ -217,15 +219,10 @@ flex-direction: column;
   padding: size(23px) size(28px);
   padding-bottom: size(28px);
 
-  @include vp-1365 {
-    padding: size(23px) size(30px);
-
-  }
-
   @include vp-767 {
     align-items: center;
-    padding: size(38px) size(28px);
-    padding-bottom: size(35px);
+    padding: size(39px) size(28px);
+    padding-bottom: size(34px);
   }
 
   h3 {

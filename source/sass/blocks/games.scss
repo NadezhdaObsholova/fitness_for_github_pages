@@ -4,6 +4,7 @@
 
   @include vp-1365 {
     padding-top: size(102px);
+    padding-bottom: size(100px);
   }
 
   @include vp-767 {
@@ -39,14 +40,16 @@
     color: $color-default-white;
 
     @include vp-1365 {
-      grid-template-columns: 1fr size(54px);
-      padding: size(40px) size(45px) size(45px);
-      row-gap: size(10px);
+      grid-template-columns: 1fr size(57px);
+      padding: size(40px) size(46px) size(45px);
+      row-gap: size(9px);
     }
 
     @include vp-767 {
       padding: size(40px);
       row-gap: size(12px);
+      row-gap: size(6px);
+      padding-bottom: size(41px);
     }
 
     h3 {
@@ -89,7 +92,6 @@
         line-height: size(24px);
       }
     }
-
   }
 
   .games__data {
@@ -97,6 +99,9 @@
     grid-row: 1/2;
     min-height: size(75px);
 
+    @include vp-1365 {
+      min-height: size(48px);
+    }
   }
 
   .games__data-holder,
@@ -107,18 +112,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-
-    .games__data-holder:before,
-    .games__time-holder:before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: size(2px);
-      background-color: white;
-      top: size(29px);
-      left: size(-1px);
-    }
 
     div {
       display: grid;
@@ -138,13 +131,32 @@
     }
   }
 
+  .games__data-holder:before,
+  .games__time-holder:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: size(2px);
+    background-color: white;
+    top: size(29px);
+
+    @include vp-1365 {
+      top: size(20px);
+    }
+  }
+
   .games__time {
     grid-column: 2/3;
     grid-row: 2/3;
     min-height: size(75px);
+
+    @include vp-1365 {
+      min-height: size(48px);
+    }
   }
 
-  h4 {
+  h4,
+  h5 {
     grid-column: 1/3;
     grid-row: 3/4;
     font-weight: 300;
@@ -160,6 +172,12 @@
     @include vp-767 {
       font-size: size(16px);
       line-height: size(20px);
+    }
+  }
+
+  h4 {
+    @include vp-767 {
+      padding-top: size(10px);
     }
   }
 
@@ -185,7 +203,7 @@
     user-select: none;
 
     @include vp-1365 {
-      min-width: size(202px);
+      min-width: size(200px);
       font-weight: 400;
       padding: size(22px) 0;
     }
