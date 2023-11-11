@@ -68,7 +68,7 @@
   li {
     font-size: size(20px);
     line-height: size(20px);
-    padding-bottom: size(13px);
+    padding-bottom: size(12px);
     width: max-content;
 
     @include vp-1365 {
@@ -105,7 +105,7 @@
     justify-content: space-between;
     margin: 0;
     padding: 0;
-    padding-top: size(37px);
+    padding-top: size(36px);
 
     @include vp-1365 {
       justify-content: center;
@@ -222,7 +222,7 @@
     line-height: size(12px);
     letter-spacing: size(0.6px);
     text-transform: uppercase;
-    padding: size(25px) size(45px);
+    padding: size(25px) size(44px);
     outline: size(2px) solid $color-default-black;
     user-select: none;
 
@@ -240,7 +240,7 @@
     position: relative;
     display: flex;
     gap: size(15px);
-    margin-top: size(46px);
+    margin-top: size(47px);
     margin-bottom: size(39px);
 
     @include vp-1365 {
@@ -298,7 +298,7 @@
   display: flex;
   position: absolute;
   right: 0;
-  bottom: size(-155px);
+  bottom: size(-152px);
 
   @include vp-1365 {
     bottom: size(-150px);
@@ -311,6 +311,7 @@
   img {
     width: size(284px);
     height: size(497px);
+    
     @include vp-1365 {
       width: size(327px);
       height: size(423px);

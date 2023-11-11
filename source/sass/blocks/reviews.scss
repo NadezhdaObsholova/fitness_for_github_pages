@@ -1,4 +1,9 @@
 .reviews__container {
+  display: grid;
+  grid-template-columns: size(16px) size(560px) size(16px);
+  column-gap: size(40px);
+  align-items: center;
+  justify-content: center;
   padding-top: size(120px);
   padding-bottom: size(120px);
 
@@ -13,6 +18,7 @@
   }
 
   h2 {
+    grid-column: 1/4;
     font-family: "AlumniSans";
     font-size: size(54px);
     line-height: size(54px);
@@ -20,7 +26,7 @@
     letter-spacing: size(1.62px);
     text-align: center;
     margin: 0;
-    margin-bottom: size(48px);
+    margin-bottom: size(46px);
 
     @include vp-1365 {
       font-size: size(42px);
@@ -36,20 +42,13 @@
       margin-bottom: size(43px);
     }
   }
-}
-
-.reviews__holder {
-  position: relative;
-  display: grid;
 
   button {
     cursor: pointer;
-    position: absolute;
     width: size(16px);
     height: size(32px);
     background-color: transparent;
     border: none;
-    position: absolute;
     padding: 0;
 
     @include vp-767 {
@@ -62,25 +61,42 @@
       width: 100%;
       height: 100%;
     }
+
+    path {
+      stroke: #102654;
+    }
   }
 
-  .swiper__button-prev {
-    left: size(240px);
-    @include vp-1365 {
-      left: 0;
-    }
+  .reviews__button-prev {
+    grid-column: 1/2;
+    grid-row: 2/3;
   }
-  .swiper__button-next {
-    right: size(250px);
-    @include vp-1365 {
-      right: 0;
-    }
+
+  .reviews__button-next {
+    grid-column: 3/4;
+    grid-row: 2/3;
   }
+
+
+
+}
+
+.reviews__wrapper {
+  grid-column: 2/3;
+  position: relative;
+  display: grid;
+  width: size(560px);
+  height: size(259px);
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.reviews__holder {
+  position: absolute;
+  display: flex;
 }
 
 .reviews__item {
-  grid-column: 1/2;
-  grid-row: 1/2;
   display: grid;
   grid-template-columns: size(80px) 1fr;
   column-gap: size(30px);
@@ -153,7 +169,3 @@
     }
   }
 }
-
-
-
-

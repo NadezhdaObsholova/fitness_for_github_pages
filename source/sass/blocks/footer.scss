@@ -1,0 +1,173 @@
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  h2 {
+    font-family: "AlumniSans";
+    font-size: size(54px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: size(54px);
+    letter-spacing: size(1.62px);
+    margin-top: 0;
+    margin-bottom: size(33px);
+  }
+}
+
+.footer__form-holder {
+  padding: size(60px) size(170px) size(60px) size(103px);
+  background-color: $color-basic-dark-blue;
+  color: $color-default-white;
+}
+
+.footer__form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: size(30px);
+  row-gap: size(28px);
+
+
+  input {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    border: size(1px) solid #74819C;
+   // border-bottom: size(1px) solid #74819C;
+    padding-top: size(5px);
+    padding-bottom: size(5px);
+    font-family: inherit;
+    font-size: size(14px);
+    line-height: size(22px);
+    font-weight: 400;
+    color: $color-default-white;
+  }
+
+  input::placeholder {
+    font-family: inherit;
+    font-size: size(14px);
+    line-height: size(22px);
+    font-weight: 400;
+    color: $color-default-white;
+  }
+
+  button {
+    grid-column: 1/3;
+    width: 100%;
+    min-height: size(66px);
+    font-size: size(12px);
+    font-weight: 700;
+    line-height: size(12px);
+    letter-spacing: size(0.6px);
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+    outline: size(1px) solid $color-default-white;
+    color: $color-default-white;
+  }
+}
+
+.footer__contacts-holder {
+  padding: size(60px) size(123px) size(60px) size(120px);
+}
+
+.footer__contacts {
+  position: relative;
+  display: grid;
+  row-gap: size(14px);
+  grid-template-columns: 1fr 1fr;
+  margin-top: size(40px);
+
+  h3 {
+    font-size: size(24px);
+    font-weight: 400;
+    line-height: size(24px);
+    margin: 0;
+    margin-bottom: size(7px);
+  }
+
+  p {
+    font-size: size(14px);
+    line-height: size(22px);
+    margin: 0;
+  }
+
+  div:nth-child(even) {
+    padding-left: size(70px);
+  }
+}
+
+.footer__contacts::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: size(1px);
+  background-color: #74819C;
+  right: 50%;
+}
+
+.footer__nav {
+  grid-column: 1/3;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: size(40px) size(103px);
+  background-color: #030a1a;
+}
+
+.footer__nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: size(40px);
+  padding-right: 15px;
+
+  a {
+    display: block;
+    font-size: size(14px);
+    line-height: size(22px);
+    text-decoration: none;
+    color: $color-default-white;
+  }
+}
+
+.footer__sotial-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: size(10px);
+}
+
+.fotter__sotial-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: size(25px);
+  height: size(25px);
+  border-radius: 50%;
+  background-color: $color-default-white;
+
+  svg {
+    path {
+      fill: #030a1a;
+    }
+  }
+}
+
+.fotter__ok {
+  svg {
+    width: size(16px);
+    height: size(16px);
+  }
+}
+
+.fotter__vk {
+  svg {
+    width: size(15px);
+    height: size(15px);
+  }
+}
+
+.fotter__reddit {
+  svg {
+    width: size(18px);
+    height: size(14px);
+  }
+}

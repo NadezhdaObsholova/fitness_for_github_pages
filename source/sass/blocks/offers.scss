@@ -70,7 +70,7 @@ flex-direction: column;
   min-height: size(462px);
   color: $color-default-white;
   background-color: #ed0233;
-  padding: size(40px) size(45px) size(50px);
+  padding: size(40px) size(45px) size(47px);
 
 
   @include vp-1365 {
@@ -215,7 +215,7 @@ flex-direction: column;
   margin: size(7px);
   background-color: $color-default-white;
   padding: size(23px) size(28px);
-  padding-bottom: size(25px);
+  padding-bottom: size(28px);
 
   @include vp-1365 {
     padding: size(23px) size(30px);
