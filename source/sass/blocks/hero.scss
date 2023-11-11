@@ -174,8 +174,6 @@
     grid-column: 2/3;
     grid-row: 3/4;
     width: size(230px);
-    outline: size(2px) solid $color-default-white;
-    user-select: none;
 
     @include vp-1365 {
       width: size(185px);

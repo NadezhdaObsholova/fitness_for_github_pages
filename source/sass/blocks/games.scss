@@ -190,26 +190,13 @@
     grid-column: 1/3;
     grid-row: 4/5;
     font-weight: 700;
-    display: flex;
-    justify-content: center;
-    font-size: size(12px);
-    line-height: size(12px);
-    letter-spacing: size(0.6px);
-    text-transform: uppercase;
-    padding: size(25px);
     min-width: size(340px);
-    outline: size(2px) solid $color-default-white;
-    color: $color-default-white;
-    user-select: none;
 
     @include vp-1365 {
       min-width: size(200px);
-      font-weight: 400;
-      padding: size(22px) 0;
     }
 
     @include vp-767 {
-      padding: size(21px) size(44px);
       margin-top: size(13px);
     }
   }
