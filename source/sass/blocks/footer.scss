@@ -267,6 +267,7 @@
     display: block;
     font-size: size(14px);
     line-height: size(22px);
+    color: $color-default-white;
     text-decoration: none;
 
     @include vp-1365 {

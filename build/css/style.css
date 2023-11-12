@@ -314,25 +314,6 @@ template {
   display: none;
 }
 
-/*
-@mixin active {
-  &.focus-visible:active {
-    @content;
-  }
-}
-
-@mixin hover-focus {
-  @media (hover: hover) {
-    &:hover:not(.focus-visible) {
-      @content;
-    }
-  }
-/*
-  &.focus-visible:focus {
-    @content;
-  }
-}
-*/
 @font-face {
   font-style: normal;
   font-weight: 400;
@@ -667,11 +648,16 @@ button,
   outline: 0.125rem solid #ffffff;
 }
 @media (hover: hover) {
-  .btn--white:hover:not(.focus-visible), .btn--white:focus:not(.focus-visible) {
+  .btn--white:hover:not(.focus-visible) {
     color: #103aae;
     background-color: #ffffff;
     outline: none;
   }
+}
+.btn--white:focus:not(.focus-visible) {
+  color: #103aae;
+  background-color: #ffffff;
+  outline: none;
 }
 .btn--white:active:not(.focus-visible) {
   color: #102654;
@@ -680,11 +666,16 @@ button,
   outline: 0.125rem solid #000000;
 }
 @media (hover: hover) {
-  .btn--gradient:hover:not(.focus-visible), .btn--gradient:focus:not(.focus-visible) {
+  .btn--gradient:hover:not(.focus-visible) {
     color: #ffffff;
     background: var(--1, linear-gradient(97deg, #ED0233 17.6%, #003EB7 95.31%));
     outline: none;
   }
+}
+.btn--gradient:focus:not(.focus-visible) {
+  color: #ffffff;
+  background: var(--1, linear-gradient(97deg, #ED0233 17.6%, #003EB7 95.31%));
+  outline: none;
 }
 .btn--gradient:active:not(.focus-visible) {
   opacity: 0.7;
@@ -1350,7 +1341,7 @@ button,
 @media (max-width: 767px) {
   .hero__container {
     display: block;
-    padding-bottom: 4.5rem;
+    padding-bottom: 4.4375rem;
     width: auto;
   }
 }
@@ -1729,7 +1720,7 @@ button,
     width: 20rem;
     height: 10.4375rem;
     right: calc(50% - 10rem);
-    top: calc(100% - 14.875rem);
+    top: calc(100% - 14.8125rem);
   }
 }
 .about__video img {
@@ -2474,30 +2465,29 @@ button,
 .swiper__button-prev,
 .swiper__button-next {
   position: absolute;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   top: calc(50% - 1.25rem);
-}
-.swiper__button-prev svg,
-.swiper__button-next svg {
-  width: 1rem;
-  height: 2rem;
+  width: 3.625rem;
+  height: 3.625rem;
 }
 @media (max-width: 767px) {
-  .swiper__button-prev svg,
-.swiper__button-next svg {
-    width: 0.625rem;
-    height: 1.1875rem;
+  .swiper__button-prev,
+.swiper__button-next {
+    width: 2.25rem;
+    height: 2.25rem;
   }
-}
-.swiper__button-prev path,
-.swiper__button-next path {
-  stroke: #102654;
 }
 
 .swiper__button-prev {
-  left: -3.875rem;
+  left: -4.1875rem;
 }
 @media (max-width: 767px) {
   .swiper__button-prev {
@@ -2506,7 +2496,7 @@ button,
 }
 
 .swiper__button-next {
-  right: -3.875rem;
+  right: -4.1875rem;
 }
 @media (max-width: 767px) {
   .swiper__button-next {
@@ -3136,12 +3126,26 @@ button,
           align-items: end;
 }
 .offers__link a {
+  display: block;
   font-size: 0.875rem;
   line-height: 0.875rem;
   font-weight: 700;
   letter-spacing: 0.04375rem;
   text-transform: uppercase;
-  border-bottom: 0.125rem solid #ffffff;
+  padding-bottom: 0.125rem;
+  border-bottom: 0.125rem solid currentcolor;
+}
+.offers__link a:focus:not(.focus-visible) {
+  border-bottom: none;
+  outline: 0.125rem solid;
+  outline-color: currentcolor;
+  outline-offset: 10px;
+}
+.offers__link a:hover {
+  opacity: 0.8;
+}
+.offers__link a:active {
+  opacity: 1;
 }
 
 .offers__period {
@@ -3318,11 +3322,6 @@ button,
     text-align: center;
   }
 }
-.offers__item-content a {
-  display: block;
-  padding-bottom: 0.1875rem;
-  border-bottom: 0.125rem solid;
-}
 
 .faq {
   background-color: #f8f9fc;
@@ -3446,11 +3445,16 @@ button,
   }
 }
 @media (hover: hover) {
-  .faq__topics .faq__item:hover:not(.focus-visible), .faq__topics .faq__item:focus:not(.focus-visible) {
+  .faq__topics .faq__item:hover:not(.focus-visible) {
     color: #ffffff;
     background: var(--1, linear-gradient(97deg, #ED0233 17.6%, #003EB7 95.31%));
     outline: none;
   }
+}
+.faq__topics .faq__item:focus:not(.focus-visible) {
+  color: #ffffff;
+  background: var(--1, linear-gradient(97deg, #ED0233 17.6%, #003EB7 95.31%));
+  outline: none;
 }
 
 .faq__info {
@@ -3583,21 +3587,23 @@ button,
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border: none;
   background-color: transparent;
   padding: 0;
-}
-@media (max-width: 1365px) {
-  .faq__info-item button {
-    padding-top: 0.125rem;
-  }
-}
-.faq__info-item button svg {
   width: 2.5rem;
   height: 2.5rem;
 }
 @media (max-width: 767px) {
-  .faq__info-item button svg {
+  .faq__info-item button {
     width: 1.875rem;
     height: 1.875rem;
   }
@@ -3606,11 +3612,11 @@ button,
 .reviews__container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1rem 35rem 1rem;
-  grid-template-columns: 1rem 35rem 1rem;
-  -webkit-column-gap: 2.5rem;
-     -moz-column-gap: 2.5rem;
-          column-gap: 2.5rem;
+  -ms-grid-columns: 3.625rem 35rem 3.625rem;
+  grid-template-columns: 3.625rem 35rem 3.625rem;
+  -webkit-column-gap: 1.1875rem;
+     -moz-column-gap: 1.1875rem;
+          column-gap: 1.1875rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -3622,22 +3628,22 @@ button,
 }
 @media (max-width: 1365px) {
   .reviews__container {
-    -ms-grid-columns: 1rem 36.25rem 1rem;
-    grid-template-columns: 1rem 36.25rem 1rem;
+    -ms-grid-columns: 3.625rem 36.25rem 3.625rem;
+    grid-template-columns: 3.625rem 36.25rem 3.625rem;
     padding-top: 6.25rem;
     padding-bottom: 6.25rem;
-    -webkit-column-gap: 2.0625rem;
-       -moz-column-gap: 2.0625rem;
-            column-gap: 2.0625rem;
+    -webkit-column-gap: 0.75rem;
+       -moz-column-gap: 0.75rem;
+            column-gap: 0.75rem;
   }
 }
 @media (max-width: 767px) {
   .reviews__container {
-    -ms-grid-columns: 0.625rem 14.25rem 0.625rem;
-    grid-template-columns: 0.625rem 14.25rem 0.625rem;
-    -webkit-column-gap: 1.1875rem;
-       -moz-column-gap: 1.1875rem;
-            column-gap: 1.1875rem;
+    -ms-grid-columns: 2.25rem 14.25rem 2.25rem;
+    grid-template-columns: 2.25rem 14.25rem 2.25rem;
+    -webkit-column-gap: 0.6875rem;
+       -moz-column-gap: 0.6875rem;
+            column-gap: 0.6875rem;
     padding-top: 4.375rem;
     padding-bottom: 4.4375rem;
   }
@@ -3672,26 +3678,12 @@ button,
   }
 }
 .reviews__container button {
-  cursor: pointer;
-  width: 1rem;
-  height: 2rem;
-  background-color: transparent;
-  border: none;
-  padding: 0;
+  position: relative;
 }
 @media (max-width: 767px) {
   .reviews__container button {
-    width: 0.625rem;
-    height: 1.1875rem;
     top: calc(50% - 0.5625rem);
   }
-}
-.reviews__container button svg {
-  width: 100%;
-  height: 100%;
-}
-.reviews__container button path {
-  stroke: #102654;
 }
 .reviews__container .reviews__button-prev {
   -ms-grid-column: 1;
@@ -4229,6 +4221,7 @@ button,
   display: block;
   font-size: 0.875rem;
   line-height: 1.375rem;
+  color: #ffffff;
   text-decoration: none;
 }
 @media (max-width: 1365px) {
@@ -4307,6 +4300,57 @@ button,
 .fotter__reddit svg {
   width: 1.125rem;
   height: 0.875rem;
+}
+
+.btn-svg,
+.btn-svg--faq {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.btn-svg svg,
+.btn-svg--faq svg {
+  width: 100%;
+  height: 100%;
+}
+.btn-svg svg path,
+.btn-svg--faq svg path {
+  stroke: #102654;
+}
+.btn-svg svg rect,
+.btn-svg--faq svg rect {
+  stroke: #102654;
+}
+@media (hover: hover) {
+  .btn-svg:hover:not(.focus-visible) circle,
+.btn-svg--faq:hover:not(.focus-visible) circle {
+    stroke: #102654;
+  }
+}
+.btn-svg:focus:not(.focus-visible) circle,
+.btn-svg--faq:focus:not(.focus-visible) circle {
+  stroke: #102654;
+}
+.btn-svg:active:not(.focus-visible) svg,
+.btn-svg--faq:active:not(.focus-visible) svg {
+  fill: #102654;
+}
+.btn-svg:active:not(.focus-visible) circle,
+.btn-svg--faq:active:not(.focus-visible) circle {
+  stroke: #102654;
+}
+.btn-svg:active:not(.focus-visible) path,
+.btn-svg--faq:active:not(.focus-visible) path {
+  stroke: white;
+}
+.btn-svg:disabled,
+.btn-svg--faq:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.btn-svg:disabled path,
+.btn-svg--faq:disabled path {
+  opacity: 0.3;
 }
 
 /* @mixin hover-focus {

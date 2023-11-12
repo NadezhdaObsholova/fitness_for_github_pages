@@ -11,8 +11,10 @@
   <link rel="icon" href="img/favicons/icon-32.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple-180.png">
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="preload" href="fonts/RobotoCondensed/RobotoCondensed-Regular.woff" as="fonts" type="fonts/woff2" crossorigin="anonymous">
-  <link rel="preload" href="fonts/AlumniSans/AlumniSans-SemiBold.woff2" as="fonts" type="fonts/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/RobotoCondensed/RobotoCondensed-Regular.woff" as="fonts" type="fonts/woff2"
+    crossorigin="anonymous">
+  <link rel="preload" href="fonts/AlumniSans/AlumniSans-SemiBold.woff2" as="fonts" type="fonts/woff2"
+    crossorigin="anonymous">
 </head>
 
 <body>
@@ -20,7 +22,7 @@
     <header class="hero" data-test="hero">
       <h1 class="visually-hidden">Тренажерный зал в Омске</h1>
       <div class="hero__header container">
-        <a href="">
+        <a href="#">
           <img src="img/svg/logotype.svg" width="120" height="26">
         </a>
         <a tabindex="1" href="tel:+78005555555">8-800-555-55-55</a>
@@ -34,7 +36,7 @@
             <li>Групповые занятия</li>
             <li>Кардио-зона</li>
           </ul>
-          <a class="btn btn--white" tabindex="1" href="#offers">Купить абонемент</a>
+          <a class="btn btn--white" tabindex="1" href="#price">Купить абонемент</a>
         </div>
         <span class="hero__img">
           <picture>
@@ -108,7 +110,7 @@
           </div>
         </div>
       </section>
-      <section class="price" data-test="price">
+      <section class="price" data-test="price" id="price">
         <div class="price__container container">
           <h2>Абонементы</h2>
           <div class="price__options">
@@ -134,7 +136,7 @@
                       </svg>
                     </span>
                   </p>
-                  <a class="btn btn--gradient" tabindex="1" href="blank.html">Купить абонемент</a>
+                  <a class="btn btn--gradient" tabindex="1" href="#">Купить абонемент</a>
                 </div>
               </li>
               <li class="price__item-current" tabindex="1">
@@ -151,7 +153,7 @@
                       </svg>
                     </span>
                   </p>
-                  <a class="btn btn--gradient" tabindex="1" href="blank.html">Купить абонемент</a>
+                  <a class="btn btn--gradient" tabindex="1" href="#">Купить абонемент</a>
                 </div>
               </li>
               <li tabindex="1">
@@ -168,7 +170,7 @@
                       </svg>
                     </span>
                   </p>
-                  <a class="btn btn--gradient" tabindex="1"    href="blank.html">Купить абонемент</a>
+                  <a class="btn btn--gradient" tabindex="1" href="#">Купить абонемент</a>
                 </div>
               </li>
             </ul>
@@ -412,18 +414,18 @@
                         </div>
                       </div>
                     </div>
-
                   </div>
                 </div>
-
-                <button class="swiper__button-prev">
-                  <svg width="18" height="34" viewBox="0 0 18 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17 1L1 17L17 33" stroke="none" />
+                <button class="swiper__button-prev btn-svg">
+                  <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="29" cy="29" r="28" stroke="none" />
+                    <path d="M35 13L19 29L35 45" stroke="none" />
                   </svg>
                 </button>
-                <button class="swiper__button-next">
-                  <svg width="18" height="34" viewBox="0 0 18 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 1L17 17L1 33" stroke="none" />
+                <button class="swiper__button-next btn-svg">
+                  <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="29" cy="29" r="28" stroke="none" />
+                    <path d="M23 13L40 29L23 45" stroke="none" />
                   </svg>
                 </button>
               </div>
@@ -487,7 +489,7 @@
           </div>
         </div>
       </section>
-      <section data-test="offers" id="offers" class="offers">
+      <section data-test="offers" class="offers">
         <div class="offers__container container">
           <h2>Акции</h2>
           <div class="offers__wrapper">
@@ -562,12 +564,14 @@
                     подписать договор. При
                     покупке абонемента онлайн, анкета также заполняется онлайн и договор придет <br
                       class="mobile-only">вам на почту.</p>
-                  <button>
-                    <svg class="faq__svg-button visually-hidden" width="40" height="40">
-                      <use href="img/sprite.svg#faq_info_open"></use>
+                  <button class="btn-svg--faq">
+                     <svg  class="faq__svg-button visually-hidden" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
+                      <path d="M20 10V20M20 30V20M20 20H30M20 20H10" stroke="none" />
                     </svg>
-                    <svg class="faq__svg-button" width="40" height="40">
-                      <use href="img/sprite.svg#faq_info_close"></use>
+                    <svg  class="faq__svg-button" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
+                      <path d="M30 20H20H10" stroke="none" />
                     </svg>
                   </button>
                 </li>
@@ -576,28 +580,32 @@
                   <p class="visually-hidden">При первом посещении и покупке абонемента, необходимо заполнить анкету и
                     подписать договор. При
                     покупке абонемента онлайн, анкета также заполняется онлайн и договор придет вам на почту.</p>
-                  <button>
-                    <svg class="faq__svg-button" width="40" height="40">
-                      <use href="img/sprite.svg#faq_info_open"></use>
-                    </svg>
-                    <svg class="faq__svg-button visually-hidden" width="40" height="40">
-                      <use href="img/sprite.svg#faq_info_close"></use>
-                    </svg>
-                  </button>
+                    <button class="btn-svg--faq">
+                      <svg  class="faq__svg-button" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
+                       <path d="M20 10V20M20 30V20M20 20H30M20 20H10" stroke="none" />
+                     </svg>
+                     <svg  class="faq__svg-button  visually-hidden" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
+                       <path d="M30 20H20H10" stroke="none" />
+                     </svg>
+                   </button>
                 </li>
                 <li class="faq__info-item">
                   <h3>Есть кулеры в центре? Предоставляются <br class="mobile-only">полотенца?</h3>
                   <p class="visually-hidden">При первом посещении и покупке абонемента, необходимо заполнить анкету и
                     подписать договор. При
                     покупке абонемента онлайн, анкета также заполняется онлайн и договор придет вам на почту.</p>
-                  <button>
-                    <svg class="faq__svg-button" width="40" height="40">
-                      <use href="img/sprite.svg#faq_info_open"></use>
-                    </svg>
-                    <svg class="faq__svg-button visually-hidden" width="40" height="40">
-                      <use href="img/sprite.svg#faq_info_close"></use>
-                    </svg>
-                  </button>
+                    <button class="btn-svg--faq">
+                      <svg  class="faq__svg-button" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
+                       <path d="M20 10V20M20 30V20M20 20H30M20 20H10" stroke="none" />
+                     </svg>
+                     <svg  class="faq__svg-button  visually-hidden" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
+                       <path d="M30 20H20H10" stroke="none" />
+                     </svg>
+                   </button>
                 </li>
                 <li class="faq__info-item">
                   <h3>Сколько тренеров работает <br class="mobile-only">в клубе и какова <br class="tablet-only"> <br
@@ -606,14 +614,16 @@
                   <p class="visually-hidden">При первом посещении и покупке абонемента, необходимо заполнить анкету и
                     подписать договор. При
                     покупке абонемента онлайн, анкета также заполняется онлайн и договор придет вам на почту.</p>
-                  <button>
-                    <svg class="faq__svg-button" width="40" height="40">
-                      <use href="img/sprite.svg#faq_info_open"></use>
-                    </svg>
-                    <svg class="faq__svg-button visually-hidden" width="40" height="40">
-                      <use href="img/sprite.svg#faq_info_close"></use>
-                    </svg>
-                  </button>
+                    <button class="btn-svg--faq">
+                      <svg  class="faq__svg-button" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
+                       <path d="M20 10V20M20 30V20M20 20H30M20 20H10" stroke="none" />
+                     </svg>
+                     <svg  class="faq__svg-button  visually-hidden" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
+                       <path d="M30 20H20H10" stroke="none" />
+                     </svg>
+                   </button>
                 </li>
               </ul>
               <ul class="faq__info-list visually-hidden">
@@ -623,7 +633,16 @@
                     отдельно. В зале всегда
                     присутствует дежурный тренер, которому можно задать вопрос, получить небольшую консультацию по
                     тренажеру или технике выполнения упражнения.</p>
-                  <button></button>
+                    <button class="btn-svg--faq">
+                      <svg  class="faq__svg-button" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
+                       <path d="M20 10V20M20 30V20M20 20H30M20 20H10" stroke="none" />
+                     </svg>
+                     <svg  class="faq__svg-button  visually-hidden" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
+                       <path d="M30 20H20H10" stroke="none" />
+                     </svg>
+                   </button>
                 </li>
                 <li class="faq__info-item">
                   <h3>Можно ли заморозить абонемент?</h3>
@@ -631,7 +650,16 @@
                     отдельно. В зале всегда
                     присутствует дежурный тренер, которому можно задать вопрос, получить небольшую консультацию по
                     тренажеру или технике выполнения упражнения.</p>
-                  <button></button>
+                    <button class="btn-svg--faq">
+                      <svg  class="faq__svg-button" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
+                       <path d="M20 10V20M20 30V20M20 20H30M20 20H10" stroke="none" />
+                     </svg>
+                     <svg  class="faq__svg-button  visually-hidden" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
+                       <path d="M30 20H20H10" stroke="none" />
+                     </svg>
+                   </button>
                 </li>
                 <li class="faq__info-item">
                   <h3>Есть ли лимит по посещениям тренажерного зала и групповых занятий?</h3>
@@ -639,15 +667,32 @@
                     отдельно. В зале всегда
                     присутствует дежурный тренер, которому можно задать вопрос, получить небольшую консультацию по
                     тренажеру или технике выполнения упражнения.</p>
-                  <button></button>
+                    <button class="btn-svg--faq">
+                      <svg  class="faq__svg-button" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
+                       <path d="M20 10V20M20 30V20M20 20H30M20 20H10" stroke="none" />
+                     </svg>
+                     <svg  class="faq__svg-button  visually-hidden" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
+                       <path d="M30 20H20H10" stroke="none" />
+                     </svg>
+                   </button>
                 </li>
                 <li class="faq__info-item">
                   <h3>Что такое семейный доступ и доступ для друзей?</h3>
                   <p class="visually-hidden">При посещении тренажерного зала вам необходимо оплатить занятия с тренером
                     отдельно. В зале всегда
                     присутствует дежурный тренер, которому можно задать вопрос, получить небольшую консультацию по
-                    тренажеру или технике выполнения упражнения.</p>
-                  <button></button>
+                    <button class="btn-svg--faq">
+                      <svg  class="faq__svg-button" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
+                       <path d="M20 10V20M20 30V20M20 20H30M20 20H10" stroke="none" />
+                     </svg>
+                     <svg  class="faq__svg-button  visually-hidden" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
+                       <path d="M30 20H20H10" stroke="none" />
+                     </svg>
+                   </button>
                 </li>
               </ul>
               <ul class="faq__info-list visually-hidden">
@@ -658,28 +703,64 @@
                   <p class="visually-hidden">Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу.
                     Специалист уточнит ваши
                     данные, цели и предложит программу питания.</p>
-                  <button></button>
+                    <button class="btn-svg--faq">
+                      <svg  class="faq__svg-button" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
+                       <path d="M20 10V20M20 30V20M20 20H30M20 20H10" stroke="none" />
+                     </svg>
+                     <svg  class="faq__svg-button  visually-hidden" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
+                       <path d="M30 20H20H10" stroke="none" />
+                     </svg>
+                   </button>
                 </li>
                 <li class="faq__info-item">
                   <h3>Проводятся ли в клубе какие-либо мероприятия или соревнования?</h3>
                   <p class="visually-hidden">Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу.
                     Специалист уточнит ваши
                     данные, цели и предложит программу питания.</p>
-                  <button></button>
+                    <button class="btn-svg--faq">
+                      <svg  class="faq__svg-button" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
+                       <path d="M20 10V20M20 30V20M20 20H30M20 20H10" stroke="none" />
+                     </svg>
+                     <svg  class="faq__svg-button  visually-hidden" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
+                       <path d="M30 20H20H10" stroke="none" />
+                     </svg>
+                   </button>
                 </li>
                 <li class="faq__info-item">
                   <h3>Можно ли приобрести в центре спортивное питание?</h3>
                   <p class="visually-hidden">Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу.
                     Специалист уточнит ваши
                     данные, цели и предложит программу питания.</p>
-                  <button></button>
+                    <button class="btn-svg--faq">
+                      <svg  class="faq__svg-button" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
+                       <path d="M20 10V20M20 30V20M20 20H30M20 20H10" stroke="none" />
+                     </svg>
+                     <svg  class="faq__svg-button  visually-hidden" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
+                       <path d="M30 20H20H10" stroke="none" />
+                     </svg>
+                   </button>
                 </li>
                 <li class="faq__info-item">
                   <h3>Есть ли в центре детская комната?</h3>
                   <p class="visually-hidden">Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу.
                     Специалист уточнит ваши
                     данные, цели и предложит программу питания.</p>
-                  <button></button>
+                    <button class="btn-svg--faq">
+                      <svg  class="faq__svg-button" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
+                       <path d="M20 10V20M20 30V20M20 20H30M20 20H10" stroke="none" />
+                     </svg>
+                     <svg  class="faq__svg-button  visually-hidden" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
+                       <path d="M30 20H20H10" stroke="none" />
+                     </svg>
+                   </button>
                 </li>
               </ul>
               <ul class="faq__info-list visually-hidden">
@@ -690,7 +771,16 @@
                     Верхняя и нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки,
                     шорты, кроссовки). В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних
                     тапочках и т. п., исключения составляют специальные классы (например, йога, пилатес). </p>
-                  <button></button>
+                    <button class="btn-svg--faq">
+                      <svg  class="faq__svg-button" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
+                       <path d="M20 10V20M20 30V20M20 20H30M20 20H10" stroke="none" />
+                     </svg>
+                     <svg  class="faq__svg-button  visually-hidden" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
+                       <path d="M30 20H20H10" stroke="none" />
+                     </svg>
+                   </button>
                 </li>
                 <li class="faq__info-item">
                   <h3>Можно ли приводить с собой детей на тренировки?</h3>
@@ -699,7 +789,16 @@
                     Верхняя и нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки,
                     шорты, кроссовки). В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних
                     тапочках и т. п., исключения составляют специальные классы (например, йога, пилатес). </p>
-                  <button></button>
+                    <button class="btn-svg--faq">
+                      <svg  class="faq__svg-button" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
+                       <path d="M20 10V20M20 30V20M20 20H30M20 20H10" stroke="none" />
+                     </svg>
+                     <svg  class="faq__svg-button  visually-hidden" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
+                       <path d="M30 20H20H10" stroke="none" />
+                     </svg>
+                   </button>
                 </li>
                 <li class="faq__info-item">
                   <h3>Какие дополнительные правила посещения центра?</h3>
@@ -708,7 +807,16 @@
                     Верхняя и нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки,
                     шорты, кроссовки). В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних
                     тапочках и т. п., исключения составляют специальные классы (например, йога, пилатес). </p>
-                  <button></button>
+                    <button class="btn-svg--faq">
+                      <svg  class="faq__svg-button" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
+                       <path d="M20 10V20M20 30V20M20 20H30M20 20H10" stroke="none" />
+                     </svg>
+                     <svg  class="faq__svg-button  visually-hidden" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
+                       <path d="M30 20H20H10" stroke="none" />
+                     </svg>
+                   </button>
                 </li>
                 <li class="faq__info-item">
                   <h3>Нужна ли медицинская справка для посещения залов и бассейна?</h3>
@@ -717,7 +825,16 @@
                     Верхняя и нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки,
                     шорты, кроссовки). В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних
                     тапочках и т. п., исключения составляют специальные классы (например, йога, пилатес). </p>
-                  <button></button>
+                    <button class="btn-svg--faq">
+                      <svg  class="faq__svg-button" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
+                       <path d="M20 10V20M20 30V20M20 20H30M20 20H10" stroke="none" />
+                     </svg>
+                     <svg  class="faq__svg-button  visually-hidden" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
+                       <path d="M30 20H20H10" stroke="none" />
+                     </svg>
+                   </button>
                 </li>
               </ul>
             </div>
@@ -765,14 +882,16 @@
               </div>
             </div>
           </div>
-          <button class="reviews__button-prev">
-            <svg width="18" height="32" viewBox="0 0 18 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M17 1L1 17L17 33" stroke="none" />
+          <button class="reviews__button-prev btn-svg">
+            <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="29" cy="29" r="28" stroke="none" />
+              <path d="M35 13L19 29L35 45" stroke="none" />
             </svg>
           </button>
-          <button class="reviews__button-next">
-            <svg width="18" height="32" viewBox="0 0 18 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1 1L17 17L1 33" stroke="none" />
+          <button class="reviews__button-next btn-svg">
+            <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="29" cy="29" r="28" stroke="none" />
+              <path d="M23 13L40 29L23 45" stroke="none" />
             </svg>
           </button>
         </div>

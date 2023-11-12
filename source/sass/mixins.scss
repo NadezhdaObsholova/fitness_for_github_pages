@@ -1,11 +1,3 @@
-@mixin retina {
-
-  @media (min-resolution: $retina-dpi),
-  (min-resolution: $retina-dppx) {
-    @content;
-  }
-}
-
 @mixin hover {
   @media (hover: hover) {
     &:hover:not(.focus-visible) {
@@ -14,53 +6,46 @@
   }
 }
 
-@mixin focus {
-  &.focus-visible:focus {
+@mixin hover-focus {
+  @media (hover: hover) {
+    &:hover:not(.focus-visible) {
+      @content;
+    }
+  }
+
+  &:focus:not(.focus-visible) {
     @content;
   }
 }
 
-// миксин из дискорда
 @mixin active {
   &:active:not(.focus-visible) {
     @content;
   }
 }
 
-// мой миксин
-@mixin hover-focus {
-  @media (hover: hover) {
-
-    &:hover:not(.focus-visible),
-    &:focus:not(.focus-visible) {
-      @content;
-    }
+@mixin focus {
+  &:focus:not(.focus-visible) {
+    @content;
   }
-}
-
-&.focus-visible:focus {
-  @content;
 }
 
 // Desktop first
-
-@mixin vp-1365 {
-  @media (max-width: ($vp-1366 - 1px)) {
-    @content;
+  @mixin vp-1365 {
+    @media (max-width: ($vp-1366 - 1px)) {
+      @content;
+    }
   }
-}
 
-@mixin vp-767 {
-  @media (max-width: ($vp-768 - 1px)) {
-    @content;
+  @mixin vp-767 {
+    @media (max-width: ($vp-768 - 1px)) {
+      @content;
+    }
   }
-}
 
-@mixin vp-319 {
-  @media (max-width: ($vp-320 - 1px)) {
-    @content;
+  @mixin vp-319 {
+    @media (max-width: ($vp-320 - 1px)) {
+      @content;
+    }
   }
-}
 
-// не нужно добавлять свои миксины для ресета списков, обнуления кнопок и прочие
-// этим вы усложняете работу команды, проверку вашего кода и будущую поддержку проекта
