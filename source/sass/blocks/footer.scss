@@ -87,6 +87,13 @@
     }
   }
 
+  input:active,
+  input:focus,
+  input:focus-visible {
+    outline: size(1px) solid $color-default-white;
+    outline-offset: size(3px);
+  }
+
   input::placeholder {
     font-family: inherit;
     font-size: size(14px);
@@ -250,7 +257,8 @@
 .footer__nav-list {
   display: flex;
   flex-wrap: wrap;
-  gap: size(40px);
+  align-items: flex-start;
+  gap: size(30px);
   padding-right: size(15px);
 
   @include vp-1365 {
@@ -269,11 +277,30 @@
     line-height: size(22px);
     color: $color-default-white;
     text-decoration: none;
+    padding: 0 size(5px) size(5px);
+    box-sizing: border-box;
 
     @include vp-1365 {
       display: block;
       padding-bottom: size(5px);
     }
+
+    @include hover {
+      border-bottom: size(1px) solid $color-default-white;
+    }
+
+    &:focus,
+    &:focus-visible {
+      border: none;
+      outline: size(1px) solid $color-default-white;
+      outline-offset: size(5px);
+    }
+  }
+
+  .disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    pointer-events: none;
   }
 }
 
@@ -303,8 +330,8 @@
   gap: size(10px);
 
   @include vp-767 {
-  align-self: center;
-  margin-top: size(24px);
+    align-self: center;
+    margin-top: size(24px);
   }
 }
 
@@ -320,6 +347,42 @@
   svg {
     path {
       fill: #030a1a;
+    }
+  }
+
+  @include hover-focus {
+    background-color: #103AAE;
+
+    svg {
+      path {
+        fill: $color-default-white;
+      }
+    }
+  }
+
+  @include active {
+    background-color: #102654;
+
+    svg {
+      path {
+        fill: $color-default-white;
+      }
+    }
+  }
+
+  .disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+}
+
+.fotter__sotial-item:focus {
+  background-color: #103AAE;
+
+  svg {
+    path {
+      fill: $color-default-white;
     }
   }
 }

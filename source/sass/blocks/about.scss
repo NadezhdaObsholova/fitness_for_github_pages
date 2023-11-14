@@ -165,21 +165,13 @@
     }
   }
 
-  svg {
-    width: size(100px);
-    height: size(100px);
-
-    @include vp-1365 {
-      width: size(72px);
-      height: size(72px);
-    }
-  }
-
   button {
     position: absolute;
     z-index: 2;
     top: calc(50% - size(50px));
     left: calc(50% - size(50px));
+    width: size(100px);
+    height: size(100px);
     padding: 0;
     display: flex;
     justify-content: center;
@@ -190,8 +182,57 @@
     @include vp-1365 {
       top: calc(50% - size(36px));
       left: calc(50% - size(36px));
+      width: size(72px);
+      height: size(72px);
     }
   }
+
+  button:disabled {
+    .about__btn-bcg {
+      cursor: not-allowed;
+      pointer-events: none;
+      background: none;
+      background-color: $color-default-white;
+      outline: size(2px) solid rgb(155, 164, 185);
+
+      path {
+        fill: rgb(155, 164, 185);
+      }
+    }
+  }
+
+  button:active {
+    .about__btn-bcg {
+      width: size(58px);
+      height: size(58px);
+      outline-offset: size(19px);
+
+      @include vp-1365 {
+        width: size(42px);
+        height: size(42px);
+        outline-offset: size(13px);
+      }
+    }
+  }
+
+  button:focus-visible,
+  button:focus,
+  button:hover {
+    outline: none;
+
+    .about__btn-bcg {
+      outline: size(2px) solid #102654;
+      background: none;
+      background-color: $color-default-white;
+
+      path {
+        fill: #102654;
+      }
+    }
+
+  }
+
+
 }
 
 .about__video-iframe {
@@ -202,4 +243,38 @@
 
 .about__video-iframe--hidden {
   display: none;
+}
+
+.about__btn-bcg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: size(72px);
+  height: size(72px);
+  outline: size(2px) solid rgb(237, 2, 51, 0.2);
+  outline-offset: size(12px);
+  border-radius: 50%;
+  background: var(--1, linear-gradient(97deg, #ED0233 17.6%, #003EB7 95.31%));
+
+  @include vp-1365 {
+    width: size(52px);
+    height: size(52px);
+    outline-offset: size(8px);
+  }
+
+  svg {
+    width: size(13px);
+    height: size(15px);
+    margin-left: size(6px);
+
+    @include vp-1365 {
+      width: size(9px);
+      height: size(10px);
+      margin-left: size(4px);
+    }
+
+    path {
+      fill: $color-default-white;
+    }
+  }
 }

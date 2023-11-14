@@ -71,6 +71,7 @@
     line-height: size(20px);
     padding-bottom: size(12px);
     width: max-content;
+    cursor: pointer;
 
     @include vp-1365 {
       font-size: size(18px);
@@ -83,14 +84,29 @@
       line-height: size(16px);
       padding-bottom: size(16px);
     }
+
+    @include hover-focus {
+      border-bottom: size(2px) solid #d10a42;
+    }
+
+    @include active {
+      border-bottom: size(2px) solid #d10a42;
+    }
   }
 
   .price__option-current {
-    border-bottom: 2px solid #d10a42;
+    border-bottom: size(2px) solid #d10a42;
+  }
+
+  .disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.3;
+    border-bottom: size(2px) solid #102654;
   }
 }
 
-.price__options::after {
+.price__options::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -138,6 +154,7 @@
       background: linear-gradient(135deg, #ED0233, #003EB7);
     }
   }
+
 
   li.price__item-current {
     .price__background {
@@ -213,6 +230,12 @@
 
   a {
     width: size(205px);
+    
+    &:focus {
+      color: $color-default-white;
+      background: var(--1, linear-gradient(97deg, #ED0233 17.6%, #003EB7 95.31%));
+      outline: none;
+    }
   }
 
   p {

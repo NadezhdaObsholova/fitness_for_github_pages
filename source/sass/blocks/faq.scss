@@ -80,6 +80,7 @@
     font-weight: 400;
     line-height: size(18px);
     min-height: size(54px);
+    text-transform: none;
     background-color: transparent;
     border: none;
     outline: size(1px) solid rgba(16, 38, 84, 0.20);
@@ -95,9 +96,16 @@
       width: size(141px);
     }
 
-    @include hover-focus {
+     &:hover,
+     &:focus {
+      outline: size(1px) solid rgba(16, 38, 84);
+      border: none;
+    }
+
+    &:active {
       color: $color-default-white;
       background: var(--1, linear-gradient(97deg, #ED0233 17.6%, #003EB7 95.31%));
+      border: none;
       outline: none;
     }
   }
