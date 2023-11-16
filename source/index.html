@@ -108,9 +108,9 @@
           <h2>Абонементы</h2>
           <div class="price__options">
             <ul>
-              <li class="price__option-current" tabindex="1">1 месяц</li>
-              <li tabindex="1">6 месяцев</li>
-              <li tabindex="1">12 месяцев</li>
+              <li tabindex="1" data-price-option>1 месяц</li>
+              <li tabindex="1" data-price-option>6 месяцев</li>
+              <li tabindex="1" data-price-option>12 месяцев</li>
             </ul>
           </div>
           <div class="price__options-list">
@@ -119,10 +119,10 @@
                 <div class="price__background"></div>
                 <div class="price__option-content">
                   <h3>С тренером</h3>
-                  <h4>12 занятий</h4>
+                  <h4 data-lessonsCount>12 занятий</h4>
                   <p>
-                    <span class="price__shadow">5000</span>
-                    <span>5000</span>
+                    <span class="price__shadow" data-price-shadow>5000</span>
+                    <span data-price>5000</span>
                     <span>
                       <svg aria-hidden="true" focusable="false" width="30" height="42">
                         <use href="img/sprite.svg#ruble"></use>
@@ -138,8 +138,8 @@
                   <h3>Дневной</h3>
                   <h4>с 8:00 до 17:00</h4>
                   <p>
-                    <span class="price__shadow">1700</span>
-                    <span>1700</span>
+                    <span class="price__shadow" data-price-shadow>1700</span>
+                    <span data-price>1700</span>
                     <span>
                       <svg aria-hidden="true" focusable="false" width="30" height="42">
                         <use href="img/sprite.svg#ruble"></use>
@@ -155,8 +155,8 @@
                   <h3>Полный день</h3>
                   <h4>с 8:00 до 22:00</h4>
                   <p>
-                    <span class="price__shadow">2700</span>
-                    <span>2700</span>
+                    <span class="price__shadow" data-price-shadow>2700</span>
+                    <span data-price>2700</span>
                     <span>
                       <svg aria-hidden="true" focusable="false" width="30" height="42">
                         <use href="img/sprite.svg#ruble"></use>
@@ -557,7 +557,7 @@
                     подписать договор. При
                     покупке абонемента онлайн, анкета также заполняется онлайн и договор придет <br
                       class="mobile-only">вам на почту.</p>
-                  <button class="btn-svg--faq">
+                  <button class="faq__btn">
                     <svg class="faq__svg-button visually-hidden" width="40" height="40" viewBox="0 0 40 40" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
@@ -575,7 +575,7 @@
                   <p class="visually-hidden">При первом посещении и покупке абонемента, необходимо заполнить анкету и
                     подписать договор. При
                     покупке абонемента онлайн, анкета также заполняется онлайн и договор придет вам на почту.</p>
-                  <button class="btn-svg--faq">
+                  <button class="faq__btn">
                     <svg class="faq__svg-button" width="40" height="40" viewBox="0 0 40 40" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
@@ -593,7 +593,7 @@
                   <p class="visually-hidden">При первом посещении и покупке абонемента, необходимо заполнить анкету и
                     подписать договор. При
                     покупке абонемента онлайн, анкета также заполняется онлайн и договор придет вам на почту.</p>
-                  <button class="btn-svg--faq">
+                  <button class="faq__btn">
                     <svg class="faq__svg-button" width="40" height="40" viewBox="0 0 40 40" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
@@ -613,7 +613,7 @@
                   <p class="visually-hidden">При первом посещении и покупке абонемента, необходимо заполнить анкету и
                     подписать договор. При
                     покупке абонемента онлайн, анкета также заполняется онлайн и договор придет вам на почту.</p>
-                  <button class="btn-svg--faq">
+                  <button class="faq__btn">
                     <svg class="faq__svg-button" width="40" height="40" viewBox="0 0 40 40" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
@@ -634,7 +634,7 @@
                     отдельно. В зале всегда
                     присутствует дежурный тренер, которому можно задать вопрос, получить небольшую консультацию по
                     тренажеру или технике выполнения упражнения.</p>
-                  <button class="btn-svg--faq">
+                  <button class="faq__btn">
                     <svg class="faq__svg-button" width="40" height="40" viewBox="0 0 40 40" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
@@ -653,7 +653,7 @@
                     отдельно. В зале всегда
                     присутствует дежурный тренер, которому можно задать вопрос, получить небольшую консультацию по
                     тренажеру или технике выполнения упражнения.</p>
-                  <button class="btn-svg--faq">
+                  <button class="faq__btn">
                     <svg class="faq__svg-button" width="40" height="40" viewBox="0 0 40 40" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
@@ -672,7 +672,7 @@
                     отдельно. В зале всегда
                     присутствует дежурный тренер, которому можно задать вопрос, получить небольшую консультацию по
                     тренажеру или технике выполнения упражнения.</p>
-                  <button class="btn-svg--faq">
+                  <button class="faq__btn">
                     <svg class="faq__svg-button" width="40" height="40" viewBox="0 0 40 40" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
@@ -690,7 +690,7 @@
                   <p class="visually-hidden">При посещении тренажерного зала вам необходимо оплатить занятия с тренером
                     отдельно. В зале всегда
                     присутствует дежурный тренер, которому можно задать вопрос, получить небольшую консультацию по
-                    <button class="btn-svg--faq">
+                    <button class="faq__btn">
                       <svg class="faq__svg-button" width="40" height="40" viewBox="0 0 40 40" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
@@ -712,7 +712,7 @@
                   <p class="visually-hidden">Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу.
                     Специалист уточнит ваши
                     данные, цели и предложит программу питания.</p>
-                  <button class="btn-svg--faq">
+                  <button class="faq__btn">
                     <svg class="faq__svg-button" width="40" height="40" viewBox="0 0 40 40" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
@@ -730,7 +730,7 @@
                   <p class="visually-hidden">Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу.
                     Специалист уточнит ваши
                     данные, цели и предложит программу питания.</p>
-                  <button class="btn-svg--faq">
+                  <button class="faq__btn">
                     <svg class="faq__svg-button" width="40" height="40" viewBox="0 0 40 40" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
@@ -748,7 +748,7 @@
                   <p class="visually-hidden">Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу.
                     Специалист уточнит ваши
                     данные, цели и предложит программу питания.</p>
-                  <button class="btn-svg--faq">
+                  <button class="faq__btn">
                     <svg class="faq__svg-button" width="40" height="40" viewBox="0 0 40 40" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
@@ -766,7 +766,7 @@
                   <p class="visually-hidden">Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу.
                     Специалист уточнит ваши
                     данные, цели и предложит программу питания.</p>
-                  <button class="btn-svg--faq">
+                  <button class="faq__btn">
                     <svg class="faq__svg-button" width="40" height="40" viewBox="0 0 40 40" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
@@ -788,7 +788,7 @@
                     Верхняя и нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки,
                     шорты, кроссовки). В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних
                     тапочках и т. п., исключения составляют специальные классы (например, йога, пилатес). </p>
-                  <button class="btn-svg--faq">
+                  <button class="faq__btn">
                     <svg class="faq__svg-button" width="40" height="40" viewBox="0 0 40 40" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
@@ -808,7 +808,7 @@
                     Верхняя и нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки,
                     шорты, кроссовки). В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних
                     тапочках и т. п., исключения составляют специальные классы (например, йога, пилатес). </p>
-                  <button class="btn-svg--faq">
+                  <button class="faq__btn">
                     <svg class="faq__svg-button" width="40" height="40" viewBox="0 0 40 40" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
@@ -828,7 +828,7 @@
                     Верхняя и нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки,
                     шорты, кроссовки). В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних
                     тапочках и т. п., исключения составляют специальные классы (например, йога, пилатес). </p>
-                  <button class="btn-svg--faq">
+                  <button class="faq__btn">
                     <svg class="faq__svg-button" width="40" height="40" viewBox="0 0 40 40" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />
@@ -848,7 +848,7 @@
                     Верхняя и нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки,
                     шорты, кроссовки). В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних
                     тапочках и т. п., исключения составляют специальные классы (например, йога, пилатес). </p>
-                  <button class="btn-svg--faq">
+                  <button class="faq__btn">
                     <svg class="faq__svg-button" width="40" height="40" viewBox="0 0 40 40" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="none" />

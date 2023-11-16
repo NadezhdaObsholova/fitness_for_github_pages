@@ -2016,10 +2016,10 @@ button,
 .price__options li:active:not(.focus-visible) {
   border-bottom: 0.125rem solid #d10a42;
 }
-.price__options .price__option-current {
+.price__options .is-active {
   border-bottom: 0.125rem solid #d10a42;
 }
-.price__options .disabled {
+.price__options .is-disabled {
   cursor: not-allowed;
   pointer-events: none;
   opacity: 0.3;
@@ -3805,7 +3805,7 @@ button,
 }
 @media (max-width: 767px) {
   .reviews__container button {
-    top: calc(50% - 0.5625rem);
+    top: calc(50% - 12.5rem);
   }
 }
 .reviews__container .reviews__button-prev {

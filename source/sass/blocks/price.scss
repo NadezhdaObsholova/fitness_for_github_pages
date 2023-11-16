@@ -94,11 +94,11 @@
     }
   }
 
-  .price__option-current {
+  .is-active {
     border-bottom: size(2px) solid #d10a42;
   }
 
-  .disabled {
+  .is-disabled {
     cursor: not-allowed;
     pointer-events: none;
     opacity: 0.3;
@@ -230,7 +230,7 @@
 
   a {
     width: size(205px);
-    
+
     &:focus {
       color: $color-default-white;
       background: var(--1, linear-gradient(97deg, #ED0233 17.6%, #003EB7 95.31%));
