@@ -335,7 +335,7 @@
   }
 }
 
-.fotter__sotial-item {
+.footer__sotial-item {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -377,7 +377,7 @@
   }
 }
 
-.fotter__sotial-item:focus {
+.footer__sotial-item:focus {
   background-color: #103AAE;
 
   svg {
@@ -387,21 +387,21 @@
   }
 }
 
-.fotter__ok {
+.footer__sotial-item--ok {
   svg {
     width: size(16px);
     height: size(16px);
   }
 }
 
-.fotter__vk {
+.footer__sotial-item--vk {
   svg {
     width: size(15px);
     height: size(15px);
   }
 }
 
-.fotter__reddit {
+.footer__sotial-item--reddit {
   svg {
     width: size(18px);
     height: size(14px);

@@ -1,8 +1,8 @@
-//import './vendor';
 import {iosVhFix} from './utils/ios-vh-fix';
 import {Form} from './modules/form-validate/form';
 import {changePrices} from './modules/price';
-import {swiper} from './modules/init-swiper';
+import {swiperJury} from './modules/swiper-jury/init-swiper';
+import {toPlayVideo} from './modules/video';
 
 
 // ---------------------------------
@@ -18,7 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   changePrices();
-  swiper();
+  toPlayVideo();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана

@@ -1,3 +1,4 @@
+/*
 .swiper {
 
   h2 {
@@ -115,6 +116,18 @@
   }
 }
 
+.swiper__slide:hover,
+.swiper__slide:active,
+.swiper__slide:focus {
+  h3 {
+    opacity: 0;
+  }
+
+  .swiper__info-container {
+    opacity: 1;
+  }
+}
+
 .swiper__slide-img {
   grid-column: 1/2;
   grid-row: 1/2;
@@ -144,7 +157,10 @@
   display: grid;
   height: 100%;
   overflow-y: auto;
+  opacity: 0.1;
 }
+
+
 
 .swiper__info-background {
   grid-column: 1/2;
@@ -204,3 +220,4 @@
     padding: size(6px) 0;
   }
 }
+*/

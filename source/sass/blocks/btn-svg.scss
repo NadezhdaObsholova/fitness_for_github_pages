@@ -1,5 +1,5 @@
 .btn-svg,
-.btn-svg--faq {
+.btn-svg-faq {
 
   background-color: transparent;
   border: none;
@@ -31,7 +31,7 @@
 
   @include active {
     svg {
-      fill: #102654
+      fill: #102654;
     }
 
     circle {
@@ -50,5 +50,14 @@
     path {
       opacity: 0.3;
     }
+  }
+}
+
+.btn-svg-faq:hover {
+  svg{
+    fill: #102654;
+  }
+  path {
+    stroke: $color-default-white;
   }
 }
