@@ -1,6 +1,4 @@
-.btn-svg,
-.btn-svg-faq {
-
+.btn-svg {
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -13,17 +11,17 @@
       width: size(30px);
       height: size(30px);
     }
-
     path {
       stroke: #102654;
     }
-
     rect {
       stroke: #102654;
     }
   }
 
   @include hover-focus {
+    outline: none;
+
     circle {
       stroke: #102654;
     }
@@ -33,11 +31,9 @@
     svg {
       fill: #102654;
     }
-
     circle {
       stroke: #102654;
     }
-
     path {
       stroke: white;
     }
@@ -53,11 +49,4 @@
   }
 }
 
-.btn-svg-faq:hover {
-  svg{
-    fill: #102654;
-  }
-  path {
-    stroke: $color-default-white;
-  }
-}
+

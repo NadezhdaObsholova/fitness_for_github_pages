@@ -47,7 +47,6 @@
   display: grid;
   grid-template-columns: auto size(860px);
   column-gap: size(40px);
-  padding: 1px;
 
   @include vp-1365 {
     grid-template-columns: 1fr;
@@ -66,7 +65,8 @@
   margin-top: size(2px);
 
   @include vp-1365 {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: size(10px);
   }
 
@@ -84,26 +84,20 @@
     text-transform: none;
     background-color: transparent;
     border: none;
-    outline: size(1px) solid rgba(16, 38, 84, 0.20);
-
-    @include vp-1365 {
-      width: size(162px);
-    }
+    border: size(1px) solid rgba(16, 38, 84, 0.20);
 
     @include vp-767 {
       font-size: size(16px);
       line-height: size(16px);
       min-height: size(44px);
-      width: size(141px);
     }
 
-    &:hover,
-    &:focus {
-      outline: size(1px) solid rgba(16, 38, 84);
-      border: none;
+    @include hover-focus {
+      border: size(1px) solid rgba(16, 38, 84);
+      outline: none;
     }
 
-    &:active {
+    &.is-active {
       color: $color-default-white;
       background: var(--1, linear-gradient(97deg, #ED0233 17.6%, #003EB7 95.31%));
       border: none;
@@ -112,8 +106,8 @@
   }
 }
 
+
 .faq__info {
-  // display: grid;
   border-top: 1px solid rgba(28, 51, 116, 0.20);
   display: none;
 }
@@ -123,21 +117,19 @@
 }
 
 .faq__info-list {
-  // grid-column: 1/2;
-  // grid-row: 1/2;
   margin: 0;
   padding: 0;
   list-style: none;
 
   .is-active {
 
-  .btn-svg-faq--open {
-    display: none;
-  }
+    .btn-svg-faq--open {
+      display: none;
+    }
 
-  .btn-svg-faq--close {
-    display: block;
-  }
+    .btn-svg-faq--close {
+      display: block;
+    }
 
   }
 }
@@ -216,7 +208,7 @@
     width: size(40px);
     height: size(40px);
     stroke: #102654;
-    padding: 6px;
+    padding: size(6px);
     border: 1px solid #102654;
     border-radius: 50%;
     cursor: pointer;
@@ -230,6 +222,18 @@
   .btn-svg-faq--close {
     display: none;
     background-color: #102654;
-    padding: 9px;
+    stroke: $color-default-white;
+    padding: size(9px);
+  }
+
+  @include hover-focus {
+    outline: none;
+    .btn-svg-faq {
+      background-color: #102654;
+      stroke: $color-default-white;
+      outline: none;
+      fill: #102654;
+    }
   }
 }
+    

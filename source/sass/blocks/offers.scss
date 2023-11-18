@@ -121,20 +121,20 @@
     padding-bottom: size(2px);
     border-bottom: size(2px) solid currentcolor;
 
-    @include focus {
-      border-bottom: none;
-      outline: size(2px) solid;
-      outline-color: currentcolor;
-      outline-offset: 10px;
+    @include hover {
+      opacity: 0.8;
     }
-  }
 
-  a:hover {
-    opacity: 0.8;
-  }
+    @include active {
+      opacity: 1;
+    }
 
-  a:active {
-    opacity: 1;
+    &:focus {
+      border-bottom: none;
+      outline: size(1px) solid;
+      outline-color: currentcolor;
+      outline-offset: 15px;
+    }
   }
 }
 

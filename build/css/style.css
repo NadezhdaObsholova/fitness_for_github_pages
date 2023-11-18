@@ -2492,22 +2492,56 @@ button,
     padding-bottom: 0.9375rem;
   }
 }
-.hero__header img {
+
+.hero__logo svg {
   width: 7.5rem;
   height: 1.625rem;
+  padding-bottom: 0.375rem;
+}
+.hero__logo svg path {
+  fill: #ffffff;
 }
 @media (max-width: 1365px) {
-  .hero__header img {
+  .hero__logo svg {
     width: 6.9375rem;
     height: 1.5rem;
   }
 }
 @media (max-width: 767px) {
-  .hero__header img {
+  .hero__logo svg {
     width: 6.375rem;
+    height: 1.375rem;
   }
 }
-.hero__header a {
+@media (hover: hover) {
+  .hero__logo:hover:not(.focus-visible) {
+    outline: none;
+  }
+  .hero__logo:hover:not(.focus-visible) path {
+    fill: #b4022a;
+  }
+}
+.hero__logo:focus {
+  outline: none;
+}
+.hero__logo:focus path {
+  fill: #b4022a;
+}
+.hero__logo:focus:not(.focus-visible) {
+  outline: none;
+}
+.hero__logo:focus:not(.focus-visible) path {
+  fill: #b4022a;
+}
+.hero__logo:active:not(.focus-visible) svg {
+  padding-bottom: 0.3125rem;
+  border-bottom: 0.0625rem solid #b4022a;
+}
+.hero__logo:active:not(.focus-visible) path {
+  fill: #b4022a;
+}
+
+.hero__phone {
   text-decoration: none;
   color: white;
   font-size: 1.625rem;
@@ -2516,26 +2550,37 @@ button,
   padding-bottom: 0.3125rem;
 }
 @media (max-width: 1365px) {
-  .hero__header a {
+  .hero__phone {
     font-size: 1.5rem;
     line-height: 1.5rem;
   }
 }
 @media (max-width: 767px) {
-  .hero__header a {
+  .hero__phone {
     font-size: 1.375rem;
     line-height: 1.375rem;
   }
 }
-.hero__header a.disabled {
+.hero__phone.disabled {
   opacity: 0.5;
   cursor: not-allowed;
   pointer-events: none;
 }
-.hero__header a:hover {
+@media (hover: hover) {
+  .hero__phone:hover:not(.focus-visible) {
+    outline: none;
+    color: #1C3374;
+  }
+}
+.hero__phone:focus {
+  outline: none;
   color: #1C3374;
 }
-.hero__header a:active {
+.hero__phone:focus:not(.focus-visible) {
+  outline: none;
+  color: #1C3374;
+}
+.hero__phone:active:not(.focus-visible) {
   padding-bottom: 0.25rem;
   border-bottom: 0.0625rem solid #1C3374;
 }
@@ -3117,13 +3162,16 @@ button,
 }
 @media (hover: hover) {
   .price__options li:hover:not(.focus-visible) {
+    outline: none;
     border-bottom: 0.125rem solid #d10a42;
   }
 }
 .price__options li:focus {
+  outline: none;
   border-bottom: 0.125rem solid #d10a42;
 }
 .price__options li:focus:not(.focus-visible) {
+  outline: none;
   border-bottom: 0.125rem solid #d10a42;
 }
 .price__options li:active:not(.focus-visible) {
@@ -3194,8 +3242,24 @@ button,
     width: 27.5rem;
   }
 }
-.price__options-list li:hover .price__background,
+@media (hover: hover) {
+  .price__options-list li:hover:not(.focus-visible) {
+    outline: none;
+  }
+  .price__options-list li:hover:not(.focus-visible) .price__background {
+    background: linear-gradient(135deg, #ED0233, #003EB7);
+  }
+}
+.price__options-list li:focus {
+  outline: none;
+}
 .price__options-list li:focus .price__background {
+  background: linear-gradient(135deg, #ED0233, #003EB7);
+}
+.price__options-list li:focus:not(.focus-visible) {
+  outline: none;
+}
+.price__options-list li:focus:not(.focus-visible) .price__background {
   background: linear-gradient(135deg, #ED0233, #003EB7);
 }
 .price__options-list li.price__item-current .price__background {
@@ -3287,11 +3351,6 @@ button,
 }
 .price__option-content a {
   width: 12.8125rem;
-}
-.price__option-content a:focus {
-  color: #ffffff;
-  background: var(--1, linear-gradient(97deg, #ED0233 17.6%, #003EB7 95.31%));
-  outline: none;
 }
 .price__option-content p {
   position: relative;
@@ -4374,17 +4433,19 @@ button,
   padding-bottom: 0.125rem;
   border-bottom: 0.125rem solid currentcolor;
 }
-.offers__link a:focus:not(.focus-visible) {
-  border-bottom: none;
-  outline: 0.125rem solid;
-  outline-color: currentcolor;
-  outline-offset: 10px;
+@media (hover: hover) {
+  .offers__link a:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
 }
-.offers__link a:hover {
-  opacity: 0.8;
-}
-.offers__link a:active {
+.offers__link a:active:not(.focus-visible) {
   opacity: 1;
+}
+.offers__link a:focus {
+  border-bottom: none;
+  outline: 0.0625rem solid;
+  outline-color: currentcolor;
+  outline-offset: 15px;
 }
 
 .offers__period {
@@ -4618,7 +4679,6 @@ button,
   -webkit-column-gap: 2.5rem;
      -moz-column-gap: 2.5rem;
           column-gap: 2.5rem;
-  padding: 1px;
 }
 @media (max-width: 1365px) {
   .faq__wrapper {
@@ -4646,10 +4706,10 @@ button,
 }
 @media (max-width: 1365px) {
   .faq__topics {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[4];
+    grid-template-columns: repeat(4, 1fr);
     gap: 0.625rem;
   }
 }
@@ -4670,26 +4730,30 @@ button,
   text-transform: none;
   background-color: transparent;
   border: none;
-  outline: 0.0625rem solid rgba(16, 38, 84, 0.2);
-}
-@media (max-width: 1365px) {
-  .faq__topics .faq__item {
-    width: 10.125rem;
-  }
+  border: 0.0625rem solid rgba(16, 38, 84, 0.2);
 }
 @media (max-width: 767px) {
   .faq__topics .faq__item {
     font-size: 1rem;
     line-height: 1rem;
     min-height: 2.75rem;
-    width: 8.8125rem;
   }
 }
-.faq__topics .faq__item:hover, .faq__topics .faq__item:focus {
-  outline: 0.0625rem solid rgb(16, 38, 84);
-  border: none;
+@media (hover: hover) {
+  .faq__topics .faq__item:hover:not(.focus-visible) {
+    border: 0.0625rem solid rgb(16, 38, 84);
+    outline: none;
+  }
 }
-.faq__topics .faq__item:active {
+.faq__topics .faq__item:focus {
+  border: 0.0625rem solid rgb(16, 38, 84);
+  outline: none;
+}
+.faq__topics .faq__item:focus:not(.focus-visible) {
+  border: 0.0625rem solid rgb(16, 38, 84);
+  outline: none;
+}
+.faq__topics .faq__item.is-active {
   color: #ffffff;
   background: var(--1, linear-gradient(97deg, #ED0233 17.6%, #003EB7 95.31%));
   border: none;
@@ -4835,7 +4899,7 @@ button,
   width: 2.5rem;
   height: 2.5rem;
   stroke: #102654;
-  padding: 6px;
+  padding: 0.375rem;
   border: 1px solid #102654;
   border-radius: 50%;
   cursor: pointer;
@@ -4849,7 +4913,37 @@ button,
 .faq__info-item .btn-svg-faq--close {
   display: none;
   background-color: #102654;
-  padding: 9px;
+  stroke: #ffffff;
+  padding: 0.5625rem;
+}
+@media (hover: hover) {
+  .faq__info-item:hover:not(.focus-visible) {
+    outline: none;
+  }
+  .faq__info-item:hover:not(.focus-visible) .btn-svg-faq {
+    background-color: #102654;
+    stroke: #ffffff;
+    outline: none;
+    fill: #102654;
+  }
+}
+.faq__info-item:focus {
+  outline: none;
+}
+.faq__info-item:focus .btn-svg-faq {
+  background-color: #102654;
+  stroke: #ffffff;
+  outline: none;
+  fill: #102654;
+}
+.faq__info-item:focus:not(.focus-visible) {
+  outline: none;
+}
+.faq__info-item:focus:not(.focus-visible) .btn-svg-faq {
+  background-color: #102654;
+  stroke: #ffffff;
+  outline: none;
+  fill: #102654;
 }
 
 .reviews__container {
@@ -5181,9 +5275,13 @@ button,
     letter-spacing: -0.0625rem;
   }
 }
-.footer__form input:active,
-.footer__form input:focus,
-.footer__form input:focus-visible {
+@media (hover: hover) {
+  .footer__form input:hover:not(.focus-visible) {
+    border-bottom: 0.0625rem solid #ffffff;
+  }
+}
+.footer__form input.focus-visible {
+  border: none;
   outline: 0.0625rem solid #ffffff;
   outline-offset: 0.1875rem;
 }
@@ -5415,9 +5513,9 @@ button,
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   padding: 2.5rem 6.4375rem;
   background-color: #030a1a;
 }
@@ -5490,10 +5588,16 @@ button,
     border-bottom: 0.0625rem solid #ffffff;
   }
 }
-.footer__nav-list a:focus, .footer__nav-list a:focus-visible {
+.footer__nav-list a:focus-visible {
+  padding: 0 0.3125rem;
   border: none;
   outline: 0.0625rem solid #ffffff;
   outline-offset: 0.3125rem;
+}
+.footer__nav-list a .disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  pointer-events: none;
 }
 .footer__nav-list .disabled {
   opacity: 0.3;
@@ -5501,24 +5605,42 @@ button,
   pointer-events: none;
 }
 
-.footer__logo {
-  padding-bottom: 0.1875rem;
-}
-.footer__logo img {
+.footer__logo svg {
   width: 6.8125rem;
   height: 1.5rem;
 }
 @media (max-width: 1365px) {
-  .footer__logo img {
+  .footer__logo svg {
     width: 6.25rem;
     height: 1.5rem;
   }
 }
 @media (max-width: 767px) {
-  .footer__logo img {
+  .footer__logo svg {
     width: 5.5625rem;
     height: 0.9375rem;
   }
+}
+.footer__logo svg path {
+  fill: #ffffff;
+}
+@media (hover: hover) {
+  .footer__logo:hover:not(.focus-visible) {
+    outline: none;
+  }
+  .footer__logo:hover:not(.focus-visible) svg {
+    opacity: 0.8;
+  }
+}
+.footer__logo.focus-visible {
+  outline: none;
+}
+.footer__logo.focus-visible svg {
+  outline: 0.0625rem solid #ffffff;
+  outline-offset: 0.625rem;
+}
+.footer__logo:active:not(.focus-visible) svg {
+  opacity: 0.5;
 }
 
 .footer__sotial-list {
@@ -5558,6 +5680,7 @@ button,
 }
 @media (hover: hover) {
   .footer__sotial-item:hover:not(.focus-visible) {
+    outline: none;
     background-color: #103AAE;
   }
   .footer__sotial-item:hover:not(.focus-visible) svg path {
@@ -5565,12 +5688,14 @@ button,
   }
 }
 .footer__sotial-item:focus {
+  outline: none;
   background-color: #103AAE;
 }
 .footer__sotial-item:focus svg path {
   fill: #ffffff;
 }
 .footer__sotial-item:focus:not(.focus-visible) {
+  outline: none;
   background-color: #103AAE;
 }
 .footer__sotial-item:focus:not(.focus-visible) svg path {
@@ -5588,13 +5713,6 @@ button,
   pointer-events: none;
 }
 
-.footer__sotial-item:focus {
-  background-color: #103AAE;
-}
-.footer__sotial-item:focus svg path {
-  fill: #ffffff;
-}
-
 .footer__sotial-item--ok svg {
   width: 1rem;
   height: 1rem;
@@ -5610,76 +5728,63 @@ button,
   height: 0.875rem;
 }
 
-.btn-svg,
-.btn-svg-faq {
+.btn-svg {
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
-.btn-svg svg,
-.btn-svg-faq svg {
+.btn-svg svg {
   width: 2.5rem;
   height: 2.5rem;
 }
 @media (max-width: 767px) {
-  .btn-svg svg,
-.btn-svg-faq svg {
+  .btn-svg svg {
     width: 1.875rem;
     height: 1.875rem;
   }
 }
-.btn-svg svg path,
-.btn-svg-faq svg path {
+.btn-svg svg path {
   stroke: #102654;
 }
-.btn-svg svg rect,
-.btn-svg-faq svg rect {
+.btn-svg svg rect {
   stroke: #102654;
 }
 @media (hover: hover) {
-  .btn-svg:hover:not(.focus-visible) circle,
-.btn-svg-faq:hover:not(.focus-visible) circle {
+  .btn-svg:hover:not(.focus-visible) {
+    outline: none;
+  }
+  .btn-svg:hover:not(.focus-visible) circle {
     stroke: #102654;
   }
 }
-.btn-svg:focus circle,
-.btn-svg-faq:focus circle {
+.btn-svg:focus {
+  outline: none;
+}
+.btn-svg:focus circle {
   stroke: #102654;
 }
-.btn-svg:focus:not(.focus-visible) circle,
-.btn-svg-faq:focus:not(.focus-visible) circle {
+.btn-svg:focus:not(.focus-visible) {
+  outline: none;
+}
+.btn-svg:focus:not(.focus-visible) circle {
   stroke: #102654;
 }
-.btn-svg:active:not(.focus-visible) svg,
-.btn-svg-faq:active:not(.focus-visible) svg {
+.btn-svg:active:not(.focus-visible) svg {
   fill: #102654;
 }
-.btn-svg:active:not(.focus-visible) circle,
-.btn-svg-faq:active:not(.focus-visible) circle {
+.btn-svg:active:not(.focus-visible) circle {
   stroke: #102654;
 }
-.btn-svg:active:not(.focus-visible) path,
-.btn-svg-faq:active:not(.focus-visible) path {
+.btn-svg:active:not(.focus-visible) path {
   stroke: white;
 }
-.btn-svg:disabled,
-.btn-svg-faq:disabled {
+.btn-svg:disabled {
   cursor: not-allowed;
   pointer-events: none;
 }
-.btn-svg:disabled path,
-.btn-svg-faq:disabled path {
+.btn-svg:disabled path {
   opacity: 0.3;
-}
-
-.btn-svg-faq:hover svg {
-  fill: #102654;
-}
-.btn-svg-faq:hover path {
-  stroke: #ffffff;
-}
-
-/* @mixin hover-focus {
+} /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
         @content;

@@ -86,6 +86,7 @@
     }
 
     @include hover-focus {
+      outline: none;
       border-bottom: size(2px) solid #d10a42;
     }
 
@@ -146,15 +147,14 @@
     @include vp-1365 {
       width: size(440px);
     }
-  }
 
-  li:hover,
-  li:focus {
-    .price__background {
-      background: linear-gradient(135deg, #ED0233, #003EB7);
+    @include hover-focus {
+      outline: none;
+      .price__background {
+        background: linear-gradient(135deg, #ED0233, #003EB7);
+      }
     }
   }
-
 
   li.price__item-current {
     .price__background {
@@ -230,12 +230,6 @@
 
   a {
     width: size(205px);
-
-    &:focus {
-      color: $color-default-white;
-      background: var(--1, linear-gradient(97deg, #ED0233 17.6%, #003EB7 95.31%));
-      outline: none;
-    }
   }
 
   p {
