@@ -5,6 +5,11 @@
 // Swiper 8.4.7
 @import "vendor/swiper";
 
+@import "vendor/tabs/data-tabs.scss";
+@import "vendor/tabs/tabs.scss";
+
+@import "vendor/accordion/data-accordion.scss";
+@import "vendor/accordion/accordion.scss";
 // Global
 // ---------------------------------
 @import "function";
@@ -27,13 +32,14 @@
 @import "blocks/about";
 @import "blocks/price";
 @import "blocks/games";
-@import "blocks/swiper";
+@import "blocks/jury";
 @import "blocks/features";
 @import "blocks/offers";
 @import "blocks/faq";
 @import "blocks/reviews";
 @import "blocks/footer";
 @import "blocks/btn-svg";
+
 // ---------------------------------
 
 // ❗❗❗ запрещено использовать изображения в css, касается как jpg \ png, так и svg

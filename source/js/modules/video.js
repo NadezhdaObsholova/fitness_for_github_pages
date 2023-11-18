@@ -1,4 +1,4 @@
-const toPlayVideo = () => {
+const playVideo = () => {
   const playBtn = document.querySelector('.about__preview-button');
 
   if (playBtn) {
@@ -17,4 +17,4 @@ const toPlayVideo = () => {
   }
 };
 
-export {toPlayVideo};
+export {playVideo};

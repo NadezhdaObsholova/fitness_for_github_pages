@@ -1,10 +1,14 @@
 
 import Swiper from '../../vendor/swiper';
 
-export const swiperJury = new Swiper('.swiper__slides-holder', {
+const swiper = document.querySelector('[data-swiper="jury-swiper"]');
+const buttonNext = document.querySelector('[data-button="jury-button-next"]');
+const buttonPrev = document.querySelector('[data-button="jury-button-prev"]');
+
+export const swiperJury = new Swiper(swiper, {
   navigation: {
-    nextEl: '.swiper__button-next',
-    prevEl: '.swiper__button-prev',
+    nextEl: buttonNext,
+    prevEl: buttonPrev,
   },
   loop: true,
   breakpoints: {

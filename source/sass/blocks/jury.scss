@@ -1,5 +1,8 @@
-/*
-.swiper {
+.jury {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+
 
   h2 {
     font-family: "AlumniSans";
@@ -25,70 +28,24 @@
   }
 }
 
-.swiper__holder {
+.jury__swiper {
   position: relative;
-  margin-top: size(45px);
+  max-width: size(1160px);
+  padding-top: size(45px);
 
   @include vp-1365 {
-    margin: size(37px) auto 0 auto;
-    width: size(568px);
+    max-width: size(568px);
+    padding-top: size(40px);
   }
 
   @include vp-767 {
-    margin-top: size(42px);
-    width: size(226px);
-  }
-}
-
-.swiper__button-prev,
-.swiper__button-next {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: calc(50% - size(20px));
-  width: size(58px);
-  height: size(58px);
-
-  @include vp-767 {
-    width: size(36px);
-    height: size(36px);
-  }
-}
-
-.swiper__button-prev {
-  left: size(-67px);
-
-  @include vp-767 {
-    left: size(-32px);
-  }
-}
-
-.swiper__button-next {
-  right: size(-67px);
-
-  @include vp-767 {
-    right: size(-32px);
-  }
-}
-
-.swiper__slides-holder {
-  position: relative;
-  height: size(294px);
-  overflow: hidden;
-}
-
-.swiper__slides {
-  display: flex;
-  gap: size(40px);
-
-  @include vp-1365 {
-    gap: size(32px);
+    max-width: size(226px);
+    padding-top: size(41px);
   }
 }
 
 
-.swiper__slide {
+.jury__slide {
   position: relative;
   width: size(260px);
   height: size(294px);
@@ -116,19 +73,19 @@
   }
 }
 
-.swiper__slide:hover,
-.swiper__slide:active,
-.swiper__slide:focus {
+.jury__slide:hover,
+.jury__slide:active,
+.jury__slide:focus {
   h3 {
     opacity: 0;
   }
 
-  .swiper__info-container {
+  .jury__info-container {
     opacity: 1;
   }
 }
 
-.swiper__slide-img {
+.jury__slide-img {
   grid-column: 1/2;
   grid-row: 1/2;
   width: size(260px);
@@ -151,18 +108,16 @@
   }
 }
 
-.swiper__info-container {
+.jury__info-container {
   grid-column: 1/2;
   grid-row: 1/2;
   display: grid;
   height: 100%;
   overflow-y: auto;
-  opacity: 0.1;
+  opacity: 0;
 }
 
-
-
-.swiper__info-background {
+.jury__info-background {
   grid-column: 1/2;
   grid-row: 1/2;
   background-color: thistle;
@@ -170,7 +125,7 @@
   box-shadow: (0px 0px 35px rgba(42, 59, 99, 0.17));
 }
 
-.swiper__info {
+.jury__info {
   grid-column: 1/2;
   grid-row: 1/2;
   display: flex;
@@ -220,4 +175,35 @@
     padding: size(6px) 0;
   }
 }
-*/
+
+.jury__button-prev,
+.jury__button-next {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: size(220px);
+  width: size(58px);
+  height: size(58px);
+
+  @include vp-767 {
+    width: size(36px);
+    height: size(36px);
+  }
+}
+
+.jury__button-prev {
+  left: size(-67px);
+
+  @include vp-767 {
+    left: size(-32px);
+  }
+}
+
+.jury__button-next {
+  right: size(-67px);
+
+  @include vp-767 {
+    right: size(-32px);
+  }
+}

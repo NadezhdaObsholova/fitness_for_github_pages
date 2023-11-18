@@ -12,4 +12,8 @@
 <path d="M1 1L17 17L1 33" stroke="#102654"/>
 </g></symbol><symbol id="swiper_button_prev" viewBox="0 0 18 34"><g fill="none">
 <path d="M17 33L0.999999 17L17 0.999998" stroke="#102654"/>
-</g></symbol></svg>
+</g></symbol><symbol id="tabs-close" viewBox="0 0 20 2"><g fill="none">
+<path d="M20 1H10H0" stroke="white"/>
+</g></symbol><symbol id="tabs-open" viewBox="0 0 20 20">
+<path d="M10 0V10M10 20V10M10 10H20M10 10H0"/>
+</symbol></svg>
