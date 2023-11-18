@@ -6,129 +6,6 @@
     display: flex;
     flex-direction: column;
   }
-
-  h2 {
-    font-family: "AlumniSans";
-    font-size: size(54px);
-    font-weight: 600;
-    line-height: size(54px);
-    letter-spacing: size(1.62px);
-    margin-top: 0;
-    margin-bottom: size(33px);
-
-    @include vp-1365 {
-      font-size: size(42px);
-      line-height: size(42px);
-      letter-spacing: size(1.26px);
-    }
-
-    @include vp-767 {
-      font-size: size(32px);
-      line-height: size(32px);
-      letter-spacing: size(0.96px);
-      margin-bottom: size(36px);
-    }
-  }
-}
-
-.footer__form-holder {
-  padding: size(60px) size(170px) size(60px) size(103px);
-  background-color: $color-basic-dark-blue;
-  color: $color-default-white;
-
-  @include vp-1365 {
-    padding: size(100px) size(133px);
-  }
-
-  @include vp-767 {
-    padding: size(71px) size(15px);
-  }
-}
-
-.footer__form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: size(30px);
-  row-gap: size(28px);
-
-  @include vp-1365 {
-    column-gap: size(55px);
-    row-gap: size(30px);
-  }
-
-  @include vp-767 {
-    display: flex;
-    flex-direction: column;
-    row-gap: size(30px);
-  }
-
-  input {
-    width: 100%;
-    border: none;
-    background-color: transparent;
-    border-bottom: size(1px) solid #74819C;
-    padding-top: size(5px);
-    padding-bottom: size(5px);
-    font-family: inherit;
-    font-size: size(14px);
-    line-height: size(22px);
-    font-weight: 400;
-    color: $color-default-white;
-
-    @include vp-1365 {
-      font-weight: 300;
-      padding-top: size(3px);
-      padding-bottom: size(3px);
-    }
-
-    @include vp-767 {
-      padding-left: 0;
-      letter-spacing: size(-1px);
-    }
-
-    @include hover {
-      border-bottom: size(1px) solid $color-default-white;
-    }
-
-    &.focus-visible {
-      border: none;
-      outline: size(1px) solid $color-default-white;
-      outline-offset: size(3px);
-    }
-  }
-
-
-  input::placeholder {
-    font-family: inherit;
-    font-size: size(14px);
-    line-height: size(22px);
-    font-weight: 400;
-    color: $color-default-white;
-
-    @include vp-1365 {
-      font-size: size(16px);
-      font-weight: 300;
-      line-height: size(24px);
-
-      @include vp-767 {
-        line-height: size(22px);
-      }
-    }
-  }
-
-  button {
-    grid-column: 1/3;
-    width: 100%;
-    text-transform: uppercase;
-    background-color: transparent;
-    border: none;
-    outline: size(1px) solid $color-default-white;
-    color: $color-default-white;
-
-    @include vp-767 {
-      margin-top: size(11px);
-    }
-  }
 }
 
 .footer__contacts-holder {
@@ -300,18 +177,11 @@
       outline-offset: size(5px);
     }
 
-
   .disabled {
     opacity: 0.3;
     cursor: not-allowed;
     pointer-events: none;
   }
-  }
-
-  .disabled {
-    opacity: 0.3;
-    cursor: not-allowed;
-    pointer-events: none;
   }
 }
 
@@ -331,7 +201,7 @@
       height: size(15px);
     }
   }
-  
+
   @include hover-focus {
     outline: none;
     opacity: 0.8;

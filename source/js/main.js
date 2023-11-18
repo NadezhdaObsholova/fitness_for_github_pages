@@ -1,13 +1,12 @@
-import {iosVhFix} from './utils/ios-vh-fix';
-import {Form} from './modules/form-validate/form';
-import {playVideo} from './modules/video';
-import {changePrices} from './modules/price';
-import {swiperJury} from './modules/swiper-jury/init-swiper';
-import {swiperReviews} from './modules/swiper-reviews/init-swiper';
-import {initTabs} from './vendor/tabs/init-tabs';
-import {initAccordions} from './vendor/accordion/init-accordion';
+import { iosVhFix } from './utils/ios-vh-fix';
+import { Form } from './modules/form-validate/form';
+import { playVideo } from './modules/video';
+import { changePrices } from './modules/price';
+import { swiperJury } from './modules/swiper-jury/init-swiper';
+import { swiperReviews } from './modules/swiper-reviews/init-swiper';
+import { initTabs } from './vendor/tabs/init-tabs';
+import { initAccordions } from './vendor/accordion/init-accordion';
 
-// ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
 

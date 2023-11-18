@@ -734,10 +734,10 @@
                     <div class="faq__info-item" tabindex="0" data-accordion="button">
                       <h3>Можно ли приобрести в центре спортивное питание?</h3>
                       <div data-accordion="content">
-                      <p>Да. Вы можете обратиться как к своему тренеру, так и к нашему
-                        нутрициологу.
-                        Специалист уточнит ваши
-                        данные, цели и предложит программу питания.</p>
+                        <p>Да. Вы можете обратиться как к своему тренеру, так и к нашему
+                          нутрициологу.
+                          Специалист уточнит ваши
+                          данные, цели и предложит программу питания.</p>
                       </div>
                       <svg class="btn-svg-faq btn-svg-faq--open" width="20" height="20">
                         <use href="img/sprite.svg#tabs-open"></use>
@@ -914,20 +914,26 @@
 
 
       <div class="footer" data-test="footer">
-        <div class="footer__form-holder">
+        <div class="footer__form form">
           <h2>Бесплатное занятие</h2>
-          <form class="footer__form" method="get" action="https://echo.htmlacademy.ru">
-            <div class="footer__form-item">
-              <label class="visually-hidden" for="name">Имя</label>
-              <input type="text" name="name" id="name" placeholder="Имя" required>
-            </div>
-            <div class="footer__form-item">
-              <label class="visually-hidden" for="tel">Телефон</label>
-              <input type="number" name="tel" id="tel" placeholder="Телефон" required>
-            </div>
-            <button class="btn btn--white" type="submit">Отправить</button>
-          </form>
+
+          <div class="form__holder" data-form-node data-form-validate data-callback="base">
+            <form class="form__content" method="post" action="https://echo.htmlacademy.ru">
+              <div class="form__item name-wrapper" data-validate-type="text" data-limitation="name"
+                data-message-base="Обязательное поле" data-required data-on-input-validate>
+                <input class="form__input" type="text" name="name" id="name" placeholder="Имя" required>
+              </div>
+              <div class="form__item phone-wrapper" data-validate-type="phone"
+                data-message-base="Обязательное поле" data-message-extra="Введите 10 цифр" data-required
+                data-on-input-validate>
+                <input class="form__input" class="form-field" type="text" name="phone" placeholder="Телефон" aria-label="Телефон" required
+                  autocomplete="off">
+              </div>
+              <button class="btn btn--white" type="submit">Отправить</button>
+            </form>
+          </div>
         </div>
+
         <div class="footer__contacts-holder">
           <h2>Контакты</h2>
           <div class="footer__contacts">
@@ -994,7 +1000,7 @@
   </div>
 
   <script src="js/vendor.min.js"></script>
-  <script src="js/main.min.js"></script>
+  <script src="js/main.min.js" type="module"></script>
 </body>
 
 </html>
