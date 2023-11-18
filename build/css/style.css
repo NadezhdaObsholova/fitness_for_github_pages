@@ -2493,22 +2493,19 @@ button,
   }
 }
 
-.hero__logo svg {
+.hero__logo img {
   width: 7.5rem;
   height: 1.625rem;
   padding-bottom: 0.375rem;
 }
-.hero__logo svg path {
-  fill: #ffffff;
-}
 @media (max-width: 1365px) {
-  .hero__logo svg {
+  .hero__logo img {
     width: 6.9375rem;
     height: 1.5rem;
   }
 }
 @media (max-width: 767px) {
-  .hero__logo svg {
+  .hero__logo img {
     width: 6.375rem;
     height: 1.375rem;
   }
@@ -2516,29 +2513,19 @@ button,
 @media (hover: hover) {
   .hero__logo:hover:not(.focus-visible) {
     outline: none;
-  }
-  .hero__logo:hover:not(.focus-visible) path {
-    fill: #b4022a;
+    opacity: 0.8;
   }
 }
 .hero__logo:focus {
   outline: none;
-}
-.hero__logo:focus path {
-  fill: #b4022a;
+  opacity: 0.8;
 }
 .hero__logo:focus:not(.focus-visible) {
   outline: none;
+  opacity: 0.8;
 }
-.hero__logo:focus:not(.focus-visible) path {
-  fill: #b4022a;
-}
-.hero__logo:active:not(.focus-visible) svg {
-  padding-bottom: 0.3125rem;
-  border-bottom: 0.0625rem solid #b4022a;
-}
-.hero__logo:active:not(.focus-visible) path {
-  fill: #b4022a;
+.hero__logo:active:not(.focus-visible) {
+  opacity: 0.3;
 }
 
 .hero__phone {
@@ -5605,42 +5592,38 @@ button,
   pointer-events: none;
 }
 
-.footer__logo svg {
+.footer__logo img {
   width: 6.8125rem;
   height: 1.5rem;
 }
 @media (max-width: 1365px) {
-  .footer__logo svg {
+  .footer__logo img {
     width: 6.25rem;
     height: 1.5rem;
   }
 }
 @media (max-width: 767px) {
-  .footer__logo svg {
+  .footer__logo img {
     width: 5.5625rem;
     height: 0.9375rem;
   }
 }
-.footer__logo svg path {
-  fill: #ffffff;
-}
 @media (hover: hover) {
   .footer__logo:hover:not(.focus-visible) {
     outline: none;
-  }
-  .footer__logo:hover:not(.focus-visible) svg {
     opacity: 0.8;
   }
 }
-.footer__logo.focus-visible {
+.footer__logo:focus {
   outline: none;
+  opacity: 0.8;
 }
-.footer__logo.focus-visible svg {
-  outline: 0.0625rem solid #ffffff;
-  outline-offset: 0.625rem;
+.footer__logo:focus:not(.focus-visible) {
+  outline: none;
+  opacity: 0.8;
 }
-.footer__logo:active:not(.focus-visible) svg {
-  opacity: 0.5;
+.footer__logo:active:not(.focus-visible) {
+  opacity: 0.3;
 }
 
 .footer__sotial-list {

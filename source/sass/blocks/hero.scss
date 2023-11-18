@@ -38,14 +38,10 @@
 
 .hero__logo {
 
-  svg {
+  img {
     width: size(120px);
     height: size(26px);
     padding-bottom: size(6px);
-
-    path {
-      fill: $color-default-white;
-    }
 
     @include vp-1365 {
       width: size(111px);
@@ -60,20 +56,11 @@
 
   @include hover-focus {
     outline: none;
-
-    path {
-      fill: #b4022a;
-    }
+    opacity: 0.8;
   }
 
   @include active {
-    svg{
-    padding-bottom: size(5px);
-    border-bottom: size(1px) solid #b4022a;
-    }
-    path {
-      fill: #b4022a;
-    }
+    opacity: 0.3;
   }
 }
 

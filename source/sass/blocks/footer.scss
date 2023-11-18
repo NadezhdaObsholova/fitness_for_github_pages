@@ -317,7 +317,7 @@
 
 .footer__logo {
 
-  svg {
+  img {
     width: size(109px);
     height: size(24px);
 
@@ -330,36 +330,17 @@
       width: size(89px);
       height: size(15px);
     }
-
-    path {
-      fill: $color-default-white;
-    }
   }
-
-  @include hover {
+  
+  @include hover-focus {
     outline: none;
-
-    svg {
-      opacity: 0.8;
-    }
-  }
-
-  &.focus-visible {
-    outline: none;
-
-    svg {
-      outline: size(1px) solid $color-default-white;
-      outline-offset: size(10px);
-    }
+    opacity: 0.8;
   }
 
   @include active {
-    svg {
-      opacity: 0.5;
-    }
+    opacity: 0.3;
   }
 }
-
 
 .footer__sotial-list {
   display: flex;
