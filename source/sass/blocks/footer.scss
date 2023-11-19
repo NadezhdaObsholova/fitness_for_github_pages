@@ -7,6 +7,10 @@
     display: flex;
     flex-direction: column;
   }
+
+  @include vp-767 {
+    border-top: none;
+  }
 }
 
 .footer__nav {
@@ -20,7 +24,7 @@
 
   @include vp-1365 {
     padding: size(45px);
-    padding-bottom: size(10px);
+    padding-bottom: size(26px);
   }
 
   @include vp-767 {
@@ -28,6 +32,7 @@
     flex-direction: column;
     align-items: flex-start;
     padding: size(30px) size(15px);
+    padding-bottom: size(45px);
     gap: size(30px);
   }
 }

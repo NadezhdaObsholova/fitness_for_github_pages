@@ -1856,6 +1856,9 @@ button,
 }
 @media (max-width: 767px) {
   .hero__header {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
     padding-top: 0.9375rem;
     padding-bottom: 0.9375rem;
   }
@@ -1874,6 +1877,7 @@ button,
 }
 @media (max-width: 767px) {
   .hero__logo img {
+    padding-bottom: 0;
     width: 6.375rem;
     height: 1.375rem;
   }
@@ -1978,7 +1982,7 @@ button,
        -moz-column-gap: 0.9375rem;
             column-gap: 0.9375rem;
     width: auto;
-    padding-top: 2.125rem;
+    padding-top: 2rem;
     padding-bottom: 0;
   }
 }
@@ -2012,9 +2016,9 @@ button,
   .hero__content h2 {
     font-size: 3.875rem;
     line-height: 4.375rem;
-    margin-top: 0.8125rem;
+    margin-top: 0.875rem;
     margin-bottom: 3.75rem;
-    letter-spacing: 0.09375rem;
+    letter-spacing: 0.1125rem;
   }
 }
 .hero__content p {
@@ -2070,8 +2074,8 @@ button,
     font-size: 0.75rem;
     line-height: 1.25rem;
     letter-spacing: 0.05625rem;
-    margin-bottom: 0.375rem;
-    margin-top: 0.625rem;
+    margin-bottom: 0.125rem;
+    margin-top: 0.5625rem;
   }
 }
 .hero__content a {
@@ -2095,7 +2099,7 @@ button,
 @media (max-width: 767px) {
   .hero__content a {
     width: 100%;
-    height: 3.375rem;
+    height: 3.3125rem;
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-column: 1/3;
@@ -2121,7 +2125,7 @@ button,
   grid-template-columns: 22.1875rem 41.25rem;
   gap: 9.0625rem;
   padding-top: 7.5rem;
-  padding-bottom: 14.5625rem;
+  padding-bottom: 14.625rem;
 }
 @media (max-width: 1365px) {
   .about__container {
@@ -2133,7 +2137,7 @@ button,
         -ms-flex-direction: column;
             flex-direction: column;
     padding-top: 6.625rem;
-    padding-bottom: 11.25rem;
+    padding-bottom: 11.375rem;
     gap: 0;
   }
 }
@@ -2258,7 +2262,7 @@ button,
     width: 16.5625rem;
     height: 10.4375rem;
     right: calc(50% - 8.3125rem);
-    top: calc(100% - 16.5625rem);
+    top: calc(100% - 16.5rem);
   }
 }
 @media (max-width: 767px) {
@@ -2445,12 +2449,12 @@ button,
 @media (max-width: 1365px) {
   .price__container {
     padding-top: 4.25rem;
-    padding-bottom: 6.25rem;
+    padding-bottom: 6.125rem;
   }
 }
 @media (max-width: 767px) {
   .price__container {
-    padding-top: 2.875rem;
+    padding-top: 2.9375rem;
     padding-bottom: 4.4375rem;
   }
 }
@@ -2589,7 +2593,7 @@ button,
           justify-content: space-between;
   margin: 0;
   padding: 0;
-  padding-top: 2.25rem;
+  padding-top: 2.1875rem;
 }
 @media (max-width: 1365px) {
   .price__options-list ul {
@@ -2766,6 +2770,8 @@ button,
   .price__option-content p {
     margin-top: 2.75rem;
     margin-bottom: 1.5rem;
+    padding-left: 0.125rem;
+    gap: 0.8125rem;
   }
 }
 .price__option-content span {
@@ -3424,14 +3430,13 @@ button,
 }
 @media (max-width: 1365px) {
   .features__container {
-    padding: 6.3125rem 2.75rem 3.25rem 2.75rem;
+    padding: 6.3125rem 2.75rem 3.1875rem 2.75rem;
     margin: 0 auto;
   }
 }
 @media (max-width: 767px) {
   .features__container {
-    padding: 4.4375rem 0 0.9375rem;
-    padding-bottom: 0.125rem;
+    padding: 4.4375rem 0 3rem;
   }
 }
 .features__container h2 {
@@ -3506,7 +3511,7 @@ button,
 @media (max-width: 1365px) {
   .features__container p {
     margin-bottom: 0;
-    margin-top: 0.75rem;
+    margin-top: 0.6875rem;
   }
 }
 @media (max-width: 767px) {
@@ -3524,9 +3529,15 @@ button,
   color: #2e35ac;
   margin-top: 0.625rem;
 }
+@media (max-width: 1365px) {
+  .features__container h3 + p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.125rem;
+  }
+}
 @media (max-width: 767px) {
   .features__container h3 + p {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.6875rem;
   }
 }
 
@@ -3549,9 +3560,9 @@ button,
     -ms-grid-columns: 19.5625rem 19.5625rem;
     grid-template-columns: 19.5625rem 19.5625rem;
     width: auto;
-    -webkit-column-gap: 3.125rem;
-       -moz-column-gap: 3.125rem;
-            column-gap: 3.125rem;
+    -webkit-column-gap: 3.25rem;
+       -moz-column-gap: 3.25rem;
+            column-gap: 3.25rem;
     row-gap: 21.375rem;
     margin: 3.0625rem auto;
   }
@@ -3560,8 +3571,9 @@ button,
   .features__list {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    gap: 2.25rem;
+    gap: 2.1875rem;
     margin-top: 3.4375rem;
+    margin-bottom: 0;
   }
 }
 .features__list .features__item:nth-last-child(-n+2) {
@@ -3668,7 +3680,7 @@ button,
     left: 0;
     top: 0;
     padding: 0 4.375rem;
-    padding-bottom: 2.375rem;
+    padding-bottom: 2.5625rem;
     margin-top: 0.125rem;
   }
 }
@@ -3685,7 +3697,7 @@ button,
 @media (max-width: 767px) {
   .features__item--main h3 {
     margin-top: 1.875rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4375rem;
   }
 }
 .features__item--main h4 {
@@ -3783,12 +3795,12 @@ button,
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 1.875rem;
-    padding-top: 2.4375rem;
+    padding-top: 2.5rem;
   }
 }
 @media (max-width: 767px) {
   .offers__wrapper {
-    padding-top: 1.1875rem;
+    padding-top: 1.25rem;
     gap: 2.5rem;
   }
 }
@@ -4079,7 +4091,7 @@ button,
 @media (max-width: 1365px) {
   .faq__container {
     padding-top: 6.3125rem;
-    padding-bottom: 6.1875rem;
+    padding-bottom: 6.25rem;
   }
 }
 @media (max-width: 767px) {
@@ -4129,12 +4141,12 @@ button,
   .faq__wrapper {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    row-gap: 2.5625rem;
+    row-gap: 2.4375rem;
   }
 }
 @media (max-width: 767px) {
   .faq__wrapper {
-    row-gap: 1.75rem;
+    row-gap: 1.8125rem;
   }
 }
 
@@ -4164,7 +4176,7 @@ button,
     display: grid;
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    gap: 0.625rem;
+    gap: 0.5rem;
   }
 }
 
@@ -4207,6 +4219,17 @@ button,
   outline: none;
 }
 
+@media (max-width: 1365px) {
+  .faq__content {
+    margin-left: 0.0625rem;
+  }
+}
+@media (max-width: 767px) {
+  .faq__content {
+    margin-left: 0;
+  }
+}
+
 .faq__info {
   border-top: 0.0625rem solid rgba(28, 51, 116, 0.2);
   display: none;
@@ -4222,6 +4245,16 @@ button,
   margin: 0;
   padding: 0;
   list-style: none;
+}
+@media (max-width: 1365px) {
+  .faq__info-list li:last-of-type .faq__info-item {
+    padding-top: 1.5625rem;
+  }
+}
+@media (max-width: 767px) {
+  .faq__info-list li:last-of-type .faq__info-item {
+    padding-top: 1.4375rem;
+  }
 }
 .faq__info-list .is-active .btn-svg-faq--open {
   display: none;
@@ -4255,9 +4288,8 @@ button,
     -webkit-column-gap: 6.25rem;
        -moz-column-gap: 6.25rem;
             column-gap: 6.25rem;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5625rem;
-    min-height: 5.625rem;
+    padding-top: 1.6875rem;
+    padding-bottom: 1.4375rem;
   }
 }
 @media (max-width: 767px) {
@@ -4274,7 +4306,7 @@ button,
         -ms-flex-align: center;
             align-items: center;
     padding-top: 1.3125rem;
-    padding-bottom: 1.375rem;
+    padding-bottom: 1.25rem;
   }
   .faq__info-item div {
     -ms-grid-column: 1;
@@ -4301,6 +4333,7 @@ button,
             flex-grow: 1;
     font-size: 1.375rem;
     line-height: 1.375rem;
+    margin-top: 0.0625rem;
   }
 }
 @media (max-width: 767px) {
@@ -4330,7 +4363,8 @@ button,
 }
 @media (max-width: 1365px) {
   .faq__info-item p {
-    padding-top: 0.0625rem;
+    padding: 0.0625rem 0;
+    padding-top: 0.125rem;
   }
 }
 @media (max-width: 767px) {
@@ -4343,7 +4377,7 @@ button,
     grid-row: 2/3;
     font-size: 1rem;
     line-height: 1.25rem;
-    padding-top: 1.1875rem;
+    padding-top: 1.25rem;
   }
 }
 .faq__info-item .btn-svg-faq {
@@ -4358,21 +4392,43 @@ button,
   height: 2.5rem;
   stroke: #102654;
   padding: 0.5rem;
-  border: 0.0625rem solid #102654;
+  border: 0.0625rem solid #1C3374;
   border-radius: 50%;
   cursor: pointer;
+}
+@media (max-width: 1365px) {
+  .faq__info-item .btn-svg-faq {
+    margin-top: -0.0625rem;
+    margin-left: -0.0625rem;
+  }
 }
 @media (max-width: 767px) {
   .faq__info-item .btn-svg-faq {
     width: 1.875rem;
     height: 1.875rem;
+    padding: 0.375rem;
+    margin-left: 0;
+    margin-top: 0;
   }
 }
 .faq__info-item .btn-svg-faq--close {
   display: none;
-  background-color: #102654;
+  background-color: #1C3374;
   stroke: #ffffff;
   padding: 0.5625rem;
+}
+@media (max-width: 1365px) {
+  .faq__info-item .btn-svg-faq--close {
+    margin-top: -0.125rem;
+    margin-left: -0.0625rem;
+  }
+}
+@media (max-width: 767px) {
+  .faq__info-item .btn-svg-faq--close {
+    padding: 0.375rem;
+    margin-left: 0;
+    margin-top: 0;
+  }
 }
 @media (hover: hover) {
   .faq__info-item:hover:not(.focus-visible) {
@@ -4654,6 +4710,11 @@ button,
             flex-direction: column;
   }
 }
+@media (max-width: 767px) {
+  .footer {
+    border-top: none;
+  }
+}
 
 .footer__nav {
   -ms-grid-column: 1;
@@ -4675,7 +4736,7 @@ button,
 @media (max-width: 1365px) {
   .footer__nav {
     padding: 2.8125rem;
-    padding-bottom: 0.625rem;
+    padding-bottom: 1.625rem;
   }
 }
 @media (max-width: 767px) {
@@ -4691,6 +4752,7 @@ button,
         -ms-flex-align: start;
             align-items: flex-start;
     padding: 1.875rem 0.9375rem;
+    padding-bottom: 2.8125rem;
     gap: 1.875rem;
   }
 }
@@ -4891,11 +4953,13 @@ button,
 @media (max-width: 1365px) {
   .form {
     padding: 6.25rem 8.3125rem;
+    padding-bottom: 6.125rem;
   }
 }
 @media (max-width: 767px) {
   .form {
     padding: 4.4375rem 0.9375rem;
+    padding-bottom: 4.3125rem;
   }
 }
 .form h2 {
@@ -4919,7 +4983,7 @@ button,
     font-size: 2rem;
     line-height: 2rem;
     letter-spacing: 0.06rem;
-    margin-bottom: 2.25rem;
+    margin-bottom: 2.3125rem;
   }
 }
 
@@ -4950,7 +5014,7 @@ button,
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    row-gap: 1.9375rem;
+    row-gap: 2.0625rem;
   }
 }
 .form__content input {
@@ -4969,15 +5033,20 @@ button,
 }
 @media (max-width: 1365px) {
   .form__content input {
+    font-size: 1rem;
     font-weight: 300;
+    line-height: 1.5rem;
     padding-top: 0.1875rem;
     padding-bottom: 0.1875rem;
   }
 }
 @media (max-width: 767px) {
   .form__content input {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
     padding-left: 0;
     letter-spacing: -0.0625rem;
+    padding-bottom: 0.125rem;
   }
 }
 @media (hover: hover) {
@@ -5053,19 +5122,29 @@ button,
 }
 @media (max-width: 1365px) and (max-width: 767px) {
   .form__content input::-webkit-input-placeholder {
+    font-size: 0.875rem;
     line-height: 1.375rem;
+    letter-spacing: 0.0125rem;
   }
   .form__content input::-moz-placeholder {
+    font-size: 0.875rem;
     line-height: 1.375rem;
+    letter-spacing: 0.0125rem;
   }
   .form__content input:-ms-input-placeholder {
+    font-size: 0.875rem;
     line-height: 1.375rem;
+    letter-spacing: 0.0125rem;
   }
   .form__content input::-ms-input-placeholder {
+    font-size: 0.875rem;
     line-height: 1.375rem;
+    letter-spacing: 0.0125rem;
   }
   .form__content input::placeholder {
+    font-size: 0.875rem;
     line-height: 1.375rem;
+    letter-spacing: 0.0125rem;
   }
 }
 .form__content button {
@@ -5076,7 +5155,7 @@ button,
   text-transform: uppercase;
   background-color: transparent;
   border: none;
-  outline: 0.0625rem solid #ffffff;
+  border: 0.125rem solid #ffffff;
   color: #ffffff;
 }
 @media (max-width: 1365px) {
@@ -5086,16 +5165,16 @@ button,
 }
 @media (max-width: 767px) {
   .form__content button {
-    margin-top: 0.6875rem;
+    margin-top: 0.625rem;
   }
 }
 
 .is-invalid .form__input:not(:disabled) {
-  border-bottom-color: red;
+  border-bottom-color: #FF121F;
 }
 
 .input-message.is-invalid {
-  color: red;
+  color: #FF121F;
 }
 
 .contacts {
@@ -5122,7 +5201,6 @@ button,
     font-size: 2rem;
     line-height: 2rem;
     letter-spacing: 0.06rem;
-    margin-bottom: 2.1875rem;
   }
 }
 @media (max-width: 1365px) {
@@ -5136,7 +5214,7 @@ button,
 }
 @media (max-width: 767px) {
   .contacts {
-    padding: 4.125rem 0.9375rem;
+    padding: 4.1875rem 0.9375rem;
     padding-bottom: 4.25rem;
   }
   .contacts h2 {
@@ -5185,7 +5263,9 @@ button,
 }
 @media (max-width: 767px) {
   .contacts__holder h3 {
-    letter-spacing: -0.05rem;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+    margin-bottom: 0.75rem;
   }
 }
 .contacts__holder p {

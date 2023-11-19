@@ -47,11 +47,11 @@
     display: flex;
     flex-direction: column;
     gap: size(30px);
-    padding-top: size(39px);
+    padding-top: size(40px);
   }
 
   @include vp-767 {
-    padding-top: size(19px);
+    padding-top: size(20px);
     gap: size(40px);
   }
 }

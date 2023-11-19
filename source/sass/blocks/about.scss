@@ -4,13 +4,13 @@
   grid-template-columns: size(355px) size(660px);
   gap: size(145px);
   padding-top: size(120px);
-  padding-bottom: size(233px);
+  padding-bottom: size(234px);
 
   @include vp-1365 {
     display: flex;
     flex-direction: column;
     padding-top: size(106px);
-    padding-bottom: size(180px);
+    padding-bottom: size(182px);
     gap: 0;
   }
 
@@ -130,7 +130,7 @@
     width: size(265px);
     height: size(167px);
     right: calc(50% - size(133px));
-    top: calc(100% - size(265px));
+    top: calc(100% - size(264px));
   }
 
   @include vp-767 {
