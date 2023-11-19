@@ -11,7 +11,7 @@
 
   @include vp-767 {
     padding-top: size(46px);
-    padding-bottom: size(72px);
+    padding-bottom: size(71px);
   }
 
   h2 {
@@ -82,7 +82,7 @@
     @include vp-767 {
       font-size: size(16px);
       line-height: size(16px);
-      padding-bottom: size(16px);
+      padding-bottom: size(15px);
     }
 
     @include hover-focus {
@@ -132,8 +132,8 @@
     }
 
     @include vp-767 {
-      padding-top: size(35px);
-      gap: size(39px);
+      padding-top: size(34px);
+      gap: size(34px);
     }
   }
 
@@ -195,8 +195,8 @@
   }
 
   @include vp-767 {
-    padding-top: size(42px);
-    padding-bottom: size(43px);
+    padding-top: size(45px);
+    padding-bottom: size(44px);
   }
 
   h3 {
@@ -257,8 +257,8 @@
     }
 
     @include vp-767 {
-      margin-top: size(45px);
-      margin-bottom: size(23px);
+      margin-top: size(44px);
+      margin-bottom: size(24px);
     }
   }
 

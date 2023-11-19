@@ -11,14 +11,14 @@
     grid-template-columns: size(58px) size(580px) size(58px);
     padding-top: size(101px);
     padding-bottom: size(100px);
-    column-gap: size(12px);
+    column-gap: size(10px);
   }
 
   @include vp-767 {
     grid-template-columns: size(36px) size(228px) size(36px);
-    column-gap: size(11px);
-    padding-top: size(70px);
-    padding-bottom: size(71px);
+    column-gap: size(3px);
+    padding-top: size(71px);
+    padding-bottom: size(70px);
   }
 
   h2 {
@@ -50,9 +50,23 @@
   button {
     position: relative;
     padding: 0;
-    padding-top: size(3px);
+
+    @include vp-1365 {
+      top: calc(50% - size(122px));
+    }
+
     @include vp-767 {
-      top: calc(50% - size(200px));
+      top: calc(50% - size(162px));
+    }
+
+    svg {
+      width: size(56px);
+      height: size(56px);
+
+      @include vp-767 {
+        width: size(36px);
+        height: size(36px);
+      }
     }
   }
 

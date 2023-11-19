@@ -12,7 +12,7 @@
   }
 
   @include vp-767 {
-    padding-top: size(70px);
+    padding-top: size(71px);
     padding-bottom: size(70px);
   }
 
@@ -38,7 +38,7 @@
       font-size: size(32px);
       line-height: size(32px);
       letter-spacing: size(0.96px);
-      margin-bottom: size(36px);
+      margin-bottom: size(34px);
     }
   }
 }
@@ -156,8 +156,12 @@
     column-gap: 0;
     min-height: size(84px);
     align-items: center;
-    padding-top: size(22px);
+    padding-top: size(21px);
     padding-bottom: size(22px);
+
+    div {
+      grid-column: 1/3;
+    }
   }
 
   h3 {
@@ -200,7 +204,7 @@
       grid-row: 2/3;
       font-size: size(16px);
       line-height: size(20px);
-      padding-top: size(16px);
+      padding-top: size(19px);
     }
   }
 
@@ -211,7 +215,7 @@
     width: size(40px);
     height: size(40px);
     stroke: #102654;
-    padding: size(6px);
+    padding: size(8px);
     border: 1px solid #102654;
     border-radius: 50%;
     cursor: pointer;

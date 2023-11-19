@@ -8,8 +8,8 @@
   }
 
   @include vp-767 {
-    padding-top: size(68px);
-    padding-bottom: size(50px);
+    padding-top: size(70px);
+    padding-bottom: size(70px);
   }
 }
 
@@ -48,8 +48,8 @@
     @include vp-767 {
       padding: size(40px);
       row-gap: size(12px);
-      row-gap: size(6px);
-      padding-bottom: size(41px);
+      row-gap: size(5px);
+      padding-bottom: size(43px);
     }
 
     h3 {
@@ -198,7 +198,7 @@
     }
 
     @include vp-767 {
-      margin-top: size(13px);
+      margin-top: size(15px);
     }
   }
 }

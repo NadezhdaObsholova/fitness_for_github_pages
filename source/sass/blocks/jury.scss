@@ -40,7 +40,7 @@
 
   @include vp-767 {
     max-width: size(226px);
-    padding-top: size(41px);
+    padding-top: size(42px);
   }
 }
 
@@ -78,6 +78,11 @@
       line-height: size(20px);
       letter-spacing: size(0.2px);
       padding-bottom: size(5px);
+    }
+
+    @include vp-767 {
+      font-size: size(22px);
+      line-height: size(22px);
     }
   }
 
@@ -211,6 +216,7 @@
   @include vp-767 {
     width: size(36px);
     height: size(36px);
+    top: size(194px);
   }
 }
 
@@ -218,7 +224,7 @@
   left: size(-76px);
 
   @include vp-767 {
-    left: size(-32px);
+    left: size(-41px);
   }
 }
 
@@ -226,6 +232,6 @@
   right: size(-76px);
 
   @include vp-767 {
-    right: size(-32px);
+    right: size(-41px);
   }
 }

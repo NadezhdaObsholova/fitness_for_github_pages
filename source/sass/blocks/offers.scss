@@ -8,7 +8,7 @@
   }
 
   @include vp-767 {
-    padding-top: size(68px);
+    padding-top: size(70px);
     padding-bottom: size(70px);
   }
 
@@ -52,7 +52,7 @@
 
   @include vp-767 {
     padding-top: size(19px);
-    gap: size(38px);
+    gap: size(40px);
   }
 }
 
@@ -81,7 +81,7 @@
   @include vp-767 {
     width: 100%;
     min-height: size(300px);
-    padding: size(44px) size(45px) size(47px);
+    padding: size(46px) size(45px) size(47px);
     align-items: center;
   }
 
@@ -169,6 +169,7 @@
   }
 
   @include vp-767 {
+    margin-top: size(9px);
     font-size: size(64px);
     line-height: size(64px);
   }
@@ -212,7 +213,7 @@
     display: grid;
     grid-template-columns: auto;
     max-width: size(290px);
-    gap: size(31px);
+    gap: size(30px);
   }
 }
 

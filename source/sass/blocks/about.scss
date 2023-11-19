@@ -84,6 +84,7 @@
       line-height: size(20px);
       text-align: left;
       margin-top: size(12px);
+      margin-left: 0;
       letter-spacing: 0;
     }
   }
@@ -138,7 +139,7 @@
     width: size(320px);
     height: size(167px);
     right: calc(50% - size(160px));
-    top: calc(100% - size(237px));
+    top: calc(100% - size(238px));
   }
 
   img {
