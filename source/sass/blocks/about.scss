@@ -5,7 +5,7 @@
   gap: size(145px);
 
   padding-top: size(120px);
-  padding-bottom: size(230px);
+  padding-bottom: size(233px);
 
   @include vp-1365 {
     display: flex;
@@ -67,8 +67,8 @@
     line-height: size(22px);
     font-weight: 400;
     letter-spacing: 0;
-    margin-top: size(27px);
-    margin-bottom: size(95px);
+    margin-top: size(29px);
+    margin-bottom: size(94px);
 
     @include vp-1365 {
       font-size: size(20px);
@@ -91,6 +91,7 @@
     margin: size(10px) 0;
     font-weight: 300;
     letter-spacing: 0;
+    margin: 8px 0;
 
     @include vp-1365 {
       width: size(502px);

@@ -71,8 +71,7 @@
   min-height: size(462px);
   color: $color-default-white;
   background-color: #ed0233;
-  padding: size(40px) size(45px) size(47px);
-
+  padding: size(40px) size(45px) size(44px);
 
   @include vp-1365 {
     width: size(279px);

@@ -105,7 +105,7 @@
   justify-items: end;
   align-items: center;
   padding-top: size(62px);
-  padding-bottom: size(182px);
+  padding-bottom: size(184px);
 
   @include vp-1365 {
     grid-template-columns: size(112px) size(185px);
@@ -133,7 +133,7 @@
     letter-spacing: size(4.6px);
     text-transform: uppercase;
     margin-top: size(11px);
-    margin-bottom: size(50px);
+    margin-bottom: size(51px);
     text-align: right;
 
     @include vp-1365 {
@@ -185,6 +185,7 @@
     line-height: size(22px);
     text-align: right;
     letter-spacing: size(0.1px);
+    margin-top: size(17px);
 
     @include vp-1365 {
       letter-spacing: size(-0.2px);
@@ -201,7 +202,7 @@
   a {
     grid-column: 2/3;
     grid-row: 3/4;
-    width: size(230px);
+    width: size(228px);
 
     @include vp-1365 {
       width: size(185px);

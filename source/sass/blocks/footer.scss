@@ -1,6 +1,7 @@
 .footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  border-top: 1px solid #74819c;;
 
   @include vp-1365 {
     display: flex;
@@ -9,12 +10,34 @@
 }
 
 .footer__contacts-holder {
-  padding: size(60px) size(123px) size(60px) size(120px);
+  padding: size(59px) size(123px) size(60px) size(120px);
+
+  h2 {
+    font-family: "AlumniSans";
+    font-size: size(54px);
+    font-weight: 600;
+    line-height: size(54px);
+    letter-spacing: size(1.62px);
+    margin-top: 0;
+    margin-bottom: size(34px);
+
+    @include vp-1365 {
+      font-size: size(42px);
+      line-height: size(42px);
+      letter-spacing: size(1.26px);
+    }
+
+    @include vp-767 {
+      font-size: size(32px);
+      line-height: size(32px);
+      letter-spacing: size(0.96px);
+      margin-bottom: size(36px);
+    }
+  }
 
   @include vp-1365 {
     padding: size(105px) size(133px);
     padding-bottom: size(99px);
-
     h2 {
       letter-spacing: size(1.65px);
     }
@@ -35,7 +58,7 @@
   display: grid;
   row-gap: size(14px);
   grid-template-columns: 1fr 1fr;
-  margin-top: size(40px);
+  margin-top: size(42px);
 
   @include vp-1365 {
     row-gap: size(30px);
@@ -53,7 +76,7 @@
     font-weight: 400;
     line-height: size(24px);
     margin: 0;
-    margin-bottom: size(7px);
+    margin-bottom: size(6px);
 
     @include vp-1365 {
       font-size: size(22px);
@@ -119,7 +142,8 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: size(40px) size(103px);
+  padding: size(42px) size(103px);
+  padding-bottom: size(20px);
   background-color: #030a1a;
 
   @include vp-1365 {
@@ -141,6 +165,7 @@
   align-items: flex-start;
   gap: size(30px);
   padding-right: size(15px);
+  min-height: size(44px);
 
   @include vp-1365 {
     gap: size(30px);
@@ -158,7 +183,7 @@
     line-height: size(22px);
     color: $color-default-white;
     text-decoration: none;
-    padding: 0 size(5px) size(5px);
+    padding: size(2px) size(5px) size(5px);
     box-sizing: border-box;
 
     @include vp-1365 {

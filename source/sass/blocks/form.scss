@@ -1,5 +1,5 @@
 .form {
-  padding: size(60px) size(170px) size(60px) size(103px);
+  padding: size(59px) size(170px) size(60px) size(103px);
   background-color: $color-basic-dark-blue;
   color: $color-default-white;
 
@@ -18,7 +18,7 @@
     line-height: size(54px);
     letter-spacing: size(1.62px);
     margin-top: 0;
-    margin-bottom: size(33px);
+    margin-bottom: size(34px);
 
     @include vp-1365 {
       font-size: size(42px);
@@ -39,7 +39,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: size(30px);
-  row-gap: size(28px);
+  row-gap: size(29px);
 
   @include vp-1365 {
     column-gap: size(55px);
@@ -57,8 +57,9 @@
     border: none;
     background-color: transparent;
     border-bottom: size(1px) solid #74819C;
-    padding-top: size(5px);
-    padding-bottom: size(5px);
+    padding-top: size(9px);
+    padding-bottom: size(4px);
+    padding-left: 0px;
     font-family: inherit;
     font-size: size(14px);
     line-height: size(22px);
@@ -83,7 +84,7 @@
     &.focus-visible {
       border: none;
       outline: size(1px) solid $color-default-white;
-      outline-offset: size(3px);
+
     }
   }
 
