@@ -150,6 +150,7 @@
 
     @include hover-focus {
       outline: none;
+
       .price__background {
         background: linear-gradient(135deg, #ED0233, #003EB7);
       }

@@ -27,6 +27,7 @@
   @include vp-1365 {
     padding: size(105px) size(133px);
     padding-bottom: size(99px);
+
     h2 {
       letter-spacing: size(1.65px);
     }
@@ -84,32 +85,32 @@
     line-height: size(22px);
     margin: 0;
   }
+}
 
-  .contacts__address,
-  .contacts__phone {
-    display: flex;
-    flex-direction: column;
-    row-gap: size(12px);
+.contacts__address,
+.contacts__phone {
+  display: flex;
+  flex-direction: column;
+  row-gap: size(12px);
 
-    @include vp-1365 {
-      row-gap: size(29px);
-    }
-
-    @include vp-767 {
-      row-gap: size(26px);
-    }
+  @include vp-1365 {
+    row-gap: size(29px);
   }
 
-  .contacts__phone {
-    padding-left: size(70px);
+  @include vp-767 {
+    row-gap: size(26px);
+  }
+}
 
-    @include vp-1365 {
-      padding-left: size(60px);
-    }
+.contacts__phone {
+  padding-left: size(70px);
 
-    @include vp-767 {
-      padding-left: 0;
-    }
+  @include vp-1365 {
+    padding-left: size(60px);
+  }
+
+  @include vp-767 {
+    padding-left: 0;
   }
 }
 

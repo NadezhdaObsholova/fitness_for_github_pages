@@ -4,11 +4,12 @@
   cursor: pointer;
 
   svg {
-    @include vp-767 {
-    }
+    @include vp-767 {}
+
     path {
       stroke: #102654;
     }
+
     rect {
       stroke: #102654;
     }
@@ -26,9 +27,11 @@
     svg {
       fill: #102654;
     }
+
     circle {
       stroke: #102654;
     }
+
     path {
       stroke: white;
     }
@@ -43,5 +46,3 @@
     }
   }
 }
-
-

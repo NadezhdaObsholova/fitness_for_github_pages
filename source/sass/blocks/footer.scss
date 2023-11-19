@@ -1,7 +1,7 @@
 .footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  border-top: size(1px) solid #74819c;;
+  border-top: size(1px) solid #74819c;
 
   @include vp-1365 {
     display: flex;
@@ -81,16 +81,15 @@
       outline-offset: size(5px);
     }
 
-  .disabled {
-    opacity: 0.3;
-    cursor: not-allowed;
-    pointer-events: none;
-  }
+    .disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
   }
 }
 
 .footer__logo {
-
   img {
     width: size(109px);
     height: size(24px);

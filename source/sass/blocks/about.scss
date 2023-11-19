@@ -3,7 +3,6 @@
   display: grid;
   grid-template-columns: size(355px) size(660px);
   gap: size(145px);
-
   padding-top: size(120px);
   padding-bottom: size(233px);
 
@@ -33,7 +32,6 @@
 }
 
 .about__content {
-
   @include vp-767 {
     padding: 0 size(15px);
   }
@@ -167,44 +165,30 @@
       width: size(320px);
     }
   }
+}
 
-  .about__preview-button {
-    position: absolute;
-    z-index: 2;
-    top: calc(50% - size(50px));
-    left: calc(50% - size(50px));
-    width: size(100px);
-    height: size(100px);
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    background-color: transparent;
+.about__preview-button {
+  position: absolute;
+  z-index: 2;
+  top: calc(50% - size(50px));
+  left: calc(50% - size(50px));
+  width: size(100px);
+  height: size(100px);
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
 
-    @include vp-1365 {
-      top: calc(50% - size(36px));
-      left: calc(50% - size(36px));
-      width: size(72px);
-      height: size(72px);
-    }
+  @include vp-1365 {
+    top: calc(50% - size(36px));
+    left: calc(50% - size(36px));
+    width: size(72px);
+    height: size(72px);
   }
 
-  .about__preview-button.disabled {
-    .about__btn-bcg {
-      cursor: not-allowed;
-      pointer-events: none;
-      background: none;
-      background-color: $color-default-white;
-      outline: size(2px) solid rgb(155, 164, 185);
-
-      path {
-        fill: rgb(155, 164, 185);
-      }
-    }
-  }
-
-  .about__preview-button:active {
+  @include active {
     .about__btn-bcg {
       width: size(58px);
       height: size(58px);
@@ -218,9 +202,7 @@
     }
   }
 
-  .about__preview-button:focus-visible,
-  .about__preview-button:focus,
-  .about__preview-button:hover {
+  @include hover-focus {
     outline: none;
 
     .about__btn-bcg {
@@ -230,6 +212,20 @@
 
       path {
         fill: #102654;
+      }
+    }
+  }
+
+  &.disabled {
+    .about__btn-bcg {
+      cursor: not-allowed;
+      pointer-events: none;
+      background: none;
+      background-color: $color-default-white;
+      outline: size(2px) solid rgb(155, 164, 185);
+
+      path {
+        fill: rgb(155, 164, 185);
       }
     }
   }
