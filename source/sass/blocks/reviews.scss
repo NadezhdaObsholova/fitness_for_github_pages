@@ -9,7 +9,7 @@
 
   @include vp-1365 {
     grid-template-columns: size(58px) size(580px) size(58px);
-    padding-top: size(100px);
+    padding-top: size(101px);
     padding-bottom: size(100px);
     column-gap: size(12px);
   }
@@ -36,7 +36,7 @@
       font-size: size(42px);
       line-height: size(42px);
       letter-spacing: size(1.26px);
-      margin-bottom: size(40px);
+      margin-bottom: size(41px);
     }
 
     @include vp-767 {

@@ -47,7 +47,7 @@
     display: flex;
     flex-direction: column;
     gap: size(30px);
-    padding-top: size(40px);
+    padding-top: size(39px);
   }
 
   @include vp-767 {
@@ -75,7 +75,7 @@
 
   @include vp-1365 {
     width: size(279px);
-    padding: size(43px) size(45px) size(45px);
+    padding: size(44px) size(45px) size(45px);
   }
 
   @include vp-767 {
@@ -164,7 +164,7 @@
   margin-bottom: size(25px);
 
   @include vp-1365 {
-    margin-top: size(8px);
+    margin-top: size(6px);
     margin-bottom: size(20px);
   }
 

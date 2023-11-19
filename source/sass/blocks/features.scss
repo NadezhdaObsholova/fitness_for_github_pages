@@ -7,7 +7,7 @@
   padding-bottom: size(64px);
 
   @include vp-1365 {
-    padding: size(101px) size(44px) size(47px) size(44px);
+    padding: size(101px) size(44px) size(52px) size(44px);
     margin: 0 auto;
   }
 
@@ -120,8 +120,8 @@
     grid-template-columns: size(313px) size(313px);
     width: auto;
     column-gap: size(50px);
-    row-gap: size(340px);
-    margin: size(50px) auto;
+    row-gap: size(342px);
+    margin: size(49px) auto;
   }
 
   @include vp-767 {
