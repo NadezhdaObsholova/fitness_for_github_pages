@@ -108,7 +108,7 @@
 }
 
 .faq__info {
-  border-top: 1px solid rgba(28, 51, 116, 0.20);
+  border-top: size(1px) solid rgba(28, 51, 116, 0.20);
   display: none;
 }
 
@@ -216,7 +216,7 @@
     height: size(40px);
     stroke: #102654;
     padding: size(8px);
-    border: 1px solid #102654;
+    border: size(1px) solid #102654;
     border-radius: 50%;
     cursor: pointer;
 
