@@ -17,7 +17,7 @@
   }
 
   h2 {
-    font-family: "AlumniSans";
+    font-family: "AlumniSans", "Arial", sans-serif;
     font-size: size(54px);
     line-height: size(54px);
     font-weight: 600;
@@ -84,8 +84,7 @@
   min-height: size(54px);
   text-transform: none;
   background-color: transparent;
-  border: none;
-  border: size(1px) solid rgba(16, 38, 84, 0.20);
+  border: size(1px) solid rgba(16, 38, 84, 0.2);
   padding-top: size(5px);
 
   @include vp-767 {
@@ -98,13 +97,25 @@
     border: size(1px) solid rgba(16, 38, 84);
     outline: none;
   }
+}
 
-  &.is-active {
-    color: $color-default-white;
-    background: var(--1, linear-gradient(97deg, #ED0233 17.6%, #003EB7 95.31%));
-    border: none;
-    outline: none;
-  }
+.faq__item:disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.faq__info-item.is-disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.faq__item.is-active {
+  color: $color-default-white;
+  background: linear-gradient(97deg, #ed0233 17.6%, #003eb7 95.31%);
+  border: none;
+  outline: none;
 }
 
 .faq__content {
@@ -118,7 +129,7 @@
 }
 
 .faq__info {
-  border-top: size(1px) solid rgba(28, 51, 116, 0.20);
+  border-top: size(1px) solid rgba(28, 51, 116, 0.2);
   display: none;
 }
 
@@ -131,17 +142,16 @@
   padding: 0;
   list-style: none;
 
-
   li:last-of-type {
     .faq__info-item {
       @include vp-1365 {
         padding-top: size(25px);
       }
+
       @include vp-767 {
         padding-top: size(23px);
       }
     }
-
   }
 
   .is-active {
@@ -162,7 +172,7 @@
   align-items: center;
   column-gap: size(160px);
   min-height: size(90px);
-  border-bottom: size(1px) solid rgba(28, 51, 116, 0.20);
+  border-bottom: size(1px) solid rgba(28, 51, 116, 0.2);
   padding-top: size(26px);
   padding-bottom: size(23px);
 
@@ -240,7 +250,7 @@
     height: size(40px);
     stroke: #102654;
     padding: size(8px);
-    border: size(1px) solid #1C3374;
+    border: size(1px) solid #1c3374;
     border-radius: 50%;
     cursor: pointer;
 
@@ -260,7 +270,7 @@
 
   .btn-svg-faq--close {
     display: none;
-    background-color: #1C3374;
+    background-color: #1c3374;
     stroke: $color-default-white;
     padding: size(9px);
 
@@ -285,5 +295,13 @@
       outline: none;
       fill: #102654;
     }
+  }
+}
+
+.is-disabled {
+  .btn-svg-faq {
+    opacity: 0.3;
+    cursor: not-allowed;
+    pointer-events: none;
   }
 }

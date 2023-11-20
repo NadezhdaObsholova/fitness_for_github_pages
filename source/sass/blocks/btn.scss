@@ -36,13 +36,13 @@
 
     @include hover-focus {
       color: $color-default-white;
-      background: var(--1, linear-gradient(97deg, #ed0233 17.6%, #003eb7 95.31%));
+      background: linear-gradient(97deg, #ed0233 17.6%, #003eb7 95.31%);
       outline: none;
     }
 
     @include active {
       opacity: 0.7;
-      background: var(--1, linear-gradient(97deg, #ed0233 17.6%, #003eb7 95.31%));
+      background: linear-gradient(97deg, #ed0233 17.6%, #003eb7 95.31%);
       outline: none;
       color: $color-default-white;
     }

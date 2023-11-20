@@ -15,7 +15,7 @@
   }
 
   h2 {
-    font-family: "AlumniSans";
+    font-family: "AlumniSans", "Arial", sans-serif;
     font-size: size(54px);
     line-height: size(54px);
     font-weight: 600;
@@ -112,7 +112,7 @@
   position: absolute;
   width: 100%;
   height: size(2px);
-  background-color: rgba(120, 120, 120, 0.20);
+  background-color: rgba(120, 120, 120, 0.2);
   bottom: 0;
 }
 
@@ -152,19 +152,19 @@
       outline: none;
 
       .price__background {
-        background: linear-gradient(135deg, #ED0233, #003EB7);
+        background: linear-gradient(135deg, #ed0233, #003eb7);
       }
     }
   }
 
   li.price__item-current {
     .price__background {
-      background: linear-gradient(135deg, #ED0233, #003EB7);
+      background: linear-gradient(135deg, #ed0233, #003eb7);
     }
 
     a {
       color: $color-default-white;
-      background: var(--1, linear-gradient(97deg, #ED0233 17.6%, #003EB7 95.31%));
+      background: linear-gradient(97deg, #ed0233 17.6%, #003eb7 95.31%);
       outline: none;
     }
   }
@@ -242,6 +242,12 @@
       width: size(202px);
       height: size(54px);
     }
+  }
+
+  a.is-disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    pointer-events: none;
   }
 
   p {

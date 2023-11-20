@@ -37,7 +37,7 @@
   }
 
   h2 {
-    font-family: "AlumniSans";
+    font-family: "AlumniSans", "Arial", sans-serif;
     font-size: size(54px);
     line-height: size(54px);
     font-weight: 600;
@@ -88,7 +88,6 @@
   }
 
   p {
-    margin: size(10px) 0;
     font-weight: 300;
     letter-spacing: 0;
     margin: size(8px) 0;
@@ -215,18 +214,18 @@
       }
     }
   }
+}
 
-  &.disabled {
-    .about__btn-bcg {
-      cursor: not-allowed;
-      pointer-events: none;
-      background: none;
-      background-color: $color-default-white;
-      outline: size(2px) solid rgb(155, 164, 185);
+.about__preview-button.is-disabled {
+  .about__btn-bcg {
+    cursor: not-allowed;
+    pointer-events: none;
+    background: none;
+    background-color: $color-default-white;
+    outline: size(2px) solid rgb(155, 164, 185);
 
-      path {
-        fill: rgb(155, 164, 185);
-      }
+    path {
+      fill: rgb(155, 164, 185);
     }
   }
 }
@@ -250,7 +249,7 @@
   outline: size(2px) solid rgb(237, 2, 51, 0.2);
   outline-offset: size(12px);
   border-radius: 50%;
-  background: var(--1, linear-gradient(97deg, #ed0233 17.6%, #003eb7 95.31%));
+  background: linear-gradient(97deg, #ed0233 17.6%, #003eb7 95.31%);
 
   @include vp-1365 {
     width: size(52px);

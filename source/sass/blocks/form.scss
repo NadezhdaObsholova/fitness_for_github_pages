@@ -14,7 +14,7 @@
   }
 
   h2 {
-    font-family: "AlumniSans";
+    font-family: "AlumniSans", "Arial", sans-serif;
     font-size: size(54px);
     font-weight: 600;
     line-height: size(54px);
@@ -58,17 +58,17 @@
     width: 100%;
     border: none;
     background-color: transparent;
-    border-bottom: size(1px) solid #74819C;
+    border-bottom: size(1px) solid #74819c;
     padding-top: size(9px);
     padding-bottom: size(4px);
-    padding-left: 0px;
+    padding-left: 0;
     font-family: inherit;
     font-size: size(14px);
     line-height: size(22px);
     font-weight: 400;
     color: $color-default-white;
 
-     @include vp-1365 {
+    @include vp-1365 {
       font-size: size(16px);
       font-weight: 300;
       line-height: size(24px);
@@ -87,12 +87,11 @@
     @include hover {
       border-bottom: size(1px) solid $color-default-white;
     }
+  }
 
-    &.focus-visible {
-      border: none;
-      outline: size(1px) solid $color-default-white;
-
-    }
+  input.focus-visible {
+    border: none;
+    outline: size(1px) solid $color-default-white;
   }
 
   input::placeholder {
@@ -120,7 +119,6 @@
     width: 100%;
     text-transform: uppercase;
     background-color: transparent;
-    border: none;
     border: size(2px) solid $color-default-white;
     color: $color-default-white;
 
@@ -135,9 +133,9 @@
 }
 
 .is-invalid .form__input:not(:disabled) {
-  border-bottom-color: #FF121F;
+  border-bottom-color: #ff121f;
 }
 
 .input-message.is-invalid {
-  color: #FF121F;
+  color: #ff121f;
 }

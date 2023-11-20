@@ -13,13 +13,12 @@
   }
 
   h2 {
-    font-family: "AlumniSans";
+    font-family: "AlumniSans", "Arial", sans-serif;
     font-size: size(54px);
     line-height: size(54px);
     font-weight: 600;
     letter-spacing: size(1.62px);
     text-align: center;
-    margin-bottom: size(34px);
     margin: 0;
 
     @include vp-1365 {
@@ -118,7 +117,7 @@
     letter-spacing: size(0.7px);
     text-transform: uppercase;
     padding-bottom: size(2px);
-    border-bottom: size(2px) solid currentcolor;
+    border-bottom: size(2px) solid currentColor;
 
     @include hover {
       opacity: 0.8;
@@ -127,13 +126,13 @@
     @include active {
       opacity: 1;
     }
+  }
 
-    &:focus {
-      border-bottom: none;
-      outline: size(1px) solid;
-      outline-color: currentcolor;
-      outline-offset: size(15px);
-    }
+  a.focus-visible {
+    border-bottom: none;
+    outline: size(1px) solid;
+    outline-color: currentColor;
+    outline-offset: size(10px);
   }
 }
 
@@ -224,7 +223,7 @@
 .offers__item-background {
   grid-column: 1/2;
   grid-row: 1/2;
-  background: linear-gradient(160deg, #ED0233, #003EB7);
+  background: linear-gradient(160deg, #ed0233, #003eb7);
 }
 
 .offers__item-content {

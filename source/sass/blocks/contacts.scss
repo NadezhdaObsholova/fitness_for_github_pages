@@ -2,7 +2,7 @@
   padding: size(59px) size(123px) size(60px) size(120px);
 
   h2 {
-    font-family: "AlumniSans";
+    font-family: "AlumniSans", "Arial", sans-serif;
     font-size: size(54px);
     font-weight: 600;
     line-height: size(54px);
@@ -120,7 +120,7 @@
   content: "";
   height: 100%;
   width: size(1px);
-  background-color: #74819C;
+  background-color: #74819c;
   right: 50%;
 
   @include vp-767 {

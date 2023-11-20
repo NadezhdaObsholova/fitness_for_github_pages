@@ -13,4 +13,3 @@
 @function size-mobile($size-in-px) {
   @return calc($size-in-px / $vp-320 * 100vw);
 }
-
